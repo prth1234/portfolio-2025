@@ -1491,6 +1491,27 @@
         type="text/javascript"></script>
     <script src="https://cdn.prod.website-files.com/64591e5db836f60c02bb97e9/js/webflow.751e0867.148dc658e77a3916.js"
         type="text/javascript"></script>
+
+        
 </body>
+<script>
+  // Map page names to background colors
+  const bgMap = {
+    "index3.html": "#000",
+    "index.html": "#f9f4eb",
+    "index2.html": "#f9f4eb",
+    "index4.html": "#f9f4eb",
+    "index5.html": "#f9f4eb"
+  };
+
+  Object.keys(bgMap).forEach(function(page) {
+    document.querySelectorAll('a[href="' + page + '"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.documentElement.style.background = bgMap[page];
+        document.body.style.background = bgMap[page];
+      });
+    });
+  });
+</script>
 
 </html>
