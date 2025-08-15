@@ -67,7 +67,7 @@
 
         body.is-price .preloader,
         body.is-return .preloader {
-            background-color: #000;
+            background-color: #000 !important;
         }
 
         .preloader_element {
@@ -80,15 +80,19 @@
             width: var(--size-8);
             height: var(--size-24);
             border-radius: 2px;
-            background-color: var(--color);
+            background-color: black;
             grid-column: 1;
             grid-row: 1;
             animation: loading .6s infinite var(--smooth-ease);
         }
 
+          html {
+    background: #000 !important;
+  }
+
         body.is-price .preloader_box,
         body.is-return .preloader_box {
-            background-color: var(--color-background);
+            background-color: black;
         }
 
         .preloader_box:nth-child(1) {
@@ -136,6 +140,8 @@
         }
     </style>
     <script src="https://edbo.vercel.app/scripts/app.js" defer></script>
+
+
     <!--<script src="https://localhost:3000/scripts/app.js" defer></script>-->
 </head>
 
