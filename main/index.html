@@ -223,7 +223,7 @@
             <nav class="header_nav">
                 <ul role="list" class="header_nav-list w-list-unstyled">
                     <li class="header_nav-list-item"><a data-nav-link="" data-text="About" data-swup-preload=""
-                            data-wf--header-button--variant="base" href="/" aria-current="page"
+                            data-wf--header-button--variant="base" href="index.html" aria-current="page"
                             class="header_nav-button u-c1 w-inline-block w--current"><span
                                 class="header_nav-button-inner"><span class="header_nav-button-text">About</span><span
                                     class="header_nav-button-bg"></span></span></a></li>
@@ -1512,6 +1512,24 @@
       });
     });
   });
+</script>
+<script>
+  // Set background color on page load based on filename
+  (function() {
+    var bgMap = {
+      "index3.html": "#000",
+      "index.html": "#f9f4eb",
+      "index2.html": "#f9f4eb",
+      "index4.html": "#f9f4eb",
+      "index5.html": "#f9f4eb"
+    };
+    var path = window.location.pathname;
+    var page = path.substring(path.lastIndexOf('/') + 1);
+    if (bgMap[page]) {
+      document.documentElement.style.background = bgMap[page];
+      document.body.style.background = bgMap[page];
+    }
+  })();
 </script>
 
 </html>
