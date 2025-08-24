@@ -922,15 +922,18 @@
                                 <div class="chat-modal_inner-wrap">
                                     <div STYLE="--index: 0;" class="chat-modal_message">
                                         <div class="chat-modal_message-bg"></div>
-                                        <p class="chat-modal_message-text">Wie kann ich schnell testen, ob eine Website
-                                            barrierefrei ist?</p>
+                                        <p class="chat-modal_message-text">Which product categories had the highest sales last quarter?</p>
                                     </div>
                                     <div STYLE="--index: 1;" class="chat-modal_message">
                                         <div class="chat-modal_message-bg"></div>
-                                        <p class="chat-modal_message-text">Gehe mit der TAB Taste durch die Seite – wird
-                                            jedes Element sichtbar fokussiert?</p>
+                                        <p class="chat-modal_message-text">SELECT category, SUM(amount) AS total_sales
+<br> FROM orders
+<br>WHERE QUARTER(order_date) = QUARTER(CURDATE()) - 1
+  AND YEAR(order_date) = YEAR(CURDATE())
+<br>GROUP BY category
+<br>ORDER BY total_sales DESC;</p>
                                     </div>
-                                    <div STYLE="--index: 2;" class="chat-modal_message">
+                                    <!-- <div STYLE="--index: 2;" class="chat-modal_message">
                                         <div class="chat-modal_message-bg"></div>
                                         <p class="chat-modal_message-text">Öffne ein Menü oder Modal, wie das hier zum
                                             Beispiel – funktioniert ESC zum Close? Bleibt der Fokus bei TAB im
@@ -945,7 +948,7 @@
                                             src="https://cdn.prod.website-files.com/64591e5db836f60c02bb97e9/6749dadb419e4a1bccdf1d8a_03b5b06c997f88503748378707710776_header-profile-image_eduard-bodak.png"
                                             loading="lazy" width="48" height="48"
                                             alt="Profilbild von Parth Singh. Er hat braune Haare. Trägt eine Brille. Hat einen grünen Pullover an."
-                                            class="chat-modal_img" /></div>
+                                            class="chat-modal_img" /></div> -->
                                 </div>
                             </div><button type="button" tabindex="-1" data-chat-modal-backdrop=""
                                 class="chat-modal_backdrop"></button>
