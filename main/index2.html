@@ -35,7 +35,7 @@
     <meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link id="main-css" rel="stylesheet" href="../styles/main.css?v=20261105k">
+    <link id="main-css" rel="stylesheet" href="../styles/main.css?v=20261105l">
     <style>
         :root {
             --z-index-preloader: 1100;
@@ -194,7 +194,7 @@
         }
     </style>
     <!-- Structured Work Experience Data -->
-    <script src="experience-data.js?v=20261105k"></script>
+    <script src="experience-data.js?v=20261105l"></script>
     <script src="scripts/app.js?v=20261105f" defer></script>
     </head>
 
@@ -497,8 +497,39 @@
                             <div data-content-switcher="" class="process_content">
                                 <div data-content-switcher-header="" class="process_content-header">
                                     <div class="hero-process_role-wrap">
-                                        <div class="hero-process_role-title u-h3"><span class="role-star">✦</span> SWE</div>
-                                        <div class="hero-process_role-meta"><span class="role-company">Flexera GCC</span><span class="role-star-sep">✦</span><span class="role-period">Aug 2024 – Present</span></div>
+                                        <div class="role_timeline-wrap">
+                                            <div class="role_timeline-header">
+                                                <span class="role_company">Flexera GCC</span>
+                                                <span class="role_company-badge">Career Progression</span>
+                                            </div>
+                                            <div class="role_timeline">
+                                                <div class="role_timeline-step is-current">
+                                                    <div class="role_timeline-track">
+                                                        <span class="role_timeline-node">✦</span>
+                                                        <span class="role_timeline-stem"></span>
+                                                    </div>
+                                                    <div class="role_timeline-body">
+                                                        <div class="role_timeline-heading">
+                                                            <span class="role_timeline-title">Software Engineer</span>
+                                                            <span class="role_timeline-tag is-promoted">Promoted ✦</span>
+                                                        </div>
+                                                        <div class="role_timeline-date">Apr 2026 – Present</div>
+                                                    </div>
+                                                </div>
+                                                <div class="role_timeline-step">
+                                                    <div class="role_timeline-track">
+                                                        <span class="role_timeline-node is-past">●</span>
+                                                    </div>
+                                                    <div class="role_timeline-body">
+                                                        <div class="role_timeline-heading">
+                                                            <span class="role_timeline-title">Associate Software Engineer</span>
+                                                            <span class="role_timeline-tag">Initial Role</span>
+                                                        </div>
+                                                        <div class="role_timeline-date">Aug 2024 – Apr 2026</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div aria-live="polite" data-content-switcher-panel-list=""
                                         class="process_content-header-list">
@@ -1258,7 +1289,34 @@ Built automated reporting systems and real-time analytics dashboards to deliver 
               title = title.replace(/^[\s‣•\-\*✦]+/, "").trim();
 
               roleEl.className = "hero-process_role-wrap";
-              if (company && period) {
+              if (Array.isArray(exp.promotionTimeline) && exp.promotionTimeline.length > 0) {
+                var tlHtml = '<div class="role_timeline-wrap">';
+                tlHtml += '<div class="role_timeline-header">';
+                tlHtml += '<span class="role_company">' + company + '</span>';
+                tlHtml += '<span class="role_company-badge">Career Progression</span>';
+                tlHtml += '</div>';
+                tlHtml += '<div class="role_timeline">';
+                exp.promotionTimeline.forEach(function(step, sIdx) {
+                  var isCur = step.isCurrent || sIdx === 0;
+                  var hasNext = sIdx < exp.promotionTimeline.length - 1;
+                  tlHtml += '<div class="role_timeline-step' + (isCur ? ' is-current' : '') + '">';
+                  tlHtml += '<div class="role_timeline-track">';
+                  tlHtml += '<span class="role_timeline-node' + (isCur ? '' : ' is-past') + '">' + (isCur ? '✦' : '●') + '</span>';
+                  if (hasNext) tlHtml += '<span class="role_timeline-stem"></span>';
+                  tlHtml += '</div>';
+                  tlHtml += '<div class="role_timeline-body">';
+                  tlHtml += '<div class="role_timeline-heading">';
+                  tlHtml += '<span class="role_timeline-title">' + step.title + '</span>';
+                  if (step.status) {
+                    tlHtml += '<span class="role_timeline-tag' + (isCur ? ' is-promoted' : '') + '">' + step.status + (isCur ? ' ✦' : '') + '</span>';
+                  }
+                  tlHtml += '</div>';
+                  tlHtml += '<div class="role_timeline-date">' + step.period + '</div>';
+                  tlHtml += '</div></div>';
+                });
+                tlHtml += '</div></div>';
+                roleEl.innerHTML = tlHtml;
+              } else if (company && period) {
                 roleEl.innerHTML = 
                   '<div class="hero-process_role-title u-h3"><span class="role-star">✦</span> ' + title + '</div>' +
                   '<div class="hero-process_role-meta"><span class="role-company">' + company + '</span><span class="role-star-sep">✦</span><span class="role-period">' + period + '</span></div>';

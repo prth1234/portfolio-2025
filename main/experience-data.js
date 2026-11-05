@@ -23,6 +23,20 @@ window.EXPERIENCE_DATA = {
       role: "Software Engineer",
       company: "Flexera GCC",
       period: "Aug 2024 - Present",
+      promotionTimeline: [
+        {
+          title: "Software Engineer",
+          period: "Apr 2026 – Present",
+          status: "Promoted",
+          isCurrent: true
+        },
+        {
+          title: "Associate Software Engineer",
+          period: "Aug 2024 – Apr 2026",
+          status: "Initial Role",
+          isCurrent: false
+        }
+      ],
       learnMoreUrl: "https://drive.google.com/file/d/1mye4Ah8pFF9ACPcuk2JnVS_l2otH-faC/view?usp=sharing",
       points: [
         {
