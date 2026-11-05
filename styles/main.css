@@ -360,3 +360,90 @@ body[data-page="index3"] {
 
 
 
+
+
+/* Contact Form Submit Loader */
+.plan_submit-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.form_submit-loader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  left: calc(100% + 14px);
+  top: 50%;
+  transform: translate3d(6px, -50%, 0);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.25s cubic-bezier(0.32, 0.72, 0, 1),
+              transform 0.35s cubic-bezier(0.32, 0.72, 0, 1),
+              visibility 0.25s;
+  white-space: nowrap;
+}
+
+.plan_form.is-loading .form_submit-loader {
+  opacity: 1;
+  visibility: visible;
+  transform: translate3d(0, -50%, 0);
+  pointer-events: auto;
+}
+
+.form_submit-loader-spinner {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+
+.form_submit-loader-box {
+  width: 3px;
+  height: 16px;
+  border-radius: 1px;
+  background-color: var(--ci-yellow, #ffe32e);
+  grid-column: 1;
+  grid-row: 1;
+  animation: form-loader-spin 0.6s infinite cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.form_submit-loader-box:nth-child(1) { animation-delay: -0.045s; }
+.form_submit-loader-box:nth-child(2) { animation-delay: -0.030s; }
+.form_submit-loader-box:nth-child(3) { animation-delay: -0.015s; }
+.form_submit-loader-box:nth-child(4) { animation-delay: 0s; }
+
+@keyframes form-loader-spin {
+  0% { transform: rotate(0deg) translateZ(0); }
+  100% { transform: rotate(180deg) translateZ(0); }
+}
+
+.form_submit-loader-text {
+  font-family: var(--font-family-mono, monospace);
+  font-size: var(--font-size-f2, 0.75rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ci-yellow, #ffe32e);
+  font-weight: 500;
+  line-height: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .plan_submit-wrap {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .form_submit-loader {
+    position: static;
+    transform: none;
+    margin-top: 4px;
+  }
+  .plan_form.is-loading .form_submit-loader {
+    transform: none;
+  }
+}
