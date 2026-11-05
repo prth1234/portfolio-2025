@@ -150,39 +150,63 @@ body[data-page="index3"] {
   color: #000;
 }
 
-/* Solid deep black background for plan section */
+/* Plan section background: soft fade at top preserving the cards wheel fade, solid black all the way through footer */
 .plan.u-theme-dark {
-  background-color: #000000 !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 120px, #000000 280px, #000000 100%) !important;
   padding-bottom: 0 !important;
+}
+
+.plan_footer {
+  display: none !important;
 }
 
 /* Curvy wavy transition divider between black plan section and cream service section */
 .curvy-transition-section {
-  display: block;
-  width: 100%;
-  line-height: 0;
-  background-color: var(--ci-cream, #f9f4eb);
-  overflow: hidden;
-  position: relative;
-  z-index: 5;
-  margin-top: -2px;
+  display: block !important;
+  width: 100% !important;
+  line-height: 0 !important;
+  background-color: #f9f4eb !important;
+  margin: 0 !important;
+  margin-top: -2px !important;
+  margin-bottom: -2px !important;
+  padding: 0 !important;
+  position: relative !important;
+  z-index: 10 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
 }
 
 .curvy-transition-svg {
-  display: block;
-  width: 100%;
-  height: clamp(50px, 6vw, 95px);
-  pointer-events: none;
+  display: block !important;
+  width: 100% !important;
+  height: clamp(65px, 7.5vw, 115px) !important;
+  vertical-align: bottom !important;
+  pointer-events: none !important;
 }
 
-/* Wavy yellow curved underline for opened/expanded accordion headings */
+/* Wavy yellow curved underline for opened/expanded accordion headings (custom SVG curvy line) */
 .accordion_details[open] > .accordion_summary .accordion_title,
 .accordion_details.is-active > .accordion_summary .accordion_title {
-  text-decoration: underline wavy var(--ci-yellow, #ffe32e);
-  -webkit-text-decoration: underline wavy var(--ci-yellow, #ffe32e);
-  text-decoration-skip-ink: none;
-  text-underline-offset: 6px;
-  text-decoration-thickness: 2.5px;
+  position: relative !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+  -webkit-text-decoration: none !important;
+}
+
+.accordion_details[open] > .accordion_summary .accordion_title::after,
+.accordion_details.is-active > .accordion_summary .accordion_title::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: -6px !important;
+  width: 100% !important;
+  height: 8px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 6'%3E%3Cpath d='M0 3 Q 5 0, 10 3 T 20 3' fill='none' stroke='%23ffe32e' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat: repeat-x !important;
+  background-size: 16px 6px !important;
+  pointer-events: none !important;
 }
 
 /* Contact Form with Email & Message inputs */

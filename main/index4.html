@@ -32,7 +32,7 @@
   <meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <link id="main-css" rel="stylesheet" href="../styles/main.css">
+  <link id="main-css" rel="stylesheet" href="../styles/main.css?v=20261105i">
   <style>
     :root {
       --z-index-preloader: 1100;
@@ -272,17 +272,30 @@
       color: #000;
     }
 
-    /* Wavy yellow curved underline for opened/expanded accordion headings */
+    /* Wavy yellow curved underline for opened/expanded accordion headings (custom SVG curvy line) */
     .accordion_details[open] > .accordion_summary .accordion_title,
     .accordion_details.is-active > .accordion_summary .accordion_title {
-      text-decoration: underline wavy var(--ci-yellow, #ffe32e);
-      -webkit-text-decoration: underline wavy var(--ci-yellow, #ffe32e);
-      text-decoration-skip-ink: none;
-      text-underline-offset: 6px;
-      text-decoration-thickness: 2.5px;
+      position: relative !important;
+      display: inline-block !important;
+      text-decoration: none !important;
+      -webkit-text-decoration: none !important;
+    }
+
+    .accordion_details[open] > .accordion_summary .accordion_title::after,
+    .accordion_details.is-active > .accordion_summary .accordion_title::after {
+      content: "" !important;
+      position: absolute !important;
+      left: 0 !important;
+      bottom: -6px !important;
+      width: 100% !important;
+      height: 8px !important;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 6'%3E%3Cpath d='M0 3 Q 5 0, 10 3 T 20 3' fill='none' stroke='%23ffe32e' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+      background-repeat: repeat-x !important;
+      background-size: 16px 6px !important;
+      pointer-events: none !important;
     }
   </style>
-  <script src="scripts/app.js" defer></script>
+  <script src="scripts/app.js?v=20261105e" defer></script>
   </head>
 
 <body translate="no" data-load="" data-click-animation="">
@@ -336,7 +349,7 @@
                                     class="header_nav-button-bg"></span></span></a></li>
                     <li class="header_nav-list-item"><a data-nav-link="" data-text="More" data-swup-preload=""
                             data-wf--header-button--variant="base" href="index4.html" aria-current="page"
-                            class="header_nav-button u-c1 w-inline-block w--current"><span class="header_nav-button-inner"><span
+                            class="header_nav-button u-c1 w-inline-block w--current is-active"><span class="header_nav-button-inner"><span
                                     class="header_nav-button-text">More</span><span
                                     class="header_nav-button-bg"></span></span></a></li>
                 </ul>

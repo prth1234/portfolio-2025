@@ -38,7 +38,7 @@
     <meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link id="main-css" rel="stylesheet" href="../styles/main.css?v=20261105c">
+    <link id="main-css" rel="stylesheet" href="../styles/main.css?v=20261105h">
     <style>
         :root {
             --z-index-preloader: 1100;
@@ -48,23 +48,28 @@
             display: block !important;
             width: 100% !important;
             line-height: 0 !important;
-            background-color: transparent !important;
-            margin-top: -65px !important;
-            margin-bottom: 0 !important;
+            background-color: #f9f4eb !important;
+            margin: 0 !important;
+            margin-top: -2px !important;
+            margin-bottom: -2px !important;
+            padding: 0 !important;
             position: relative !important;
-            z-index: 25 !important;
-            pointer-events: none !important;
-            overflow: visible !important;
+            z-index: 10 !important;
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+            overflow: hidden !important;
         }
 
         .curvy-transition-svg {
             display: block !important;
             width: 100% !important;
-            height: clamp(70px, 9vw, 130px) !important;
+            height: clamp(65px, 7.5vw, 115px) !important;
+            vertical-align: bottom !important;
         }
 
         .plan.u-theme-dark {
-            background-color: #000000 !important;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 120px, #000000 280px, #000000 100%) !important;
             padding-bottom: 0 !important;
         }
 
@@ -203,7 +208,7 @@
 
 
     </style>
-    <script src="scripts/app.js" defer></script>
+    <script src="scripts/app.js?v=20261105e" defer></script>
     </head>
 
 <body data-load="" data-click-animation="" translate="no">
@@ -246,7 +251,7 @@
                 <ul role="list" class="header_nav-list w-list-unstyled">
                     <li class="header_nav-list-item"><a data-nav-link="" data-text="About" data-swup-preload=""
                             data-wf--header-button--variant="base" href="index.html" aria-current="page"
-                            class="header_nav-button u-c1 w-inline-block w--current"><span
+                            class="header_nav-button u-c1 w-inline-block w--current is-active"><span
                                 class="header_nav-button-inner"><span class="header_nav-button-text">About</span><span
                                     class="header_nav-button-bg"></span></span></a></li>
                     <li class="header_nav-list-item"><a data-nav-link="" data-text="Experience" data-swup-preload=""
@@ -928,23 +933,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="plan_footer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"
-                                aria-hidden="true" class="icon">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M9 5H11V7H13V9H15V11H13V13H11V15H9V13H7V11H5V9H7V7H9V5Z" fill="currentColor">
-                                </path>
-                            </svg></div>
+                        <div class="plan_footer" style="display: none !important;"></div>
                     </div>
                 </div>
             </section>
-            <div class="curvy-transition-section" aria-hidden="true">
-                <svg viewBox="0 0 1440 90" fill="none" preserveAspectRatio="none" class="curvy-transition-svg" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0,0 L1440,0 L1440,45 C 1380,75 1320,15 1260,45 C 1200,75 1140,15 1080,45 C 1020,75 960,15 900,45 C 840,75 780,15 720,45 C 660,75 600,15 540,45 C 480,75 420,15 360,45 C 300,75 240,15 180,45 C 120,75 60,15 0,45 Z" fill="#000000"></path>
-                    <path d="M0,45 C 60,15 120,75 180,45 C 240,15 300,75 360,45 C 420,15 480,75 540,45 C 600,15 660,75 720,45 C 780,15 840,75 900,45 C 960,15 1020,75 1080,45 C 1140,15 1200,75 1260,45 C 1320,15 1380,75 1440,45" fill="none" stroke="#ffe32e" stroke-width="3" stroke-linecap="round"></path>
+            <div class="curvy-transition-section" aria-hidden="true" style="display: block !important; width: 100% !important; line-height: 0 !important; background-color: #f9f4eb !important; margin: 0 !important; margin-top: -2px !important; margin-bottom: -2px !important; padding: 0 !important; position: relative !important; z-index: 10 !important; border: none !important; outline: none !important; box-shadow: none !important; overflow: hidden !important;">
+                <svg viewBox="0 0 1440 90" fill="none" preserveAspectRatio="none" class="curvy-transition-svg" style="display: block !important; width: 100% !important; height: clamp(65px, 7.5vw, 115px) !important; margin: 0 !important; padding: 0 !important; vertical-align: bottom !important;" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Black fill above wave meeting .plan -->
+                    <path d="M0,0 L0,45 Q 60,80 120,45 T 240,45 T 360,45 T 480,45 T 600,45 T 720,45 T 840,45 T 960,45 T 1080,45 T 1200,45 T 1320,45 T 1440,45 L 1440,0 Z" fill="#000000"></path>
+                    <!-- Cream fill below wave seamlessly joining .service -->
+                    <path d="M0,95 L0,45 Q 60,80 120,45 T 240,45 T 360,45 T 480,45 T 600,45 T 720,45 T 840,45 T 960,45 T 1080,45 T 1200,45 T 1320,45 T 1440,45 L 1440,95 Z" fill="#f9f4eb"></path>
+                    <!-- Vibrant yellow wavy line tracing the boundary -->
+                    <path d="M0,45 Q 60,80 120,45 T 240,45 T 360,45 T 480,45 T 600,45 T 720,45 T 840,45 T 960,45 T 1080,45 T 1200,45 T 1320,45 T 1440,45" fill="none" stroke="#ffe32e" stroke-width="4.5" stroke-linecap="round"></path>
                 </svg>
             </div>
             <section data-service-animation="" data-scroll="" data-scroll-offset="100%, 100%"
-                data-scroll-css-progress="" class="service">
+                data-scroll-css-progress="" class="service" style="background-color: #f9f4eb !important; padding-top: var(--size-80) !important; margin-top: -1px !important;">
                 <div data-scroll-repeat="" data-scroll="" data-scroll-offset="5%, 75%"
                     data-scroll-event-progress="progressService" data-scroll-call="serviceInView"
                     class="service_container u-container">
