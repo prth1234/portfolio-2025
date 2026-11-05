@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Parth's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function() {
+      var p = window.location.pathname;
+      var repo = '/portfolio-2025';
+      var clean = p.startsWith(repo) ? p.slice(repo.length) : p;
+      if (!clean.startsWith('/main/')) {
+        if (clean === '' || clean === '/') {
+          clean = '/index.html';
+        }
+        var target = (p.startsWith(repo) ? repo : '') + '/main' + clean + window.location.search + window.location.hash;
+        window.location.replace(target);
+      }
+    })();
+  </script>
+</head>
+<body style="background-color: #f9f4eb; font-family: -apple-system, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; color: #000;">
+  <p>Page not found. Redirecting to <a href="/portfolio-2025/main/index.html" style="color: #000; font-weight: 600;">Parth's Portfolio</a>...</p>
+</body>
+</html>
