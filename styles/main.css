@@ -150,23 +150,29 @@ body[data-page="index3"] {
   color: #000;
 }
 
-/* Curvy transition divider between dark plan section and cream section */
-.plan_curvy-divider {
-  grid-area: 1/1;
-  align-self: end;
-  width: 100%;
-  line-height: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 2;
-  margin-bottom: calc(var(--size-80) * -1 - 1px);
-  transform: translateY(1px);
+/* Solid deep black background for plan section */
+.plan.u-theme-dark {
+  background-color: #000000 !important;
+  padding-bottom: 0 !important;
 }
 
-.plan_curvy-divider svg {
+/* Curvy wavy transition divider between black plan section and cream service section */
+.curvy-transition-section {
   display: block;
   width: 100%;
-  height: clamp(60px, 8vw, 130px);
+  line-height: 0;
+  background-color: var(--ci-cream, #f9f4eb);
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+  margin-top: -2px;
+}
+
+.curvy-transition-svg {
+  display: block;
+  width: 100%;
+  height: clamp(50px, 6vw, 95px);
+  pointer-events: none;
 }
 
 /* Wavy yellow curved underline for opened/expanded accordion headings */
@@ -194,6 +200,13 @@ body[data-page="index3"] {
 .form_item.is-message .form_input {
   text-transform: none;
 }
+
+/* Deep linking and scroll margin for accordions and hero sections */
+.accordion_details,
+.hero-contact {
+  scroll-margin-top: calc(var(--header-height, 4rem) + 1.5rem);
+}
+
 
 
 

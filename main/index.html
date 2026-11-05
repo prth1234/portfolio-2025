@@ -38,10 +38,34 @@
     <meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link id="main-css" rel="stylesheet" href="../styles/main.css">
+    <link id="main-css" rel="stylesheet" href="../styles/main.css?v=20261105c">
     <style>
         :root {
             --z-index-preloader: 1100;
+        }
+
+        .curvy-transition-section {
+            display: block !important;
+            width: 100% !important;
+            line-height: 0 !important;
+            background-color: transparent !important;
+            margin-top: -65px !important;
+            margin-bottom: 0 !important;
+            position: relative !important;
+            z-index: 25 !important;
+            pointer-events: none !important;
+            overflow: visible !important;
+        }
+
+        .curvy-transition-svg {
+            display: block !important;
+            width: 100% !important;
+            height: clamp(70px, 9vw, 130px) !important;
+        }
+
+        .plan.u-theme-dark {
+            background-color: #000000 !important;
+            padding-bottom: 0 !important;
         }
 
         html:not(.is-ready) {
@@ -912,14 +936,15 @@
                             </svg></div>
                     </div>
                 </div>
-                <div class="plan_curvy-divider" aria-hidden="true">
-                    <svg viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0,120 L1440,120 L1440,50 C1280,105 1120,20 960,65 C800,110 640,15 480,70 C320,115 160,25 0,60 Z" fill="#f9f4eb"></path>
-                    </svg>
-                </div>
             </section>
+            <div class="curvy-transition-section" aria-hidden="true">
+                <svg viewBox="0 0 1440 90" fill="none" preserveAspectRatio="none" class="curvy-transition-svg" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0,0 L1440,0 L1440,45 C 1380,75 1320,15 1260,45 C 1200,75 1140,15 1080,45 C 1020,75 960,15 900,45 C 840,75 780,15 720,45 C 660,75 600,15 540,45 C 480,75 420,15 360,45 C 300,75 240,15 180,45 C 120,75 60,15 0,45 Z" fill="#000000"></path>
+                    <path d="M0,45 C 60,15 120,75 180,45 C 240,15 300,75 360,45 C 420,15 480,75 540,45 C 600,15 660,75 720,45 C 780,15 840,75 900,45 C 960,15 1020,75 1080,45 C 1140,15 1200,75 1260,45 C 1320,15 1380,75 1440,45" fill="none" stroke="#ffe32e" stroke-width="3" stroke-linecap="round"></path>
+                </svg>
+            </div>
             <section data-service-animation="" data-scroll="" data-scroll-offset="100%, 100%"
-                data-scroll-css-progress="" class="service" style="margin-top: -250px;">
+                data-scroll-css-progress="" class="service">
                 <div data-scroll-repeat="" data-scroll="" data-scroll-offset="5%, 75%"
                     data-scroll-event-progress="progressService" data-scroll-call="serviceInView"
                     class="service_container u-container">
@@ -1346,16 +1371,16 @@
                         <div class="footer_sitemap-right">
                             <nav class="footer_links">
                                 <ul role="list" class="footer_links-list">
-                                    <li class="footer_links-item"><a href="" aria-current="page"
-                                            class="footer_link u-c1 w-inline-block w--current"><span
+                                    <li class="footer_links-item"><a href="index4.html#education"
+                                            class="footer_link u-c1 w-inline-block"><span
                                                 class="footer_link-text">Education</span></a></li>
-                                    <li class="footer_links-item"><a href="index4.html"
+                                    <li class="footer_links-item"><a href="index4.html#skills"
                                             class="footer_link u-c1 w-inline-block"><span
                                                 class="footer_link-text">Skills</span></a></li>
-                                    <li class="footer_links-item"><a href="index4.html"
+                                    <li class="footer_links-item"><a href="index4.html#email"
                                             class="footer_link u-c1 w-inline-block"><span
                                                 class="footer_link-text">Email</span></a></li>
-                                    <li class="footer_links-item"><a href="index4.html"
+                                    <li class="footer_links-item"><a href="index4.html#achievements"
                                             class="footer_link u-c1 w-inline-block"><span
                                                 class="footer_link-text">Achievements</span></a></li>
                                 </ul>
