@@ -38,7 +38,7 @@
     <meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link id="main-css" rel="stylesheet" href="../styles/main.css?v=20261105h">
+    <link id="main-css" rel="stylesheet" href="../styles/main.css?v=20261105i">
     <style>
         :root {
             --z-index-preloader: 1100;
@@ -162,49 +162,64 @@
         .site-scrollbar .preloader {
             display: none;
         }
+        /* From Uiverse.io by vinodjangid07 */ 
+        .button,
         .button1234 {
-  width: 110px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  background-color: rgb(161, 255, 20);
-  border-radius: 30px;
-  color: rgb(19, 19, 19);
-  font-weight: 600;
-  border: none;
-  position: relative;
-  cursor: pointer;
-  transition-duration: .2s;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
-  padding-left: 8px;
-  transition-duration: .5s;
-}
+            width: 110px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            background-color: rgb(161, 255, 20);
+            border-radius: 30px;
+            color: rgb(19, 19, 19);
+            font-weight: 600;
+            border: none;
+            position: relative;
+            cursor: pointer;
+            box-shadow: none !important;
+            padding-left: 8px;
+            transition-duration: .5s;
+            font-family: inherit;
+            font-size: 15px;
+            line-height: 1;
+            text-decoration: none;
+            outline: none;
+            margin-top: var(--size-24, 1.5rem);
+        }
 
-.svgIcon {
-  height: 25px;
-  transition-duration: 1.5s;
-}
+        .svgIcon {
+            height: 25px;
+            width: 25px;
+            display: block;
+            flex-shrink: 0;
+            transform-origin: center;
+            transition-duration: 1.5s;
+        }
 
-.bell path {
-  fill: rgb(19, 19, 19);
-}
+        .bell path,
+        .svgIcon path {
+            fill: rgb(19, 19, 19);
+        }
 
-.button:hover {
-  background-color: rgb(192, 255, 20);
-  transition-duration: .5s;
-}
+        .button:hover,
+        .button1234:hover {
+            background-color: rgb(192, 255, 20);
+            transition-duration: .5s;
+        }
 
-.button:active {
-  transform: scale(0.97);
-  transition-duration: .2s;
-}
+        .button:active,
+        .button1234:active {
+            transform: scale(0.97);
+            transition-duration: .2s;
+        }
 
-.button:hover .svgIcon {
-  transform: rotate(250deg);
-  transition-duration: 1.5s;
-}
+        .button:hover .svgIcon,
+        .button1234:hover .svgIcon {
+            transform: rotate(250deg);
+            transition-duration: 1.5s;
+        }
 
 
     </style>
@@ -1239,10 +1254,12 @@
                                 class="next-page_title-outer"><span
                                     class="next-page_title-span u-h1">Singh</span></span></div>
 
-                         <button class="button1234">
-   <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
-  Explore
-</button>
+                        <button class="button" type="button" onclick="window.location.href='index2.html'">
+                            <svg class="svgIcon" viewBox="0 0 512 512" height="25" width="25" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="rgb(19, 19, 19)" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path>
+                            </svg>
+                            Explore
+                        </button>
 
                         <div class="next-page_preview">
                             <div class="next-page_preview-text-outer"><span
@@ -1258,7 +1275,7 @@
                                     class="next-page_preview-text is-gray u-f2">04</span><span
                                     class="next-page_preview-text u-f2">Run</span></div>
                         </div>
-                        <div class="next-page_action"><a data-button-hover="" href="/index2.html"
+                        <div class="next-page_action"><a data-button-hover="" href="index2.html"
                                 class="button-default is-yellow w-inline-block"><span
                                     class="button-default_button-container"><svg xmlns="http://www.w3.org/2000/svg"
                                         width="100%" viewBox="0 0 20 20" fill="none" aria-hidden="true"
@@ -1294,7 +1311,7 @@
                                 </path>
                             </svg>
                         </div>
-                    </div><a tabindex="-1" data-next-page-link="" data-cursor="read" href="/index4.html"
+                    </div><a tabindex="-1" data-next-page-link="" data-cursor="read" href="index4.html"
                         class="next-page_link w-inline-block"><span class="next-page_link-text u-screen-reader-text">Go to</span></a>
                 </div>
             </section>
@@ -1361,7 +1378,7 @@
                                 </div>
                             </div>
                             <div class="footer_next-page-action"><a data-button-hover="" data-text="Prozess"
-                                    href="/index2.html" class="button-default is-yellow w-inline-block"><span
+                                    href="index2.html" class="button-default is-yellow w-inline-block"><span
                                         class="button-default_button-container"><svg xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20" fill="none" aria-hidden="true" class="icon is-small"
                                             STYLE="--index: 0;">

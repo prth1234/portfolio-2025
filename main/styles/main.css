@@ -231,6 +231,66 @@ body[data-page="index3"] {
   scroll-margin-top: calc(var(--header-height, 4rem) + 1.5rem);
 }
 
+/* From Uiverse.io by vinodjangid07 - Explore Button */
+.button,
+.button1234 {
+  width: 110px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: rgb(161, 255, 20);
+  border-radius: 30px;
+  color: rgb(19, 19, 19);
+  font-weight: 600;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  box-shadow: none !important;
+  padding-left: 8px;
+  transition-duration: .5s;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1;
+  text-decoration: none;
+  outline: none;
+  margin-top: var(--size-24, 1.5rem);
+}
+
+.svgIcon {
+  height: 25px;
+  width: 25px;
+  display: block;
+  flex-shrink: 0;
+  transform-origin: center;
+  transition-duration: 1.5s;
+}
+
+.bell path,
+.svgIcon path {
+  fill: rgb(19, 19, 19);
+}
+
+.button:hover,
+.button1234:hover {
+  background-color: rgb(192, 255, 20);
+  transition-duration: .5s;
+}
+
+.button:active,
+.button1234:active {
+  transform: scale(0.97);
+  transition-duration: .2s;
+}
+
+.button:hover .svgIcon,
+.button1234:hover .svgIcon {
+  transform: rotate(250deg);
+  transition-duration: 1.5s;
+}
+
+
 
 
 
