@@ -1,12 +1,38 @@
 {
   "rewrites": [
-    { "source": "/api/:path*", "destination": "/api/:path*" },
-    { "source": "/", "destination": "/main/index.html" },
-    { "source": "/index.html", "destination": "/main/index.html" },
-    { "source": "/index2.html", "destination": "/main/index2.html" },
-    { "source": "/index3.html", "destination": "/main/index3.html" },
-    { "source": "/index4.html", "destination": "/main/index4.html" },
-    { "source": "/scripts/:path*", "destination": "/main/scripts/:path*" },
-    { "source": "/experience-data.js", "destination": "/main/experience-data.js" }
-  ]
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    },
+    {
+      "source": "/",
+      "destination": "/main/index.html"
+    },
+    {
+      "source": "/index.html",
+      "destination": "/main/index.html"
+    },
+    {
+      "source": "/index2.html",
+      "destination": "/main/index2.html"
+    },
+    {
+      "source": "/index3.html",
+      "destination": "/main/index3.html"
+    },
+    {
+      "source": "/index4.html",
+      "destination": "/main/index4.html"
+    },
+    {
+      "source": "/scripts/:path*",
+      "destination": "/main/scripts/:path*"
+    },
+    {
+      "source": "/experience-data.js",
+      "destination": "/main/experience-data.js"
+    }
+  ],
+  "cleanUrls": false,
+  "trailingSlash": false
 }
