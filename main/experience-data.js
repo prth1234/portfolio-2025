@@ -20,7 +20,9 @@ window.EXPERIENCE_DATA = {
   experiences: [
     {
       id: "phase01",
-      role: "SDE | Flexera GCC | Aug 2024 - Present",
+      role: "Software Engineer",
+      company: "Flexera GCC",
+      period: "Aug 2024 - Present",
       learnMoreUrl: "https://drive.google.com/file/d/1mye4Ah8pFF9ACPcuk2JnVS_l2otH-faC/view?usp=sharing",
       points: [
         {
@@ -43,7 +45,9 @@ window.EXPERIENCE_DATA = {
     },
     {
       id: "phase02",
-      role: "SDE Intern | Finvolv | Jan 2024 - Aug 2024",
+      role: "SDE Intern",
+      company: "Finvolv",
+      period: "Jan 2024 - Aug 2024",
       learnMoreUrl: "https://drive.google.com/file/d/1mye4Ah8pFF9ACPcuk2JnVS_l2otH-faC/view?usp=sharing",
       points: [
         {
@@ -66,7 +70,9 @@ window.EXPERIENCE_DATA = {
     },
     {
       id: "phase03",
-      role: "ML Intern | Irdeto | Jun 2023 - Aug 2023",
+      role: "ML Intern",
+      company: "Irdeto",
+      period: "Jun 2023 - Aug 2023",
       learnMoreUrl: "https://drive.google.com/file/d/1mye4Ah8pFF9ACPcuk2JnVS_l2otH-faC/view?usp=sharing",
       points: [
         {
@@ -89,7 +95,9 @@ window.EXPERIENCE_DATA = {
     },
     {
       id: "phase04",
-      role: "Data Science Intern | To The New | Jun 2022 - Aug 2022",
+      role: "Data Science Intern",
+      company: "To The New",
+      period: "Jun 2022 - Aug 2022",
       learnMoreUrl: "https://drive.google.com/file/d/1mye4Ah8pFF9ACPcuk2JnVS_l2otH-faC/view?usp=sharing",
       points: [
         {

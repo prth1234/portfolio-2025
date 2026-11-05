@@ -292,6 +292,70 @@ body[data-page="index3"] {
   transition-duration: 1.5s;
 }
 
+/* Work Experience Role & Metadata Header */
+.process_content-header {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.25rem;
+}
+
+.hero-process_role-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0;
+  padding-top: 0.5rem;
+}
+
+.hero-process_role-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: var(--font-family-narrow);
+  font-size: var(--font-size-h3);
+  font-weight: 600;
+  color: var(--ci-black, #000);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.hero-process_role-title .role-star {
+  font-size: 0.8em;
+  color: currentColor;
+  flex-shrink: 0;
+  display: inline-block;
+  transform: translateY(-1px);
+}
+
+.hero-process_role-meta {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  font-family: var(--font-family-mono, monospace);
+  font-size: clamp(0.75rem, 0.7rem + 0.25vi, 0.85rem);
+  color: rgba(0, 0, 0, 0.65);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero-process_role-meta .role-company {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.hero-process_role-meta .role-star-sep {
+  font-size: 0.65rem;
+  color: rgba(0, 0, 0, 0.4);
+  display: inline-block;
+}
+
+.hero-process_role-meta .role-period {
+  font-variant-numeric: tabular-nums;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+
 
 
 
