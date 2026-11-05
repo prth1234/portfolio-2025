@@ -1,0 +1,91 @@
+{
+  "tagline": "Innovative Software Engineer with 2.5+ years of experience architecting future-ready cloud platforms, high-scale distributed systems, and agentic AI solutions—redefining cost efficiency, reliability, and scale for modern enterprises.",
+  "tag": "Software Engineer",
+  "experiences": [
+    {
+      "id": "phase01",
+      "role": "SWE | Flexera GCC | Aug 2024 - Present",
+      "learnMoreUrl": "https://drive.google.com/file/d/1mye4Ah8pFF9ACPcuk2JnVS_l2otH-faC/view?usp=sharing",
+      "points": [
+        {
+          "title": "Hybrid Cloud FinOps Platform",
+          "detail": "Architected and developed core microservices from the ground up for the Hybrid Cloud Cost Optimization (FinOps) platform, analyzing, visualizing, and optimizing billions of dollars in multi-cloud spend for Fortune 500 enterprises with ~30% average cost savings."
+        },
+        {
+          "title": "Multi-Cloud Ingestion & Lakehouse ETL",
+          "detail": "Built a high-throughput multi-cloud bill parser across AWS, Azure, and GCP; orchestrated robust ETL data pipelines to ingest, normalize, and standardize massive spend telemetry into a central datalakehouse."
+        },
+        {
+          "title": "gRPC & REST Microservices APIs",
+          "detail": "Developed low-latency gRPC and REST APIs to transmit processed data to frontend clients, empowering enterprise customers with clear visibility, real-time tracking, and actionable insights into their cloud expenditures."
+        },
+        {
+          "title": "AI Anomaly Detection & DevOps SLA",
+          "detail": "Engineered AI-driven pattern recognition and anomaly detection in multi-cloud spend for proactive savings; established automated CI/CD pipelines accelerating deployments by 25% while maintaining a 100% P1/P2 resolution rate under a 15-minute SLA."
+        }
+      ]
+    },
+    {
+      "id": "phase02",
+      "role": "SDE Intern | Finvolv | Jan 2024 - Aug 2024",
+      "learnMoreUrl": "https://drive.google.com/file/d/1mye4Ah8pFF9ACPcuk2JnVS_l2otH-faC/view?usp=sharing",
+      "points": [
+        {
+          "title": "High-Performance API Engineering",
+          "detail": "Developed an advanced IAM system for complex financial hierarchies and authorization flows, delivering secure, compliant, and seamless role-based access across the platform."
+        },
+        {
+          "title": "Advanced IAM Architecture",
+          "detail": "Built a custom API layer over Keycloak to address strict financial security needs, integrating multi-level authorization, fraud detection, and audit trails—boosting tokenization efficiency and system security by 45%."
+        },
+        {
+          "title": "Optimized Core Financial APIs & Data Handling",
+          "detail": "Developed and optimized high-performance REST APIs for critical modules, leveraging caching, pagination, message queuing, and database tuning to deliver 30% faster response times and improved scalability."
+        },
+        {
+          "title": "Secure Document & Workflow Management",
+          "detail": "Built an encrypted Document Management System on AWS S3 with end-to-end encryption, and streamlined event-driven integration between LOS and LMS to accelerate credit evaluation workflows."
+        }
+      ]
+    },
+    {
+      "id": "phase03",
+      "role": "ML Intern | Irdeto | Jun 2023 - Aug 2023",
+      "learnMoreUrl": "https://drive.google.com/file/d/1mye4Ah8pFF9ACPcuk2JnVS_l2otH-faC/view?usp=sharing",
+      "points": [
+        {
+          "title": "AI-Driven Content Discovery & Engagement",
+          "detail": "Designed and implemented real-time metadata enrichment and automated indexing pipelines, significantly improving OTT platform discoverability and user engagement through intelligent content tagging and categorization."
+        },
+        {
+          "title": "Computer Vision & NLP Integration for Media Intelligence",
+          "detail": "Developed advanced workflows combining CNN-based object recognition and BERT-based NLP to generate feature maps for image processing, enabling iterative model optimization and improving content analysis accuracy over time."
+        },
+        {
+          "title": "Real-Time Event Recognition & Personalization",
+          "detail": "Built on-the-fly event detection and dynamic content tagging systems for video streams, boosting metadata design and searchability by 50%+, while enhancing personalized recommendations, targeted advertising, and real-time analytics."
+        }
+      ]
+    },
+    {
+      "id": "phase04",
+      "role": "Data Science Intern | To The New | Jun 2022 - Aug 2022",
+      "learnMoreUrl": "https://drive.google.com/file/d/1mye4Ah8pFF9ACPcuk2JnVS_l2otH-faC/view?usp=sharing",
+      "points": [
+        {
+          "title": "Strategic NLP for Marketing & Product Optimization",
+          "detail": "Developed an NLP-powered sentiment analysis pipeline to extract actionable insights from time series and unstructured data, enabling targeted marketing campaigns, informed product strategy, and data visualization through advanced interactive dashboards."
+        },
+        {
+          "title": "Scalable Big Data Engineering & Optimization",
+          "detail": "Designed high-performance workflows to process and analyze 2PB of text data, implementing advanced preprocessing (transformer embeddings, outlier detection, adversarial augmentation) to enhance model accuracy, data quality, and analytical depth."
+        },
+        {
+          "title": "Automated Market Intelligence & Real-Time Dashboards",
+          "detail": "Built automated reporting systems and real-time analytics dashboards to deliver market trends, customer behavior insights, and performance metrics—accelerating decision-making and improving business responsiveness to market shifts."
+        }
+      ]
+    }
+  ]
+}
+
