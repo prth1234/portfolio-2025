@@ -1,4 +1,4 @@
-const f={title:"Components/Wavy Divider",tags:["autodocs"],argTypes:{topColor:{control:"color",defaultValue:"#000000"},bottomColor:{control:"color",defaultValue:"#f9f4eb"},strokeColor:{control:"color",defaultValue:"#ffe32e"},strokeWidth:{control:{type:"number",min:1,max:10,step:.5},defaultValue:4.5}}},e=({topColor:t="#000000",bottomColor:r="#f9f4eb",strokeColor:T="#ffe32e",strokeWidth:v=4.5})=>`
+/* empty css                     */const c={title:"Components/Wavy Divider",tags:["autodocs"],argTypes:{topColor:{control:"color",defaultValue:"#000000"},bottomColor:{control:"color",defaultValue:"#f9f4eb"},strokeColor:{control:"color",defaultValue:"#ffe32e"},strokeWidth:{control:{type:"number",min:1,max:10,step:.5},defaultValue:4.5}}},e=({topColor:t="#000000",bottomColor:r="#f9f4eb",strokeColor:T="#ffe32e",strokeWidth:v=4.5})=>`
   <div style="width: 100%; overflow: hidden;">
     <div style="background-color: ${t}; color: #fff; padding: 3rem 2rem; text-align: center; font-family: var(--sq-font-family-narrow); font-size: 2rem;">
       Upper Section (Dark Pitch)
@@ -81,4 +81,4 @@ const f={title:"Components/Wavy Divider",tags:["autodocs"],argTypes:{topColor:{c
       Lower Section (Dark Pitch)
     </div>
   </div>
-\``,...(s=(d=o.parameters)==null?void 0:d.docs)==null?void 0:s.source}}};const c=["Default","Inverted"];export{e as Default,o as Inverted,c as __namedExportsOrder,f as default};
+\``,...(s=(d=o.parameters)==null?void 0:d.docs)==null?void 0:s.source}}};const p=["Default","Inverted"];export{e as Default,o as Inverted,p as __namedExportsOrder,c as default};

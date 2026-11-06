@@ -4,116 +4,250 @@ import { Meta } from '@storybook/blocks';
 
 <div style={{
   background: '#f9f4eb',
-  padding: '3rem 2.5rem',
+  padding: '2.5rem 2rem',
   borderRadius: '8px',
-  border: '1px solid rgba(0,0,0,0.1)',
-  color: '#000',
+  border: '1px solid rgba(0,0,0,0.08)',
+  color: '#111111',
   marginBottom: '2.5rem',
-  fontFamily: 'var(--sq-font-family-normal, sans-serif)'
+  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
 }}>
   <div style={{
     display: 'flex',
     gap: '0.5rem',
     alignItems: 'center',
-    marginBottom: '1rem'
+    marginBottom: '0.75rem'
   }}>
-    <span className="sq-badge sq-badge--promoted">V1.0.0 ✦</span>
-    <span className="sq-badge sq-badge--faint">EDITORIAL & RETRO SYSTEM</span>
+    <span className="sq-badge sq-badge--promoted" style={{ fontSize: '0.65rem', padding: '2px 8px' }}>V1.0.0 ✦</span>
+    <span className="sq-badge sq-badge--faint" style={{ fontSize: '0.65rem', padding: '2px 8px' }}>EDITORIAL & RETRO SYSTEM</span>
   </div>
 
-  <h1 className="u-h1" style={{
-    fontSize: 'clamp(2.5rem, 1.5rem + 4vi, 5rem)',
-    lineHeight: '0.92',
-    margin: '0.5rem 0 1.25rem 0'
+  <h1 style={{
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+    fontSize: 'clamp(2rem, 1.2rem + 2.5vi, 3.25rem)',
+    fontWeight: '700',
+    letterSpacing: '-0.02em',
+    lineHeight: '1.1',
+    margin: '0.5rem 0 1rem 0',
+    color: '#000000'
   }}>
-    SQUIGGLE <span className="sq-wavy-underline">DESIGN SYSTEM</span>
+    Squiggle <span className="sq-wavy-underline">UI Design System</span>
   </h1>
 
-  <p className="u-p1" style={{
-    fontSize: '1.2rem',
-    maxWidth: '720px',
-    lineHeight: '1.5',
-    color: 'rgba(0,0,0,0.85)',
-    margin: '0 0 2rem 0'
+  <p style={{
+    fontSize: '1rem',
+    maxWidth: '680px',
+    lineHeight: '1.55',
+    color: 'rgba(0,0,0,0.75)',
+    margin: '0 0 1.5rem 0'
   }}>
     A production-grade, framework-agnostic design system reverse-engineered with 100% exact fidelity from the high-contrast editorial portfolio. Built for reusable, themeable consistency across creative projects.
   </p>
 
-  <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
-    <a href="./?path=/story/page-patterns-templates--experience-page-template" className="sq-button sq-button--primary" style={{ textDecoration: 'none' }}>
-      <span>VIEW EXPERIENCE TEMPLATE</span>
-      <svg className="sq-icon--arrow" viewBox="0 0 20 20" fill="currentColor">
+  <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', alignItems: 'center' }}>
+    <a href="./?path=/story/page-patterns-templates--experience-page-template"
+       className="sq-button sq-button--primary sq-button--small"
+       style={{
+         textDecoration: 'none',
+         backgroundColor: '#ffe32e',
+         color: '#000000',
+         border: '1px solid rgba(0,0,0,0.15)'
+       }}>
+      <span style={{ color: '#000000', fontWeight: '700' }}>VIEW EXPERIENCE TEMPLATE</span>
+      <svg className="sq-icon--arrow" viewBox="0 0 20 20" fill="#000000" style={{ color: '#000000', width: '13px', height: '13px' }}>
         <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
       </svg>
     </a>
-    <a href="./?path=/story/components-wavy-underline--default" className="sq-button sq-button--outline" style={{ textDecoration: 'none' }}>
-      <span>EXPLORE WAVY UNDERLINE</span>
+    <a href="./?path=/story/components-wavy-underline--default"
+       className="sq-button sq-button--outline sq-button--small"
+       style={{ textDecoration: 'none', color: '#000000' }}>
+      <span style={{ color: '#000000', fontWeight: '600' }}>EXPLORE WAVY UNDERLINE</span>
     </a>
   </div>
 </div>
 
 ---
 
-## Visual Identity & Core Motifs
+<h2 style={{
+  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+  fontSize: '1.5rem',
+  fontWeight: '600',
+  letterSpacing: '-0.01em',
+  margin: '2rem 0 1.25rem 0',
+  color: '#000000'
+}}>
+  Visual Identity & Core Motifs
+</h2>
 
 <div style={{
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
   gap: '1.5rem',
-  margin: '2rem 0'
+  margin: '1.5rem 0 2.5rem'
 }}>
-  <div style={{
-    border: '1px solid rgba(0,0,0,0.12)',
-    borderRadius: '4px',
-    padding: '1.5rem',
-    background: '#ffffff'
-  }}>
-    <div style={{ height: '8px', background: '#ffe32e', width: '48px', borderRadius: '2px', marginBottom: '1rem' }}></div>
-    <h3 style={{ fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.4rem', margin: '0 0 0.5rem 0' }}>
-      Signature Yellow Accent
-    </h3>
-    <p style={{ fontSize: '0.95rem', lineHeight: '1.5', color: 'rgba(0,0,0,0.7)', margin: 0 }}>
-      Vibrant electric yellow (<code>#ffe32e</code>) applied to the hand-drawn wavy underline, active milestone nodes, form submit CTA, and high-priority promoted tags.
-    </p>
+  {/* Card 1: Signature Yellow Accent */}
+  <div className="sq-project-card" style={{ maxWidth: '100%', minHeight: '340px', backgroundColor: '#000000', color: '#ffffff' }}>
+    <div className="sq-project-card__corner sq-project-card__corner--tl">
+      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    </div>
+    <div className="sq-project-card__corner sq-project-card__corner--tr">
+      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    </div>
+    <div className="sq-project-card__corner sq-project-card__corner--bl">
+      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    </div>
+    <div className="sq-project-card__corner sq-project-card__corner--br">
+      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    </div>
+
+    <div className="sq-project-card__header">
+      <span className="sq-project-card__tag" style={{ color: '#ffe32e', background: 'rgba(255, 255, 255, 0.1)' }}>Core Accent</span>
+      <span style={{ fontFamily: 'var(--sq-font-family-mono)', fontSize: '0.75rem', color: '#ffe32e' }}>01 ✦</span>
+    </div>
+
+    <div>
+      <h3 style={{ color: '#ffffff', fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.35rem', fontWeight: 600, margin: '0.5rem 0 0.75rem 0' }}>
+        Signature Yellow Accent
+      </h3>
+      <p style={{ color: '#e0dbd1', fontSize: '0.86rem', lineHeight: '1.6', margin: 0 }}>
+        Vibrant electric yellow (<code style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: '#ffe32e', padding: '2px 6px', borderRadius: '3px', border: '1px solid rgba(255, 227, 46, 0.3)' }}>#ffe32e</code>) applied to the hand-drawn wavy underline, active milestone nodes, form submit CTAs, and interactive hover star indicators.
+      </p>
+    </div>
+
+    <div className="sq-project-card__tags" style={{ marginTop: '1.25rem' }}>
+      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>Tokens</span>
+      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>#ffe32e</span>
+      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>Interactive</span>
+    </div>
   </div>
 
-  <div style={{
-    border: '1px solid rgba(0,0,0,0.12)',
-    borderRadius: '4px',
-    padding: '1.5rem',
-    background: '#ffffff'
-  }}>
-    <div style={{ height: '8px', background: '#000000', width: '48px', borderRadius: '2px', marginBottom: '1rem' }}></div>
-    <h3 style={{ fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.4rem', margin: '0 0 0.5rem 0' }}>
-      Editorial Narrow Typography
-    </h3>
-    <p style={{ fontSize: '0.95rem', lineHeight: '1.5', color: 'rgba(0,0,0,0.7)', margin: 0 }}>
-      Bold, condensed narrow display headers (<code>font-narrow-semibold</code>) paired with monospace technical tracking (<code>font-mono-medium</code>) and neutral body text.
-    </p>
+  {/* Card 2: Editorial Typography */}
+  <div className="sq-project-card" style={{ maxWidth: '100%', minHeight: '340px', backgroundColor: '#000000', color: '#ffffff' }}>
+    <div className="sq-project-card__corner sq-project-card__corner--tl">
+      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    </div>
+    <div className="sq-project-card__corner sq-project-card__corner--tr">
+      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    </div>
+    <div className="sq-project-card__corner sq-project-card__corner--bl">
+      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    </div>
+    <div className="sq-project-card__corner sq-project-card__corner--br">
+      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    </div>
+
+    <div className="sq-project-card__header">
+      <span className="sq-project-card__tag" style={{ color: '#ffe32e', background: 'rgba(255, 255, 255, 0.1)' }}>Type System</span>
+      <span style={{ fontFamily: 'var(--sq-font-family-mono)', fontSize: '0.75rem', color: '#ffe32e' }}>02 ✦</span>
+    </div>
+
+    <div>
+      <h3 style={{ color: '#ffffff', fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.35rem', fontWeight: 600, margin: '0.5rem 0 0.75rem 0' }}>
+        Editorial Typography
+      </h3>
+      <p style={{ color: '#e0dbd1', fontSize: '0.86rem', lineHeight: '1.6', margin: 0 }}>
+        Bold, condensed display headers paired with monospace technical tracking (<code style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: '#ffe32e', padding: '2px 6px', borderRadius: '3px', border: '1px solid rgba(255, 227, 46, 0.3)' }}>font-mono-medium</code>) and neutral body text across fluid clamp scales.
+      </p>
+    </div>
+
+    <div className="sq-project-card__tags" style={{ marginTop: '1.25rem' }}>
+      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>Mono</span>
+      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>Scales</span>
+      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>Fluid Clamp</span>
+    </div>
   </div>
 
-  <div style={{
-    border: '1px solid rgba(0,0,0,0.12)',
-    borderRadius: '4px',
-    padding: '1.5rem',
-    background: '#ffffff'
-  }}>
-    <div style={{ height: '8px', background: '#f0ece5', width: '48px', borderRadius: '2px', marginBottom: '1rem' }}></div>
-    <h3 style={{ fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.4rem', margin: '0 0 0.5rem 0' }}>
-      Retro Pixel Accents
-    </h3>
-    <p style={{ fontSize: '0.95rem', lineHeight: '1.5', color: 'rgba(0,0,0,0.7)', margin: 0 }}>
-      Subtle 2px micro-radii, geometric corner trims (<code>93x93</code> SVG paths), signal indicator bars (<code>III</code>), and 4-box spinning windmill loaders.
-    </p>
+  {/* Card 3: Retro Pixel Accents */}
+  <div className="sq-project-card" style={{ maxWidth: '100%', minHeight: '340px', backgroundColor: '#000000', color: '#ffffff' }}>
+    <div className="sq-project-card__corner sq-project-card__corner--tl">
+      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    </div>
+    <div className="sq-project-card__corner sq-project-card__corner--tr">
+      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    </div>
+    <div className="sq-project-card__corner sq-project-card__corner--bl">
+      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    </div>
+    <div className="sq-project-card__corner sq-project-card__corner--br">
+      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    </div>
+
+    <div className="sq-project-card__header">
+      <span className="sq-project-card__tag" style={{ color: '#ffe32e', background: 'rgba(255, 255, 255, 0.1)' }}>Pixel Craft</span>
+      <span style={{ fontFamily: 'var(--sq-font-family-mono)', fontSize: '0.75rem', color: '#ffe32e' }}>03 ✦</span>
+    </div>
+
+    <div>
+      <h3 style={{ color: '#ffffff', fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.35rem', fontWeight: 600, margin: '0.5rem 0 0.75rem 0' }}>
+        Retro Pixel Accents
+      </h3>
+      <p style={{ color: '#e0dbd1', fontSize: '0.86rem', lineHeight: '1.6', margin: 0 }}>
+        Subtle 2px micro-radii, geometric corner bracket trims (<code style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: '#ffe32e', padding: '2px 6px', borderRadius: '3px', border: '1px solid rgba(255, 227, 46, 0.3)' }}>93x93</code> SVG paths), signal indicator bars (<code style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: '#ffe32e', padding: '2px 6px', borderRadius: '3px', border: '1px solid rgba(255, 227, 46, 0.3)' }}>III</code>), and radial click spark bursts.
+      </p>
+    </div>
+
+    <div className="sq-project-card__tags" style={{ marginTop: '1.25rem' }}>
+      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>Brackets</span>
+      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>Particles</span>
+      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>Sparks</span>
+    </div>
   </div>
 </div>
 
 ---
 
-## Component Architecture
+<h2 style={{
+  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+  fontSize: '1.5rem',
+  fontWeight: '600',
+  letterSpacing: '-0.01em',
+  margin: '2rem 0 1rem 0',
+  color: '#000000'
+}}>
+  Component Architecture
+</h2>
 
-- `tokens/`: CSS custom properties (`tokens.css`) & machine-readable W3C token definitions (`tokens.json`).
-- `styles/`: Base CSS reset, typography scale utilities, light/dark themes, and icons.
-- `components/`: 16 production-grade UI components with exact CSS, isolated stories, and autodocs.
-- `foundations/`: Interactive token catalogs for Colors, Typography, Spacing, Motion, and Iconography.
-- `dist/`: Unified standalone distribution file `dist/design-system.css` (50 KB).
+<div style={{
+  background: '#ffffff',
+  border: '1px solid rgba(0, 0, 0, 0.08)',
+  borderRadius: '8px',
+  padding: '1.5rem',
+  margin: '1rem 0 2rem'
+}}>
+  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.9rem' }}>
+    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+      <span style={{ color: '#ffe32e', fontSize: '0.9rem', flexShrink: 0, marginTop: '1px' }}>✦</span>
+      <div>
+        <strong style={{ fontFamily: 'var(--sq-font-family-mono)', fontSize: '0.8rem', background: 'rgba(0,0,0,0.06)', padding: '2px 6px', borderRadius: '4px', marginRight: '8px' }}>tokens/</strong>
+        <span style={{ fontSize: '0.92rem', color: 'rgba(0,0,0,0.8)' }}>CSS custom properties (<code>tokens.css</code>) & machine-readable W3C token definitions (<code>tokens.json</code>).</span>
+      </div>
+    </li>
+    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+      <span style={{ color: '#ffe32e', fontSize: '0.9rem', flexShrink: 0, marginTop: '1px' }}>✦</span>
+      <div>
+        <strong style={{ fontFamily: 'var(--sq-font-family-mono)', fontSize: '0.8rem', background: 'rgba(0,0,0,0.06)', padding: '2px 6px', borderRadius: '4px', marginRight: '8px' }}>styles/</strong>
+        <span style={{ fontSize: '0.92rem', color: 'rgba(0,0,0,0.8)' }}>Base CSS reset, typography scale utilities, light/dark themes, and icons.</span>
+      </div>
+    </li>
+    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+      <span style={{ color: '#ffe32e', fontSize: '0.9rem', flexShrink: 0, marginTop: '1px' }}>✦</span>
+      <div>
+        <strong style={{ fontFamily: 'var(--sq-font-family-mono)', fontSize: '0.8rem', background: 'rgba(0,0,0,0.06)', padding: '2px 6px', borderRadius: '4px', marginRight: '8px' }}>components/</strong>
+        <span style={{ fontSize: '0.92rem', color: 'rgba(0,0,0,0.8)' }}>17 production-grade UI components with exact CSS, isolated stories, and autodocs.</span>
+      </div>
+    </li>
+    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+      <span style={{ color: '#ffe32e', fontSize: '0.9rem', flexShrink: 0, marginTop: '1px' }}>✦</span>
+      <div>
+        <strong style={{ fontFamily: 'var(--sq-font-family-mono)', fontSize: '0.8rem', background: 'rgba(0,0,0,0.06)', padding: '2px 6px', borderRadius: '4px', marginRight: '8px' }}>foundations/</strong>
+        <span style={{ fontSize: '0.92rem', color: 'rgba(0,0,0,0.8)' }}>Interactive token catalogs for Colors, Typography, Spacing, Motion, and Iconography.</span>
+      </div>
+    </li>
+    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+      <span style={{ color: '#ffe32e', fontSize: '0.9rem', flexShrink: 0, marginTop: '1px' }}>✦</span>
+      <div>
+        <strong style={{ fontFamily: 'var(--sq-font-family-mono)', fontSize: '0.8rem', background: 'rgba(0,0,0,0.06)', padding: '2px 6px', borderRadius: '4px', marginRight: '8px' }}>dist/</strong>
+        <span style={{ fontSize: '0.92rem', color: 'rgba(0,0,0,0.8)' }}>Unified standalone distribution file <code>dist/design-system.css</code> (51 KB).</span>
+      </div>
+    </li>
+  </ul>
+</div>

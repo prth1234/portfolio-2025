@@ -23,6 +23,7 @@ const filesToBundle = [
   'components/dotted-leader/dotted-leader.css',
   'components/badge-tag/badge-tag.css',
   'components/preloader/preloader.css',
+  'components/click-animation/click-animation.css',
   'components/footer/footer.css'
 ];
 

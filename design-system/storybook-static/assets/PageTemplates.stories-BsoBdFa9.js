@@ -1,4 +1,4 @@
-/* empty css                      */const I={title:"Page Patterns/Templates",parameters:{layout:"fullscreen"},argTypes:{heroTitle:{control:"text",defaultValue:"CREATIVE DEVELOPER"},roleTitle:{control:"text",defaultValue:"Software Engineer"},company:{control:"text",defaultValue:"Flexera GCC"}}},r=`
+/* empty css                      *//* empty css                        */const C={title:"Page Patterns/Templates",parameters:{layout:"fullscreen"},argTypes:{heroTitle:{control:"text",defaultValue:"CREATIVE DEVELOPER"},roleTitle:{control:"text",defaultValue:"Software Engineer"},company:{control:"text",defaultValue:"Flexera GCC"}}},r=`
   <script>
     (function() {
       window.switchStoryView = function(viewName, clickedBtn, evt) {
@@ -253,8 +253,8 @@
       </div>
 
       <!-- Contact Form Section -->
-      <section style="background: #000; color: #fff; padding: 4.5rem var(--sq-grid-margin) 6rem; text-align: center;">
-        <h3 class="u-h3" style="margin-bottom: 2rem;">Know more about my projects</h3>
+      <section style="background: #000; color: #fff; padding: 3rem var(--sq-grid-margin) 3rem; text-align: center;">
+        <h3 class="u-h3" style="margin-bottom: 1.5rem;">Know more about my projects</h3>
         <form class="sq-contact-form" onsubmit="event.preventDefault(); this.classList.toggle('is-loading');">
           <div class="sq-contact-form__item">
             <input type="email" placeholder="E-MAIL" class="sq-contact-form__input" required />
@@ -333,6 +333,85 @@
             <span class="sq-tag">AWS</span>
           </div>
         </div>
+      </div>
+
+      <!-- Side-by-Side Comparison List (Screenshot 5 Replica) -->
+      <div style="margin-top: 4.5rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 3.5rem;">
+        <span class="sq-eyebrow" style="margin-bottom: 2rem; display: block; color: var(--sq-color-yellow);">PROJECT ARCHITECTURE // COMPARISON MATRIX</span>
+        
+        <ul class="sq-comparison-list">
+          <li class="sq-comparison-item">
+            <div class="sq-comparison-item__inner">
+              <div class="sq-comparison-header">
+                <h3 class="sq-comparison-title">Marketing Strategy Research Agent</h3>
+              </div>
+              <div class="sq-comparison-visual">
+                <div class="sq-comparison-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6ZM4 14a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm16 0a3 3 0 1 0 0 6 3 3 0 0 0 0-6ZM11 7.8V12h2V7.8a4.98 4.98 0 0 1-2 0ZM7.2 14.5l3.8-2.5 1 1.7-3.8 2.5-1-1.7Zm9.6 0-3.8-2.5-1 1.7 3.8 2.5 1-1.7Z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+              <div class="sq-comparison-content">
+                <p class="sq-comparison-paragraph">Swarm of AI Agents that conducts real-time market research & competitive analysis to generate full-funnel marketing strategies; leverages web search, retrieval-augmented reasoning, & planner-driven task orchestration.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="sq-comparison-item is-active is-inview">
+            <div class="sq-comparison-item__inner">
+              <div class="sq-comparison-header">
+                <h3 class="sq-comparison-title">Autonomous Semantic Layer Engine</h3>
+              </div>
+              <div class="sq-comparison-visual">
+                <div class="sq-comparison-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4 3h16v4H4V3Zm0 7h16v4H4v-4Zm0 7h16v4H4v-4Zm2-12h2v2H6V5Zm0 7h2v2H6v-2Zm0 7h2v2H6v-2Z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+              <div class="sq-comparison-content">
+                <p class="sq-comparison-paragraph">Agentic architecture that transforms database schemas into metric definitions, relationship graphs & lineage-aware semantic abstractions for analytics-grade LLM querying across OLAP systems & intelligent dashboards. Reduced metric hallucination & logical query errors by ~48% compared to prompt-only queries.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="sq-comparison-item">
+            <div class="sq-comparison-item__inner">
+              <div class="sq-comparison-header">
+                <h3 class="sq-comparison-title">AI-Fill (Agentic Automation)</h3>
+              </div>
+              <div class="sq-comparison-visual">
+                <div class="sq-comparison-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+              <div class="sq-comparison-content">
+                <p class="sq-comparison-paragraph">Autonomous agentic tool using LLMs & browser automation for end-to-end form completion.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="sq-comparison-item">
+            <div class="sq-comparison-item__inner">
+              <div class="sq-comparison-header">
+                <h3 class="sq-comparison-title">Text2SQL</h3>
+              </div>
+              <div class="sq-comparison-visual">
+                <div class="sq-comparison-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10 2h4v4h-4V2ZM3 8h18v2h-6v12h-2v-6h-2v6H9V10H3V8Z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="sq-comparison-content">
+                <p class="sq-comparison-paragraph">AI platform converting natural language queries into schema-aware, optimized SQL.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
 
       <!-- Dotted Leader List below -->
@@ -578,7 +657,7 @@
       </div>
     </main>
   </div>
-\``,...(d=(c=s.parameters)==null?void 0:c.docs)==null?void 0:d.source},description:{story:"1. EXPERIENCE TEMPLATE (Screenshot 5 Exact Replica)",...(v=(p=s.parameters)==null?void 0:p.docs)==null?void 0:v.description}}};var m,g,f,h,y;a.parameters={...a.parameters,docs:{...(m=a.parameters)==null?void 0:m.docs,source:{originalSource:`({
+\``,...(d=(c=s.parameters)==null?void 0:c.docs)==null?void 0:d.source},description:{story:"1. EXPERIENCE TEMPLATE (Screenshot 5 Exact Replica)",...(v=(p=s.parameters)==null?void 0:p.docs)==null?void 0:v.description}}};var m,g,h,f,u;a.parameters={...a.parameters,docs:{...(m=a.parameters)==null?void 0:m.docs,source:{originalSource:`({
   heroTitle = 'CREATIVE DEVELOPER'
 }) => \`
   \${interactivePageScript}
@@ -614,8 +693,8 @@
       </div>
 
       <!-- Contact Form Section -->
-      <section style="background: #000; color: #fff; padding: 4.5rem var(--sq-grid-margin) 6rem; text-align: center;">
-        <h3 class="u-h3" style="margin-bottom: 2rem;">Know more about my projects</h3>
+      <section style="background: #000; color: #fff; padding: 3rem var(--sq-grid-margin) 3rem; text-align: center;">
+        <h3 class="u-h3" style="margin-bottom: 1.5rem;">Know more about my projects</h3>
         <form class="sq-contact-form" onsubmit="event.preventDefault(); this.classList.toggle('is-loading');">
           <div class="sq-contact-form__item">
             <input type="email" placeholder="E-MAIL" class="sq-contact-form__input" required />
@@ -644,7 +723,7 @@
       </section>
     </main>
   </div>
-\``,...(f=(g=a.parameters)==null?void 0:g.docs)==null?void 0:f.source},description:{story:"2. ABOUT PAGE TEMPLATE",...(y=(h=a.parameters)==null?void 0:h.docs)==null?void 0:y.description}}};var u,q,_,b,x;n.parameters={...n.parameters,docs:{...(u=n.parameters)==null?void 0:u.docs,source:{originalSource:`() => \`
+\``,...(h=(g=a.parameters)==null?void 0:g.docs)==null?void 0:h.source},description:{story:"2. ABOUT PAGE TEMPLATE",...(u=(f=a.parameters)==null?void 0:f.docs)==null?void 0:u.description}}};var y,q,_,b,x;n.parameters={...n.parameters,docs:{...(y=n.parameters)==null?void 0:y.docs,source:{originalSource:`() => \`
   \${interactivePageScript}
   <div class="sq-template-container u-theme-dark" style="background-color: #000; min-height: 100vh; color: #f9f4eb;">
     \${renderHeader('projects')}
@@ -696,6 +775,85 @@
         </div>
       </div>
 
+      <!-- Side-by-Side Comparison List (Screenshot 5 Replica) -->
+      <div style="margin-top: 4.5rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 3.5rem;">
+        <span class="sq-eyebrow" style="margin-bottom: 2rem; display: block; color: var(--sq-color-yellow);">PROJECT ARCHITECTURE // COMPARISON MATRIX</span>
+        
+        <ul class="sq-comparison-list">
+          <li class="sq-comparison-item">
+            <div class="sq-comparison-item__inner">
+              <div class="sq-comparison-header">
+                <h3 class="sq-comparison-title">Marketing Strategy Research Agent</h3>
+              </div>
+              <div class="sq-comparison-visual">
+                <div class="sq-comparison-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6ZM4 14a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm16 0a3 3 0 1 0 0 6 3 3 0 0 0 0-6ZM11 7.8V12h2V7.8a4.98 4.98 0 0 1-2 0ZM7.2 14.5l3.8-2.5 1 1.7-3.8 2.5-1-1.7Zm9.6 0-3.8-2.5-1 1.7 3.8 2.5 1-1.7Z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+              <div class="sq-comparison-content">
+                <p class="sq-comparison-paragraph">Swarm of AI Agents that conducts real-time market research & competitive analysis to generate full-funnel marketing strategies; leverages web search, retrieval-augmented reasoning, & planner-driven task orchestration.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="sq-comparison-item is-active is-inview">
+            <div class="sq-comparison-item__inner">
+              <div class="sq-comparison-header">
+                <h3 class="sq-comparison-title">Autonomous Semantic Layer Engine</h3>
+              </div>
+              <div class="sq-comparison-visual">
+                <div class="sq-comparison-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4 3h16v4H4V3Zm0 7h16v4H4v-4Zm0 7h16v4H4v-4Zm2-12h2v2H6V5Zm0 7h2v2H6v-2Zm0 7h2v2H6v-2Z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+              <div class="sq-comparison-content">
+                <p class="sq-comparison-paragraph">Agentic architecture that transforms database schemas into metric definitions, relationship graphs & lineage-aware semantic abstractions for analytics-grade LLM querying across OLAP systems & intelligent dashboards. Reduced metric hallucination & logical query errors by ~48% compared to prompt-only queries.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="sq-comparison-item">
+            <div class="sq-comparison-item__inner">
+              <div class="sq-comparison-header">
+                <h3 class="sq-comparison-title">AI-Fill (Agentic Automation)</h3>
+              </div>
+              <div class="sq-comparison-visual">
+                <div class="sq-comparison-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+              <div class="sq-comparison-content">
+                <p class="sq-comparison-paragraph">Autonomous agentic tool using LLMs & browser automation for end-to-end form completion.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="sq-comparison-item">
+            <div class="sq-comparison-item__inner">
+              <div class="sq-comparison-header">
+                <h3 class="sq-comparison-title">Text2SQL</h3>
+              </div>
+              <div class="sq-comparison-visual">
+                <div class="sq-comparison-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10 2h4v4h-4V2ZM3 8h18v2h-6v12h-2v-6h-2v6H9V10H3V8Z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="sq-comparison-content">
+                <p class="sq-comparison-paragraph">AI platform converting natural language queries into schema-aware, optimized SQL.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
       <!-- Dotted Leader List below -->
       <div style="margin-top: 4rem;">
         <span class="sq-eyebrow" style="margin-bottom: 1rem; display: block;">FULL REPOSITORY DIRECTORY</span>
@@ -725,7 +883,7 @@
       </div>
     </main>
   </div>
-\``,...(_=(q=n.parameters)==null?void 0:q.docs)==null?void 0:_.source},description:{story:"3. PROJECTS PAGE TEMPLATE (Dark Theme)",...(x=(b=n.parameters)==null?void 0:b.docs)==null?void 0:x.description}}};var w,E,T,R,A;i.parameters={...i.parameters,docs:{...(w=i.parameters)==null?void 0:w.docs,source:{originalSource:`() => \`
+\``,...(_=(q=n.parameters)==null?void 0:q.docs)==null?void 0:_.source},description:{story:"3. PROJECTS PAGE TEMPLATE (Dark Theme)",...(x=(b=n.parameters)==null?void 0:b.docs)==null?void 0:x.description}}};var w,E,T,A,R;i.parameters={...i.parameters,docs:{...(w=i.parameters)==null?void 0:w.docs,source:{originalSource:`() => \`
   \${interactivePageScript}
   <div class="sq-template-container" style="background-color: var(--sq-color-cream); min-height: 100vh; color: #000;">
     \${renderHeader('experience')}
@@ -793,4 +951,4 @@
     </div>
   </div>
 \``,...(T=(E=i.parameters)==null?void 0:E.docs)==null?void 0:T.source},description:{story:`4. ALL-IN-ONE INTERACTIVE EXPLORER
-Smoothly switches between About, Experience, Projects, More on click without any reloads`,...(A=(R=i.parameters)==null?void 0:R.docs)==null?void 0:A.description}}};const j=["ExperiencePageTemplate","AboutPageTemplate","ProjectsPageTemplate","InteractiveSitePreview"];export{a as AboutPageTemplate,s as ExperiencePageTemplate,i as InteractiveSitePreview,n as ProjectsPageTemplate,j as __namedExportsOrder,I as default};
+Smoothly switches between About, Experience, Projects, More on click without any reloads`,...(R=(A=i.parameters)==null?void 0:A.docs)==null?void 0:R.description}}};const k=["ExperiencePageTemplate","AboutPageTemplate","ProjectsPageTemplate","InteractiveSitePreview"];export{a as AboutPageTemplate,s as ExperiencePageTemplate,i as InteractiveSitePreview,n as ProjectsPageTemplate,k as __namedExportsOrder,C as default};

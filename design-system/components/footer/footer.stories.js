@@ -1,47 +1,176 @@
 import './footer.css';
 
-const ceSvg = `
-  <svg class="sq-icon--ce" viewBox="0 0 21 16" fill="currentColor">
-    <path d="M8 2a6 6 0 100 12A6 6 0 008 2zM1 8a7 7 0 1113.3 3.5l-1.9-1a5 5 0 100-5l1.9-1A7 7 0 011 8zm15-4v2h3v2h-3v2h4v2h-6V2h6v2h-4z" />
-  </svg>
-`;
-
 export default {
   title: 'Components/Footer',
   tags: ['autodocs'],
+  parameters: {
+    layout: 'fullscreen',
+  },
   argTypes: {
-    theme: {
+    activeItem: {
       control: { type: 'select' },
-      options: ['light', 'dark'],
-      defaultValue: 'light',
+      options: ['none', 'education', 'skills', 'email', 'achievements'],
+      defaultValue: 'none',
+      description: 'Force a link to display in the active/hovered state with yellow text and animated star',
     },
   },
 };
 
-export const Default = ({ theme = 'light' }) => {
-  const themeClass = theme === 'dark' ? 'u-theme-dark' : 'u-theme-light';
-  return `
-    <div class="${themeClass}">
-      <footer class="sq-footer">
-        <div class="sq-footer__inner">
-          <ul class="sq-footer__links">
-            <li><a href="https://github.com" target="_blank" class="sq-footer__link">GitHub ↗</a></li>
-            <li><a href="https://linkedin.com" target="_blank" class="sq-footer__link">LinkedIn ↗</a></li>
-            <li><a href="mailto:hello@example.com" class="sq-footer__link">Email ↗</a></li>
-          </ul>
+const clockScript = `
+  <script>
+    (function() {
+      function updateClock() {
+        var clockEl = document.getElementById('sqFooterClock');
+        if (!clockEl) return;
+        var now = new Date();
+        var h = String(now.getHours()).padStart(2, '0');
+        var m = String(now.getMinutes()).padStart(2, '0');
+        clockEl.textContent = h + ':' + m;
+      }
+      updateClock();
+      setInterval(updateClock, 1000);
+    })();
+  </script>
+`;
 
-          <div class="sq-footer__meta">
-            <span>© 2026 STUDIO ARCHIVE</span>
-            ${ceSvg}
+/**
+ * 1. AUTHENTIC EDITORIAL FOOTER (Replica from Live Site Screenshots)
+ * Hovering over any link animates a yellow star ✦ to the left with elastic easing
+ * and turns the label text to vibrant yellow (#ffe32e).
+ */
+export const EditorialInteractiveFooter = ({ activeItem = 'none' }) => {
+  return `
+    ${clockScript}
+    <footer class="sq-footer--editorial">
+      <div class="sq-footer__container">
+        <!-- Top Row: My Work Badge + Navigation Columns -->
+        <div class="sq-footer__main-row">
+          <div>
+            <a href="javascript:void(0)" onclick="event.preventDefault();" class="sq-footer__work-badge">
+              <span>MY WORK</span>
+              <span class="sq-footer__work-pill">VISIT</span>
+            </a>
+          </div>
+
+          <div class="sq-footer__columns">
+            <!-- Left Column: Site Sections -->
+            <div class="sq-footer__col">
+              <ul class="sq-footer__col-list">
+                <li>
+                  <a href="javascript:void(0)"
+                     onclick="event.preventDefault();"
+                     class="sq-footer__link ${activeItem === 'education' ? 'is-forced-hover' : ''}">
+                    <span class="sq-footer__link-text">EDUCATION</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)"
+                     onclick="event.preventDefault();"
+                     class="sq-footer__link ${activeItem === 'skills' ? 'is-forced-hover' : ''}">
+                    <span class="sq-footer__link-text">SKILLS</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)"
+                     onclick="event.preventDefault();"
+                     class="sq-footer__link ${activeItem === 'email' ? 'is-forced-hover' : ''}">
+                    <span class="sq-footer__link-text">EMAIL</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)"
+                     onclick="event.preventDefault();"
+                     class="sq-footer__link ${activeItem === 'achievements' ? 'is-forced-hover' : ''}">
+                    <span class="sq-footer__link-text">ACHIEVEMENTS</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Right Column: External Socials -->
+            <div class="sq-footer__col">
+              <ul class="sq-footer__col-list">
+                <li>
+                  <a href="javascript:void(0)"
+                     onclick="event.preventDefault();"
+                     class="sq-footer__link sq-footer__link--external">
+                    <span class="sq-footer__link-text">RESUME</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)"
+                     onclick="event.preventDefault();"
+                     class="sq-footer__link sq-footer__link--external">
+                    <span class="sq-footer__link-text">LINKEDIN</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)"
+                     onclick="event.preventDefault();"
+                     class="sq-footer__link sq-footer__link--external">
+                    <span class="sq-footer__link-text">GITHUB</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)"
+                     onclick="event.preventDefault();"
+                     class="sq-footer__link sq-footer__link--external">
+                    <span class="sq-footer__link-text">INSTAGRAM</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </footer>
-    </div>
+
+        <!-- Bottom Row: Digital Clock, Star Glyphs, Meta, and To-Top Button -->
+        <div class="sq-footer__bottom-row">
+          <div class="sq-footer__time-wrap">
+            <div id="sqFooterClock" class="sq-footer__digital-clock">03:48</div>
+            <div class="sq-footer__stars">
+              <span>✦</span>
+              <span>✦</span>
+              <span>✦</span>
+            </div>
+          </div>
+
+          <div class="sq-footer__totop-wrap">
+            <span class="sq-footer__meta-tag">3D2Y</span>
+            <button type="button"
+                    onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+                    class="sq-footer__totop-btn">
+              <span>GO TO TOP</span>
+              <span>⤴ ⤴ ⤴</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
   `;
 };
 
-export const DarkTheme = Default.bind({});
-DarkTheme.args = {
-  theme: 'dark',
+/**
+ * 2. FORCED HOVER STATE (Shows EDUCATION in active hover state)
+ */
+export const ForcedHoverState = EditorialInteractiveFooter.bind({});
+ForcedHoverState.args = {
+  activeItem: 'education',
 };
 
+/**
+ * 3. MINIMAL COMPACT FOOTER
+ */
+export const MinimalDefault = () => `
+  <footer class="sq-footer">
+    <div class="sq-footer__inner">
+      <ul style="display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0;">
+        <li><a href="javascript:void(0)" onclick="event.preventDefault();" style="color: inherit; text-decoration: none;">GitHub ↗</a></li>
+        <li><a href="javascript:void(0)" onclick="event.preventDefault();" style="color: inherit; text-decoration: none;">LinkedIn ↗</a></li>
+        <li><a href="javascript:void(0)" onclick="event.preventDefault();" style="color: inherit; text-decoration: none;">Resume ↗</a></li>
+      </ul>
+      <div style="opacity: 0.6; font-size: 0.75rem;">
+        © 2026 STUDIO ARCHIVE
+      </div>
+    </div>
+  </footer>
+`;

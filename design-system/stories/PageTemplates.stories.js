@@ -1,4 +1,5 @@
 import '../dist/design-system.css';
+import '../components/comparison-list/comparison-list.css';
 
 export default {
   title: 'Page Patterns/Templates',
@@ -286,8 +287,8 @@ export const AboutPageTemplate = ({
       </div>
 
       <!-- Contact Form Section -->
-      <section style="background: #000; color: #fff; padding: 4.5rem var(--sq-grid-margin) 6rem; text-align: center;">
-        <h3 class="u-h3" style="margin-bottom: 2rem;">Know more about my projects</h3>
+      <section style="background: #000; color: #fff; padding: 3rem var(--sq-grid-margin) 3rem; text-align: center;">
+        <h3 class="u-h3" style="margin-bottom: 1.5rem;">Know more about my projects</h3>
         <form class="sq-contact-form" onsubmit="event.preventDefault(); this.classList.toggle('is-loading');">
           <div class="sq-contact-form__item">
             <input type="email" placeholder="E-MAIL" class="sq-contact-form__input" required />
@@ -371,6 +372,85 @@ export const ProjectsPageTemplate = () => `
             <span class="sq-tag">AWS</span>
           </div>
         </div>
+      </div>
+
+      <!-- Side-by-Side Comparison List (Screenshot 5 Replica) -->
+      <div style="margin-top: 4.5rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 3.5rem;">
+        <span class="sq-eyebrow" style="margin-bottom: 2rem; display: block; color: var(--sq-color-yellow);">PROJECT ARCHITECTURE // COMPARISON MATRIX</span>
+        
+        <ul class="sq-comparison-list">
+          <li class="sq-comparison-item">
+            <div class="sq-comparison-item__inner">
+              <div class="sq-comparison-header">
+                <h3 class="sq-comparison-title">Marketing Strategy Research Agent</h3>
+              </div>
+              <div class="sq-comparison-visual">
+                <div class="sq-comparison-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6ZM4 14a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm16 0a3 3 0 1 0 0 6 3 3 0 0 0 0-6ZM11 7.8V12h2V7.8a4.98 4.98 0 0 1-2 0ZM7.2 14.5l3.8-2.5 1 1.7-3.8 2.5-1-1.7Zm9.6 0-3.8-2.5-1 1.7 3.8 2.5 1-1.7Z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+              <div class="sq-comparison-content">
+                <p class="sq-comparison-paragraph">Swarm of AI Agents that conducts real-time market research & competitive analysis to generate full-funnel marketing strategies; leverages web search, retrieval-augmented reasoning, & planner-driven task orchestration.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="sq-comparison-item is-active is-inview">
+            <div class="sq-comparison-item__inner">
+              <div class="sq-comparison-header">
+                <h3 class="sq-comparison-title">Autonomous Semantic Layer Engine</h3>
+              </div>
+              <div class="sq-comparison-visual">
+                <div class="sq-comparison-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4 3h16v4H4V3Zm0 7h16v4H4v-4Zm0 7h16v4H4v-4Zm2-12h2v2H6V5Zm0 7h2v2H6v-2Zm0 7h2v2H6v-2Z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+              <div class="sq-comparison-content">
+                <p class="sq-comparison-paragraph">Agentic architecture that transforms database schemas into metric definitions, relationship graphs & lineage-aware semantic abstractions for analytics-grade LLM querying across OLAP systems & intelligent dashboards. Reduced metric hallucination & logical query errors by ~48% compared to prompt-only queries.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="sq-comparison-item">
+            <div class="sq-comparison-item__inner">
+              <div class="sq-comparison-header">
+                <h3 class="sq-comparison-title">AI-Fill (Agentic Automation)</h3>
+              </div>
+              <div class="sq-comparison-visual">
+                <div class="sq-comparison-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+              <div class="sq-comparison-content">
+                <p class="sq-comparison-paragraph">Autonomous agentic tool using LLMs & browser automation for end-to-end form completion.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="sq-comparison-item">
+            <div class="sq-comparison-item__inner">
+              <div class="sq-comparison-header">
+                <h3 class="sq-comparison-title">Text2SQL</h3>
+              </div>
+              <div class="sq-comparison-visual">
+                <div class="sq-comparison-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10 2h4v4h-4V2ZM3 8h18v2h-6v12h-2v-6h-2v6H9V10H3V8Z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="sq-comparison-content">
+                <p class="sq-comparison-paragraph">AI platform converting natural language queries into schema-aware, optimized SQL.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
 
       <!-- Dotted Leader List below -->

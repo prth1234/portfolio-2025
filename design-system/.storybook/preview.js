@@ -1,4 +1,6 @@
 import '../dist/design-system.css';
+import '../components/click-animation/click-animation.css';
+import '../components/click-animation/click-animation.js';
 
 /** @type { import('@storybook/html').Preview } */
 const preview = {

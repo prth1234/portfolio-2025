@@ -7,12 +7,25 @@
 .plan_form {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 680px;
+  max-width: 720px;
   margin: 0 auto;
+}
+
+/* ==========================================================================
+   AUTHENTIC LIVE APP VARIANT (White inputs on black canvas)
+   ========================================================================== */
+
+.sq-contact-form--authentic,
+.plan_form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
 }
 
 .sq-contact-form__item,
@@ -20,57 +33,74 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  flex: 1 1 12rem;
-  max-width: 16rem;
+  flex: 1 1 13rem;
+  max-width: 17.5rem;
 }
 
 .sq-contact-form__item--message,
 .form_item.is-message {
+  flex: 1 1 16rem;
   max-width: 22rem;
 }
 
+/* Authentic White Input Pill */
 .sq-contact-form__input,
 .form_input {
   width: 100%;
-  padding: 0.65rem 1rem;
+  padding: 0.75rem 1.15rem;
   font-family: var(--sq-font-family-mono);
-  font-size: 0.8rem;
-  font-weight: var(--sq-font-weight-medium);
-  letter-spacing: 0.05em;
-  background-color: var(--sq-color-white);
-  color: var(--sq-color-black);
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: var(--sq-radius-pixel);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
   outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   transition: border-color var(--sq-speed-fast) var(--sq-color-ease),
               box-shadow var(--sq-speed-fast) var(--sq-color-ease);
 }
 
-.u-theme-dark .sq-contact-form__input,
-.u-theme-dark .form_input {
-  background-color: #111111;
-  color: var(--sq-color-cream);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
 .sq-contact-form__input:focus,
 .form_input:focus {
-  border-color: var(--sq-color-yellow);
-  box-shadow: 0 0 0 2px rgba(255, 227, 46, 0.35);
+  border-color: #000000;
+  box-shadow: 0 0 0 2px var(--sq-color-yellow);
 }
 
 .sq-contact-form__input::placeholder,
 .form_input::placeholder {
-  color: rgba(0, 0, 0, 0.45);
+  color: rgba(0, 0, 0, 0.55) !important;
   text-transform: uppercase;
 }
 
-.u-theme-dark .sq-contact-form__input::placeholder,
-.u-theme-dark .form_input::placeholder {
-  color: rgba(255, 255, 255, 0.45);
+/* Blinking cursor bar decoration matching original portfolio */
+.sq-contact-form__item:after,
+.form_item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 14px;
+  background-color: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
 }
 
-/* Submit Actions & Loader */
+.sq-contact-form__item:has(.sq-contact-form__input:focus):after,
+.form_item:has(.form_input:focus):after {
+  background-color: #000000;
+  animation: sq-blink 1s infinite;
+}
+
+@keyframes sq-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Submit Actions & Authentic Yellow Rounded Pill */
 .sq-contact-form__submit-wrap,
 .plan_submit-wrap {
   display: inline-flex;
@@ -79,11 +109,53 @@
   position: relative;
 }
 
+.sq-contact-form__button,
+.button-default.is-yellow.is-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--sq-color-yellow, #ffe32e);
+  color: #000000;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.72rem 1.6rem;
+  font-family: var(--sq-font-family-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform var(--sq-speed-fast) var(--sq-bouncy-ease),
+              box-shadow var(--sq-speed-fast) ease,
+              background-color var(--sq-speed-fast) ease;
+}
+
+.sq-contact-form__button:hover,
+.button-default.is-yellow.is-submit:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(255, 227, 46, 0.4);
+}
+
+.sq-contact-form__button:active,
+.button-default.is-yellow.is-submit:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.sq-contact-form__icon-arrow {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+/* Spinner Loader */
 .sq-contact-form__loader,
 .form_submit-loader {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   position: absolute;
   left: calc(100% + 14px);
   top: 50%;
@@ -111,17 +183,17 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   position: relative;
 }
 
 .sq-contact-form__spinner-box,
 .form_submit-loader-box {
-  width: 3px;
-  height: 16px;
+  width: 2.5px;
+  height: 14px;
   border-radius: 1px;
-  background-color: var(--sq-color-yellow);
+  background-color: var(--sq-color-yellow, #ffe32e);
   grid-column: 1;
   grid-row: 1;
   animation: form-loader-spin 0.6s infinite cubic-bezier(0.32, 0.72, 0, 1);
@@ -144,11 +216,11 @@
 .sq-contact-form__loader-text,
 .form_submit-loader-text {
   font-family: var(--sq-font-family-mono);
-  font-size: var(--sq-font-size-f2);
+  font-size: 0.7rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--sq-color-yellow);
-  font-weight: 500;
+  color: var(--sq-color-yellow, #ffe32e);
+  font-weight: 600;
   line-height: 1;
 }
 
@@ -158,20 +230,33 @@
   width: 100%;
   text-align: center;
   font-family: var(--sq-font-family-mono);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   letter-spacing: 0.04em;
-  padding: 0.75rem 0;
-  margin-top: 0.5rem;
+  padding: 1.25rem 0 0.5rem;
 }
 
 .sq-contact-form__message--success,
-.plan_form-message.is-success {
-  color: var(--sq-color-yellow);
+.plan_form-text {
+  color: #ffffff;
+  font-family: var(--sq-font-family-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-.sq-contact-form__message--error,
-.plan_form-message.is-error {
+.sq-contact-form__message--error {
   color: #ea384c;
+}
+
+/* Dark theme variation support */
+.sq-contact-form--dark-inputs .sq-contact-form__input {
+  background-color: #111111 !important;
+  color: #f9f4eb !important;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.sq-contact-form--dark-inputs .sq-contact-form__input::placeholder {
+  color: rgba(255, 255, 255, 0.45) !important;
 }
 
 @media screen and (max-width: 600px) {
@@ -179,12 +264,15 @@
   .plan_submit-wrap {
     flex-direction: column;
     gap: 8px;
+    width: 100%;
+  }
+  .sq-contact-form__button {
+    width: 100%;
   }
   .sq-contact-form__loader,
   .form_submit-loader {
     position: static;
     transform: none;
-    margin-top: 4px;
+    margin-top: 6px;
   }
 }
-

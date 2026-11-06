@@ -1,0 +1,25 @@
+/**
+ * SQUIGGLE UI - CLICK ANIMATION (SPARK BURST)
+ * Exact extraction from portfolio-2025 click animation
+ */
+
+:root {
+  --sq-z-index-click: 1050;
+}
+
+.spark {
+  position: absolute;
+  width: 10px;
+  height: 4px;
+  background: var(--color-background, #fff);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: var(--sq-z-index-click, 1050);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spark {
+    display: none !important;
+  }
+}
+

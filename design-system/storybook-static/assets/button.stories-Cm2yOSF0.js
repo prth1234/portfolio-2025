@@ -1,8 +1,8 @@
-/* empty css               */const G=`
+const G=`
   <svg class="sq-icon--arrow" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
   </svg>
-`,Y={title:"Components/Button",tags:["autodocs"],argTypes:{label:{control:"text",defaultValue:"ENTER"},variant:{control:{type:"select"},options:["primary","dark","outline"]},size:{control:{type:"select"},options:["small","medium","large"]},disabled:{control:"boolean"},showArrow:{control:"boolean"}}},s=({label:M="ENTER",variant:U="primary",size:u="medium",disabled:_=!1,showArrow:W=!0,stateClass:X=""})=>{const j=u==="small"?"sq-button--small":u==="large"?"sq-button--large":"";return`
+`,Q={title:"Components/Button",tags:["autodocs"],argTypes:{label:{control:"text",defaultValue:"ENTER"},variant:{control:{type:"select"},options:["primary","dark","outline"]},size:{control:{type:"select"},options:["small","medium","large"]},disabled:{control:"boolean"},showArrow:{control:"boolean"}}},s=({label:M="ENTER",variant:U="primary",size:u="medium",disabled:_=!1,showArrow:W=!0,stateClass:X=""})=>{const j=u==="small"?"sq-button--small":u==="large"?"sq-button--large":"";return`
     <button class="sq-button ${`sq-button--${U}`} ${j} ${X}" ${_?"disabled":""}>
       <span>${M}</span>
       ${W?G:""}
@@ -177,4 +177,4 @@
       \${showArrow ? arrowSvg : ''}
     </button>
   \`;
-}`,...(V=(B=b.parameters)==null?void 0:B.docs)==null?void 0:V.source}}};const Z=["Playground","Primary","Dark","Outline","Small","Large","ForcedHover","ForcedActive","ForcedFocus","Disabled"];export{n as Dark,b as Disabled,i as ForcedActive,d as ForcedFocus,o as ForcedHover,l as Large,e as Outline,a as Playground,t as Primary,r as Small,Z as __namedExportsOrder,Y as default};
+}`,...(V=(B=b.parameters)==null?void 0:B.docs)==null?void 0:V.source}}};const Y=["Playground","Primary","Dark","Outline","Small","Large","ForcedHover","ForcedActive","ForcedFocus","Disabled"];export{n as Dark,b as Disabled,i as ForcedActive,d as ForcedFocus,o as ForcedHover,l as Large,e as Outline,a as Playground,t as Primary,r as Small,Y as __namedExportsOrder,Q as default};
