@@ -19,6 +19,7 @@ const filesToBundle = [
   'components/data-table/data-table.css',
   'components/project-card/project-card.css',
   'components/landscape-card/landscape-card.css',
+  'components/comparison-list/comparison-list.css',
   'components/dotted-leader/dotted-leader.css',
   'components/badge-tag/badge-tag.css',
   'components/preloader/preloader.css',

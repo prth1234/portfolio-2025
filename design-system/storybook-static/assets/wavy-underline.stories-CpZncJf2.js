@@ -2,7 +2,7 @@ const R={title:"Components/Wavy Underline",tags:["autodocs"],argTypes:{text:{con
     <div style="padding: 2rem;">
       <${l} class="${d==="thick"?"sq-wavy-underline sq-wavy-underline--thick":d==="animated"?"sq-wavy-underline sq-wavy-underline--animated":"sq-wavy-underline"}" ${B}>${A}</${l}>
     </div>
-  `},n=e.bind({});n.args={text:"Experience & Milestones",tag:"h2",variant:"default"};const a=e.bind({});a.args={text:"Parth Singh",tag:"h1",variant:"default"};const t=e.bind({});t.args={text:"Software Engineer",tag:"h3",variant:"default"};const i=()=>`
+  `},n=e.bind({});n.args={text:"Experience & Milestones",tag:"h2",variant:"default"};const a=e.bind({});a.args={text:"Creative Developer",tag:"h1",variant:"default"};const t=e.bind({});t.args={text:"Software Engineer",tag:"h3",variant:"default"};const i=()=>`
   <div style="padding: 2rem; font-family: var(--sq-font-family-normal); font-size: 1.25rem;">
     Specializing in scalable cloud platforms, distributed systems, and
     <span class="sq-wavy-underline" style="font-weight: 600;">Agentic AI Solutions</span>
@@ -21,7 +21,7 @@ const R={title:"Components/Wavy Underline",tags:["autodocs"],argTypes:{text:{con
       <\${tag} class="\${variantClass}" \${customColorStyle}>\${text}</\${tag}>
     </div>
   \`;
-}`,...(m=(u=n.parameters)==null?void 0:u.docs)==null?void 0:m.source}}};var g,w,p;a.parameters={...a.parameters,docs:{...(g=a.parameters)==null?void 0:g.docs,source:{originalSource:`({
+}`,...(m=(u=n.parameters)==null?void 0:u.docs)==null?void 0:m.source}}};var g,p,w;a.parameters={...a.parameters,docs:{...(g=a.parameters)==null?void 0:g.docs,source:{originalSource:`({
   text = 'Experience & Education',
   tag = 'h2',
   variant = 'default',
@@ -34,7 +34,7 @@ const R={title:"Components/Wavy Underline",tags:["autodocs"],argTypes:{text:{con
       <\${tag} class="\${variantClass}" \${customColorStyle}>\${text}</\${tag}>
     </div>
   \`;
-}`,...(p=(w=a.parameters)==null?void 0:w.docs)==null?void 0:p.source}}};var y,h,C;t.parameters={...t.parameters,docs:{...(y=t.parameters)==null?void 0:y.docs,source:{originalSource:`({
+}`,...(w=(p=a.parameters)==null?void 0:p.docs)==null?void 0:w.source}}};var y,h,C;t.parameters={...t.parameters,docs:{...(y=t.parameters)==null?void 0:y.docs,source:{originalSource:`({
   text = 'Experience & Education',
   tag = 'h2',
   variant = 'default',

@@ -1,0 +1,210 @@
+/**
+ * SQUIGGLE UI - SIDE-BY-SIDE COMPARISON LIST
+ * Split 3-column project comparator with center technical icon and corner brackets
+ * Exact match from main/index3.html and user screenshot
+ */
+
+.sq-comparison-list,
+.benefits_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.sq-comparison-item,
+.benefits_item {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background-color var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out);
+}
+
+.u-theme-light .sq-comparison-item,
+.sq-comparison-item--light {
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+.sq-comparison-item:last-child {
+  border-bottom: none;
+}
+
+/* 12-Column Grid Inner Container */
+.sq-comparison-item__inner,
+.benefits_item-inner {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: center;
+  column-gap: var(--sq-size-24, 1.5rem);
+  padding-top: clamp(2rem, 1.5rem + 1.2vi, 3.5rem);
+  padding-bottom: clamp(2rem, 1.5rem + 1.2vi, 3.5rem);
+  opacity: 0.38;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity var(--sq-speed, 0.45s) var(--sq-smooth-ease, ease),
+              transform var(--sq-speed-fast, 0.3s) var(--sq-smooth-ease, ease);
+}
+
+/* Hover and Active Highlight States */
+.sq-comparison-item:hover .sq-comparison-item__inner,
+.sq-comparison-item.is-active .sq-comparison-item__inner,
+.sq-comparison-item.is-inview .sq-comparison-item__inner,
+.benefits_item:hover .benefits_item-inner,
+.benefits_item.is-active .benefits_item-inner,
+.benefits_item.is-inview .benefits_item-inner {
+  opacity: 1;
+}
+
+/* Left Column: Project Title (Right-aligned reaching towards the center) */
+.sq-comparison-header,
+.benefits_header {
+  grid-column: span 5;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.sq-comparison-title,
+.benefits_title {
+  font-family: var(--sq-font-family-narrow, sans-serif);
+  font-size: clamp(1.25rem, 0.95rem + 0.85vi, 2rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--color, var(--sq-color-cream, #f9f4eb));
+  margin: 0;
+  transition: color var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out);
+}
+
+.u-theme-light .sq-comparison-title,
+.sq-comparison-item--light .sq-comparison-title {
+  color: var(--sq-color-black, #000000);
+}
+
+/* Center Column: Technical Icon with Animated Corner Brackets */
+.sq-comparison-visual,
+.benefits_visual {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sq-comparison-icon,
+.benefits_icon {
+  --border-stroke: 0.0625rem;
+  --border-color: #0000 90deg, var(--color, var(--sq-color-cream, #f9f4eb)) 0;
+  --border-width: 0.3rem 0.3rem border-box no-repeat;
+
+  display: grid;
+  place-content: center;
+  position: relative;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--color, var(--sq-color-cream, #f9f4eb));
+  transition: color var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out);
+}
+
+.u-theme-light .sq-comparison-icon,
+.sq-comparison-item--light .sq-comparison-icon {
+  --border-color: #0000 90deg, var(--sq-color-black, #000000) 0;
+  color: var(--sq-color-black, #000000);
+}
+
+/* Conic Gradient Corner Brackets Frame */
+.sq-comparison-icon:before,
+.benefits_icon:before {
+  content: "";
+  display: block;
+  grid-area: 1 / 1;
+  width: calc(100% + 0.25rem);
+  height: calc(100% + 0.25rem);
+  place-self: center;
+  opacity: 0;
+  scale: 1.25;
+  transition: opacity 0.2s ease-out, scale 0.3s var(--sq-smooth-ease, ease);
+  background: conic-gradient(from 90deg at top var(--border-stroke) left var(--border-stroke), var(--border-color)) 0 0 / var(--border-width),
+              conic-gradient(from 180deg at top var(--border-stroke) right var(--border-stroke), var(--border-color)) 100% 0 / var(--border-width),
+              conic-gradient(from 0deg at bottom var(--border-stroke) left var(--border-stroke), var(--border-color)) 0 100% / var(--border-width),
+              conic-gradient(from -90deg at bottom var(--border-stroke) right var(--border-stroke), var(--border-color)) 100% 100% / var(--border-width);
+}
+
+.sq-comparison-item:hover .sq-comparison-icon:before,
+.sq-comparison-item.is-active .sq-comparison-icon:before,
+.sq-comparison-item.is-inview .sq-comparison-icon:before,
+.benefits_item:hover .benefits_icon:before,
+.benefits_item.is-active .benefits_icon:before,
+.benefits_item.is-inview .benefits_icon:before {
+  opacity: 1;
+  scale: 1;
+}
+
+.sq-comparison-icon svg,
+.benefits_icon svg {
+  grid-area: 1 / 1;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform var(--sq-speed-fast, 0.3s) var(--sq-bouncy-ease, ease);
+}
+
+.sq-comparison-item:hover .sq-comparison-icon svg,
+.sq-comparison-item.is-active .sq-comparison-icon svg {
+  transform: scale(1.08);
+}
+
+/* Right Column: Detailed Narrative Description */
+.sq-comparison-content,
+.benefits_content {
+  grid-column: span 5;
+  text-align: left;
+}
+
+.sq-comparison-paragraph,
+.benefits_paragraph {
+  font-family: var(--sq-font-family-normal, sans-serif);
+  font-size: clamp(0.95rem, 0.85rem + 0.25vi, 1.2rem);
+  line-height: 1.55;
+  max-width: 44ch;
+  margin: 0;
+  color: var(--color, var(--sq-color-cream, #f9f4eb));
+}
+
+.u-theme-light .sq-comparison-paragraph,
+.sq-comparison-item--light .sq-comparison-paragraph {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+/* Responsive Collapse for Small Screens */
+@media screen and (max-width: 900px) {
+  .sq-comparison-item__inner,
+  .benefits_item-inner {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .sq-comparison-header,
+  .benefits_header {
+    grid-column: 1 / -1;
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  .sq-comparison-visual,
+  .benefits_visual {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+
+  .sq-comparison-content,
+  .benefits_content {
+    grid-column: 1 / -1;
+  }
+}

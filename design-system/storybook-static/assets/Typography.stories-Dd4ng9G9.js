@@ -2,7 +2,7 @@ const o={title:"Foundations/Typography",tags:["autodocs"]},a=()=>`
   <div style="padding: 2rem; max-width: 900px; display: flex; flex-direction: column; gap: 2rem;">
     <div>
       <div class="u-f1" style="color: rgba(0,0,0,0.5); margin-bottom: 0.25rem;">H1 Editorial Display (Narrow Semibold)</div>
-      <h1 class="u-h1">PARTH SINGH</h1>
+      <h1 class="u-h1">CREATIVE DEVELOPER</h1>
     </div>
 
     <div>
@@ -41,7 +41,7 @@ const o={title:"Foundations/Typography",tags:["autodocs"]},a=()=>`
   <div style="padding: 2rem; max-width: 900px; display: flex; flex-direction: column; gap: 2rem;">
     <div>
       <div class="u-f1" style="color: rgba(0,0,0,0.5); margin-bottom: 0.25rem;">H1 Editorial Display (Narrow Semibold)</div>
-      <h1 class="u-h1">PARTH SINGH</h1>
+      <h1 class="u-h1">CREATIVE DEVELOPER</h1>
     </div>
 
     <div>

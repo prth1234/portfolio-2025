@@ -47,7 +47,7 @@ Default.args = {
 
 export const InHeading1 = Template.bind({});
 InHeading1.args = {
-  text: 'Parth Singh',
+  text: 'Creative Developer',
   tag: 'h1',
   variant: 'default',
 };

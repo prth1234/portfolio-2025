@@ -21,7 +21,7 @@
     "editorial-ui",
     "storybook"
   ],
-  "author": "Parth Singh",
+  "author": "Design System",
   "license": "MIT",
   "devDependencies": {
     "@storybook/addon-a11y": "^8.6.19",

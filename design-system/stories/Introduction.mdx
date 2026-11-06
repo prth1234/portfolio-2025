@@ -2,23 +2,118 @@ import { Meta } from '@storybook/blocks';
 
 <Meta title="Introduction" />
 
-# Squiggle UI Design System
+<div style={{
+  background: '#f9f4eb',
+  padding: '3rem 2.5rem',
+  borderRadius: '8px',
+  border: '1px solid rgba(0,0,0,0.1)',
+  color: '#000',
+  marginBottom: '2.5rem',
+  fontFamily: 'var(--sq-font-family-normal, sans-serif)'
+}}>
+  <div style={{
+    display: 'flex',
+    gap: '0.5rem',
+    alignItems: 'center',
+    marginBottom: '1rem'
+  }}>
+    <span className="sq-badge sq-badge--promoted">V1.0.0 ✦</span>
+    <span className="sq-badge sq-badge--faint">EDITORIAL & RETRO SYSTEM</span>
+  </div>
 
-> **A reverse-engineered, production-grade design system extracted with 1:1 fidelity from portfolio-2025.**
+  <h1 className="u-h1" style={{
+    fontSize: 'clamp(2.5rem, 1.5rem + 4vi, 5rem)',
+    lineHeight: '0.92',
+    margin: '0.5rem 0 1.25rem 0'
+  }}>
+    SQUIGGLE <span className="sq-wavy-underline">DESIGN SYSTEM</span>
+  </h1>
 
-Squiggle UI encapsulates the distinctive editorial and retro aesthetic of the portfolio:
-- **Hand-drawn Yellow Underline**: SVG data URI wave pattern that accents titles and expands on accordion interactions.
-- **High-Contrast Palette**: Warm cream canvas (`#f9f4eb`), pitch dark surfaces (`#000000`), and signature yellow accents (`#ffe32e`).
-- **Editorial Typography**: Condensed narrow headers, monospace metadata labels, and clean body text.
-- **Pixel-Art Elements**: Micro-radii, spinning windmills, and signal status indicators.
+  <p className="u-p1" style={{
+    fontSize: '1.2rem',
+    maxWidth: '720px',
+    lineHeight: '1.5',
+    color: 'rgba(0,0,0,0.85)',
+    margin: '0 0 2rem 0'
+  }}>
+    A production-grade, framework-agnostic design system reverse-engineered with 100% exact fidelity from the high-contrast editorial portfolio. Built for reusable, themeable consistency across creative projects.
+  </p>
+
+  <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
+    <a href="./?path=/story/page-patterns-templates--experience-page-template" className="sq-button sq-button--primary" style={{ textDecoration: 'none' }}>
+      <span>VIEW EXPERIENCE TEMPLATE</span>
+      <svg className="sq-icon--arrow" viewBox="0 0 20 20" fill="currentColor">
+        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+      </svg>
+    </a>
+    <a href="./?path=/story/components-wavy-underline--default" className="sq-button sq-button--outline" style={{ textDecoration: 'none' }}>
+      <span>EXPLORE WAVY UNDERLINE</span>
+    </a>
+  </div>
+</div>
 
 ---
 
-## Architecture
+## Visual Identity & Core Motifs
 
-- `tokens/`: CSS custom properties (`tokens.css`) & JSON specification (`tokens.json`).
-- `styles/`: Base resets, typography scales, light/dark themes, and icons.
-- `components/`: Modular component styling, templates, and interactive stories.
-- `foundations/`: Swatches, type specimens, spacing visualizers, and easing curves.
-- `dist/`: Unified bundle `dist/design-system.css` for zero-configuration inclusion in any project.
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+  gap: '1.5rem',
+  margin: '2rem 0'
+}}>
+  <div style={{
+    border: '1px solid rgba(0,0,0,0.12)',
+    borderRadius: '4px',
+    padding: '1.5rem',
+    background: '#ffffff'
+  }}>
+    <div style={{ height: '8px', background: '#ffe32e', width: '48px', borderRadius: '2px', marginBottom: '1rem' }}></div>
+    <h3 style={{ fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.4rem', margin: '0 0 0.5rem 0' }}>
+      Signature Yellow Accent
+    </h3>
+    <p style={{ fontSize: '0.95rem', lineHeight: '1.5', color: 'rgba(0,0,0,0.7)', margin: 0 }}>
+      Vibrant electric yellow (<code>#ffe32e</code>) applied to the hand-drawn wavy underline, active milestone nodes, form submit CTA, and high-priority promoted tags.
+    </p>
+  </div>
 
+  <div style={{
+    border: '1px solid rgba(0,0,0,0.12)',
+    borderRadius: '4px',
+    padding: '1.5rem',
+    background: '#ffffff'
+  }}>
+    <div style={{ height: '8px', background: '#000000', width: '48px', borderRadius: '2px', marginBottom: '1rem' }}></div>
+    <h3 style={{ fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.4rem', margin: '0 0 0.5rem 0' }}>
+      Editorial Narrow Typography
+    </h3>
+    <p style={{ fontSize: '0.95rem', lineHeight: '1.5', color: 'rgba(0,0,0,0.7)', margin: 0 }}>
+      Bold, condensed narrow display headers (<code>font-narrow-semibold</code>) paired with monospace technical tracking (<code>font-mono-medium</code>) and neutral body text.
+    </p>
+  </div>
+
+  <div style={{
+    border: '1px solid rgba(0,0,0,0.12)',
+    borderRadius: '4px',
+    padding: '1.5rem',
+    background: '#ffffff'
+  }}>
+    <div style={{ height: '8px', background: '#f0ece5', width: '48px', borderRadius: '2px', marginBottom: '1rem' }}></div>
+    <h3 style={{ fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.4rem', margin: '0 0 0.5rem 0' }}>
+      Retro Pixel Accents
+    </h3>
+    <p style={{ fontSize: '0.95rem', lineHeight: '1.5', color: 'rgba(0,0,0,0.7)', margin: 0 }}>
+      Subtle 2px micro-radii, geometric corner trims (<code>93x93</code> SVG paths), signal indicator bars (<code>III</code>), and 4-box spinning windmill loaders.
+    </p>
+  </div>
+</div>
+
+---
+
+## Component Architecture
+
+- `tokens/`: CSS custom properties (`tokens.css`) & machine-readable W3C token definitions (`tokens.json`).
+- `styles/`: Base CSS reset, typography scale utilities, light/dark themes, and icons.
+- `components/`: 16 production-grade UI components with exact CSS, isolated stories, and autodocs.
+- `foundations/`: Interactive token catalogs for Colors, Typography, Spacing, Motion, and Iconography.
+- `dist/`: Unified standalone distribution file `dist/design-system.css` (50 KB).

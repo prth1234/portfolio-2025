@@ -1,6 +1,6 @@
 # Squiggle UI (`squiggle-ui`)
 
-> A production-grade, framework-agnostic design system reverse-engineered with 100% exact fidelity from Parth Singh's editorial portfolio (`portfolio-2025`).
+> A production-grade, framework-agnostic design system reverse-engineered with 100% exact fidelity from an editorial portfolio (`portfolio-2025`).
 
 ---
 

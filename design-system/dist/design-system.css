@@ -238,6 +238,7 @@
 }
 
 
+
 /* --- styles/reset.css --- */
 /**
  * SQUIGGLE UI - BASE & RESET
@@ -326,6 +327,7 @@ table {
   background-color: var(--sq-color-yellow);
   color: var(--sq-color-black);
 }
+
 
 
 /* --- styles/typography.css --- */
@@ -428,6 +430,7 @@ table {
 }
 
 
+
 /* --- styles/theme.css --- */
 /**
  * SQUIGGLE UI - THEMES
@@ -466,6 +469,7 @@ table {
 }
 
 
+
 /* --- styles/grid.css --- */
 /**
  * SQUIGGLE UI - GRID & CONTAINER
@@ -488,6 +492,7 @@ table {
   column-gap: var(--sq-size-16);
   row-gap: var(--sq-size-24);
 }
+
 
 
 /* --- styles/icons.css --- */
@@ -556,6 +561,7 @@ table {
 }
 
 
+
 /* --- components/wavy-underline/wavy-underline.css --- */
 /**
  * SQUIGGLE UI - WAVY UNDERLINE
@@ -608,6 +614,7 @@ table {
 }
 
 
+
 /* --- components/wavy-divider/wavy-divider.css --- */
 /**
  * SQUIGGLE UI - WAVY DIVIDER
@@ -647,6 +654,7 @@ table {
 .sq-wavy-divider--inverted {
   transform: rotate(180deg);
 }
+
 
 
 /* --- components/button/button.css --- */
@@ -775,6 +783,7 @@ table {
 }
 
 
+
 /* --- components/explore-button/explore-button.css --- */
 /**
  * SQUIGGLE UI - EXPLORE BUTTON
@@ -851,10 +860,11 @@ table {
 }
 
 
+
 /* --- components/nav/nav.css --- */
 /**
  * SQUIGGLE UI - NAVIGATION
- * Pill navigation bar matching exact site header styling
+ * Exact matches from portfolio-2025
  */
 
 .sq-header,
@@ -863,10 +873,10 @@ table {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: var(--sq-z-index-header);
-  background-color: var(--color-background, var(--sq-color-cream));
-  transition: background-color var(--sq-speed-fast) var(--sq-color-ease);
-  padding: 0.75rem var(--sq-grid-margin);
+  z-index: var(--sq-z-index-header, 800);
+  background-color: var(--color-background, var(--sq-color-cream, #f9f4eb));
+  transition: background-color var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out);
+  padding: 0.75rem var(--sq-grid-margin, clamp(1.5rem, 0.3333rem + 2.6667vi, 3rem));
 }
 
 .sq-header__inner,
@@ -880,83 +890,112 @@ table {
   gap: 1rem;
 }
 
-/* Avatar / Logo link */
-.sq-header__logo,
-.header_title-link {
+/* ==========================================================================
+   BRAND BADGE (Left side of header in Screenshot 5)
+   ========================================================================== */
+.sq-brand-badge,
+.header_title-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color, var(--sq-color-black, #000000));
+  color: var(--color-background, var(--sq-color-cream, #f9f4eb));
+  font-family: var(--sq-font-family-mono, monospace);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--sq-radius-pixel, 2px);
   text-decoration: none;
-  color: inherit;
+  cursor: pointer;
+  user-select: none;
+  transition: transform var(--sq-speed-fast, 0.3s) var(--sq-bouncy-ease, ease),
+              box-shadow var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out);
+  white-space: nowrap;
 }
 
-.sq-header__avatar,
-.header_title-profile-img {
+.sq-brand-badge:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.sq-brand-badge__star {
+  color: var(--sq-color-yellow, #ffe32e);
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.u-theme-dark .sq-brand-badge {
+  background-color: var(--sq-color-cream, #f9f4eb);
+  color: var(--sq-color-black, #000000);
+}
+
+.u-theme-dark .sq-brand-badge__star {
+  color: var(--sq-color-black, #000000);
+}
+
+/* Optional avatar variant */
+.sq-header__avatar {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
-.sq-header__logo-text,
-.header_title-logo-text {
-  font-family: var(--sq-font-family-mono);
-  font-size: 0.875rem;
-  font-weight: var(--sq-font-weight-semibold);
-  letter-spacing: -0.01em;
-}
-
-/* Pill Navigation List */
+/* ==========================================================================
+   NAV TABS (Variant 1: Authentic Real Portfolio Floating Pills - Screenshot 5)
+   ========================================================================== */
 .sq-nav,
 .header_nav {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .sq-nav__list,
 .header_nav-list {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.35rem;
   list-style: none;
   margin: 0;
-  padding: 3px;
-  background-color: rgba(0, 0, 0, 0.04);
-  border-radius: var(--sq-radius-pill);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.u-theme-dark .sq-nav__list,
-.u-theme-dark .header_nav-list {
-  background-color: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
+  padding: 0;
 }
 
 .sq-nav__item,
 .header_nav-list-item {
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-/* Nav Button */
+/* Nav Tab Button */
 .sq-nav__button,
 .header_nav-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 0.45rem 1rem;
-  font-family: var(--sq-font-family-mono);
+  padding: 0.45rem 1.15rem;
+  font-family: var(--sq-font-family-mono, monospace);
   font-size: 0.75rem;
-  font-weight: var(--sq-font-weight-medium);
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color, var(--sq-color-black));
-  border-radius: var(--sq-radius-pill);
+  letter-spacing: 0.08em;
+  color: var(--color, var(--sq-color-black, #000000));
+  background: transparent;
+  border-radius: var(--sq-radius-pill, 9999px);
+  border: 1px solid transparent;
   text-decoration: none;
   cursor: pointer;
-  transition: color var(--sq-speed-fast) var(--sq-color-ease),
-              background-color var(--sq-speed-fast) var(--sq-color-ease),
-              transform var(--sq-speed-fast) var(--sq-bouncy-ease);
+  white-space: nowrap;
+  user-select: none;
+  transition: color var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out),
+              background-color var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out),
+              transform var(--sq-speed-fast, 0.3s) var(--sq-bouncy-ease, ease);
 }
 
 .sq-nav__button:hover,
@@ -964,40 +1003,93 @@ table {
   background-color: rgba(0, 0, 0, 0.06);
 }
 
-.u-theme-dark .sq-nav__button:hover,
-.u-theme-dark .header_nav-button:hover {
+.u-theme-dark .sq-nav__button {
+  color: var(--color, var(--sq-color-cream, #f9f4eb));
+}
+
+.u-theme-dark .sq-nav__button:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Active Nav Button */
+/* Active Nav Button (Black solid capsule in light theme, Cream solid capsule in dark theme) */
 .sq-nav__button.is-active,
 .sq-nav__button.w--current,
 .header_nav-button.w--current,
 .header_nav-button.is-active {
-  background-color: var(--sq-color-black) !important;
-  color: var(--sq-color-cream) !important;
-  font-weight: var(--sq-font-weight-semibold);
+  background-color: var(--sq-color-black, #000000) !important;
+  color: var(--sq-color-cream, #f9f4eb) !important;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .u-theme-dark .sq-nav__button.is-active,
 .u-theme-dark .sq-nav__button.w--current,
 .u-theme-dark .header_nav-button.w--current,
 .u-theme-dark .header_nav-button.is-active {
-  background-color: var(--sq-color-cream) !important;
-  color: var(--sq-color-black) !important;
+  background-color: var(--sq-color-cream, #f9f4eb) !important;
+  color: var(--sq-color-black, #000000) !important;
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.15);
 }
 
-/* Feed Button */
-.sq-nav__feed,
+/* ==========================================================================
+   NAV TABS (Variant 2: Segmented Capsule Track)
+   ========================================================================== */
+.sq-nav--capsule .sq-nav__list {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: var(--sq-radius-pill, 9999px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 3px;
+  gap: 0.2rem;
+}
+
+.u-theme-dark .sq-nav--capsule .sq-nav__list {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ==========================================================================
+   FEED BUTTON (Right side of header)
+   ========================================================================== */
+.sq-feed-button,
 .header_tools .header_nav-button {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  padding: 0.45rem 0.95rem;
-  border-radius: var(--sq-radius-pill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1.1rem;
+  font-family: var(--sq-font-family-mono, monospace);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color, var(--sq-color-black, #000000));
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: var(--sq-radius-pill, 9999px);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  transition: border-color var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out),
+              background-color var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out),
+              color var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out);
 }
 
-.u-theme-dark .sq-nav__feed,
+.sq-feed-button:hover,
+.header_tools .header_nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: var(--sq-color-black, #000000);
+}
+
+.u-theme-dark .sq-feed-button,
 .u-theme-dark .header_tools .header_nav-button {
-  border-color: rgba(255, 255, 255, 0.18);
+  color: var(--sq-color-cream, #f9f4eb);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.u-theme-dark .sq-feed-button:hover,
+.u-theme-dark .header_tools .header_nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--sq-color-cream, #f9f4eb);
 }
 
 
@@ -1209,6 +1301,7 @@ table {
 }
 
 
+
 /* --- components/contact-form/contact-form.css --- */
 /**
  * SQUIGGLE UI - CONTACT FORM
@@ -1401,6 +1494,7 @@ table {
 }
 
 
+
 /* --- components/accordion/accordion.css --- */
 /**
  * SQUIGGLE UI - ACCORDION
@@ -1502,6 +1596,7 @@ table {
     transform: translateY(0);
   }
 }
+
 
 
 /* --- components/data-table/data-table.css --- */
@@ -1646,6 +1741,7 @@ table {
 }
 
 
+
 /* --- components/project-card/project-card.css --- */
 /**
  * SQUIGGLE UI - PROJECT & PRICE CARD
@@ -1740,6 +1836,7 @@ table {
 }
 
 
+
 /* --- components/landscape-card/landscape-card.css --- */
 /**
  * SQUIGGLE UI - LANDSCAPE CARD (XR65D)
@@ -1813,6 +1910,7 @@ table {
 }
 
 
+
 /* --- components/dotted-leader/dotted-leader.css --- */
 /**
  * SQUIGGLE UI - DOTTED LEADER
@@ -1867,6 +1965,7 @@ table {
   font-weight: var(--sq-font-weight-semibold);
   letter-spacing: 0.04em;
 }
+
 
 
 /* --- components/badge-tag/badge-tag.css --- */
@@ -1940,6 +2039,7 @@ table {
 }
 
 
+
 /* --- components/preloader/preloader.css --- */
 /**
  * SQUIGGLE UI - PRELOADER
@@ -1984,6 +2084,7 @@ table {
   0% { transform: rotate(0deg) translateZ(0); }
   100% { transform: rotate(180deg) translateZ(0); }
 }
+
 
 
 /* --- components/footer/footer.css --- */
@@ -2051,5 +2152,6 @@ table {
   gap: 1rem;
   opacity: 0.6;
 }
+
 
 

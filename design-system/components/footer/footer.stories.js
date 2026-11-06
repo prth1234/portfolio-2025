@@ -25,13 +25,13 @@ export const Default = ({ theme = 'light' }) => {
       <footer class="sq-footer">
         <div class="sq-footer__inner">
           <ul class="sq-footer__links">
-            <li><a href="https://github.com/prth1234" target="_blank" class="sq-footer__link">GitHub ↗</a></li>
+            <li><a href="https://github.com" target="_blank" class="sq-footer__link">GitHub ↗</a></li>
             <li><a href="https://linkedin.com" target="_blank" class="sq-footer__link">LinkedIn ↗</a></li>
-            <li><a href="mailto:dearparthsingh@gmail.com" class="sq-footer__link">Email ↗</a></li>
+            <li><a href="mailto:hello@example.com" class="sq-footer__link">Email ↗</a></li>
           </ul>
 
           <div class="sq-footer__meta">
-            <span>© 2026 PARTH SINGH</span>
+            <span>© 2026 STUDIO ARCHIVE</span>
             ${ceSvg}
           </div>
         </div>
