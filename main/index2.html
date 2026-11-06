@@ -1250,9 +1250,9 @@ Built automated reporting systems and real-time analytics dashboards to deliver 
     <!-- Experience Data Dynamic Renderer -->
     <script>
     (function() {
-      function renderExperiences() {
-        if (!window.EXPERIENCE_DATA) return;
-        var data = window.EXPERIENCE_DATA;
+      function renderExperiences(data) {
+        data = data || window.EXPERIENCE_DATA;
+        if (!data) return;
 
         // 1. Update tagline and badge tag if present
         if (data.tagline) {
@@ -1388,12 +1388,35 @@ Built automated reporting systems and real-time analytics dashboards to deliver 
         }
       }
 
+      function loadAndRender() {
+        if (window.EXPERIENCE_DATA) {
+          try { renderExperiences(window.EXPERIENCE_DATA); } catch(e) { console.error(e); }
+        }
+        try {
+          fetch('experience-data.json?v=' + Date.now())
+            .then(function(res) {
+              if (!res.ok) throw new Error('Fetch failed: ' + res.status);
+              return res.json();
+            })
+            .then(function(data) {
+              if (data && typeof data === 'object') {
+                window.EXPERIENCE_DATA = data;
+                renderExperiences(data);
+              }
+            })
+            .catch(function(err) {});
+        } catch(e) {}
+      }
+
       // Execute on DOM ready and after load to ensure seamless binding
       if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", renderExperiences);
+        document.addEventListener("DOMContentLoaded", loadAndRender);
       } else {
-        renderExperiences();
+        loadAndRender();
       }
+
+      document.addEventListener("siteReady", loadAndRender);
+      document.addEventListener("siteSwupReady", loadAndRender);
     })();
     </script>
 </body>
