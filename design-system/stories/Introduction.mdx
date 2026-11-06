@@ -18,15 +18,15 @@ import { Meta } from '@storybook/blocks';
 
   /* Scoped Hero Container */
   .sq-intro-hero {
-    background: #f9f4eb;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 12px;
-    padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 3.5vw, 3rem);
-    color: #111111;
-    margin-bottom: 2rem;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    background: #f9f4eb !important;
+    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+    border-radius: 12px !important;
+    padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 3.5vw, 3rem) !important;
+    color: #111111 !important;
+    margin-bottom: 2rem !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
   }
 
   /* Top Technical Meta Bar */
@@ -39,32 +39,32 @@ import { Meta } from '@storybook/blocks';
   }
 
   .sq-intro-pill {
-    font-family: var(--sq-font-family-mono, "font-mono-medium", monospace);
-    font-size: 0.68rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 9999px;
-    background: rgba(0, 0, 0, 0.06);
-    color: #111111;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    line-height: 1.2;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    font-family: var(--sq-font-family-mono, "font-mono-medium", monospace) !important;
+    font-size: 0.68rem !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    padding: 4px 10px !important;
+    border-radius: 9999px !important;
+    background: rgba(0, 0, 0, 0.06) !important;
+    color: #111111 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    line-height: 1.2 !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
   }
 
   .sq-intro-pill--accent {
-    background: #ffe32e;
-    color: #000000;
-    border-color: rgba(0, 0, 0, 0.15);
+    background: #ffe32e !important;
+    color: #000000 !important;
+    border-color: rgba(0, 0, 0, 0.15) !important;
   }
 
   .sq-intro-pill--live {
-    background: #111111;
-    color: #a1ff14;
-    border-color: #111111;
+    background: #111111 !important;
+    color: #a1ff14 !important;
+    border-color: #111111 !important;
   }
 
   .sq-intro-pill--live::before {
@@ -81,6 +81,81 @@ import { Meta } from '@storybook/blocks';
   @keyframes sq-pulse-dot {
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.4; transform: scale(0.85); }
+  }
+
+  /* Force Hero Title to be large and prominent across all Storybook Docs selectors */
+  .sbdocs-content .sq-intro-hero h1,
+  .sbdocs-content .sq-intro-hero h1 *,
+  .sbdocs-content .sq-intro-hero h1 p,
+  .sbdocs-content .sq-intro-hero h1 span,
+  .sbdocs-content h1.sq-intro-title,
+  .sbdocs-content h1.sq-intro-title * {
+    font-family: var(--sq-font-family-narrow, "font-narrow-semibold", "Arial Narrow", -apple-system, sans-serif) !important;
+    font-size: 54px !important;
+    font-weight: 700 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.02em !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline !important;
+  }
+
+  .sbdocs-content .sq-intro-hero h1 span.sq-wavy-underline {
+    font-size: 54px !important;
+    display: inline-block !important;
+    padding-bottom: 4px !important;
+  }
+
+  @media (max-width: 768px) {
+    .sbdocs-content .sq-intro-hero h1,
+    .sbdocs-content .sq-intro-hero h1 *,
+    .sbdocs-content .sq-intro-hero h1 p,
+    .sbdocs-content .sq-intro-hero h1 span,
+    .sbdocs-content h1.sq-intro-title,
+    .sbdocs-content h1.sq-intro-title * {
+      font-size: 38px !important;
+    }
+    .sbdocs-content .sq-intro-hero h1 span.sq-wavy-underline {
+      font-size: 38px !important;
+    }
+  }
+
+  /* Section Headings (H2) */
+  .sbdocs-content h2.sq-intro-heading-2,
+  .sbdocs-content .sq-intro-heading-2 {
+    font-family: var(--sq-font-family-narrow, "font-narrow-semibold", "Arial Narrow", -apple-system, sans-serif) !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: -0.01em !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  /* Card Headings (H3) */
+  .sbdocs-content .sq-intro-card h3,
+  .sbdocs-content .sq-intro-card h3 * {
+    font-family: var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif) !important;
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    margin: 0 0 8px 0 !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Directory Card Headings */
+  .sbdocs-content .sq-intro-dir-card h3,
+  .sbdocs-content .sq-intro-dir-card h3 * {
+    font-family: var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif) !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    color: #000000 !important;
+    margin: 0 0 14px 0 !important;
+    line-height: 1.2 !important;
   }
 
   /* Explore Button (Compass next-page trigger) */
@@ -386,21 +461,26 @@ import { Meta } from '@storybook/blocks';
 
   /* Terminal Block */
   .sq-intro-terminal {
-    background: #111111;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 2rem 0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    background: #111111 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    margin: 2rem 0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18) !important;
+  }
+
+  .sbdocs-content .sq-intro-terminal,
+  .sbdocs-content .sq-intro-terminal * {
+    color: #f1f1f1;
   }
 
   .sq-intro-terminal__bar {
-    background: #1d1d1d;
-    padding: 8px 14px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: #1d1d1d !important;
+    padding: 10px 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
   }
 
   .sq-intro-terminal__dot {
@@ -414,20 +494,21 @@ import { Meta } from '@storybook/blocks';
   .sq-intro-terminal__dot--green { background: #27c93f; }
 
   .sq-intro-terminal__title {
-    font-family: var(--sq-font-family-mono, monospace);
-    font-size: 0.72rem;
-    color: rgba(255, 255, 255, 0.5);
-    margin-left: 8px;
-    letter-spacing: 0.05em;
+    font-family: var(--sq-font-family-mono, monospace) !important;
+    font-size: 0.72rem !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    margin-left: 8px !important;
+    letter-spacing: 0.05em !important;
   }
 
   .sq-intro-terminal__body {
-    padding: 1.25rem 1.5rem;
-    font-family: var(--sq-font-family-mono, monospace);
-    font-size: 0.85rem;
-    color: #f1f1f1;
-    line-height: 1.6;
-    overflow-x: auto;
+    padding: 1.25rem 1.5rem !important;
+    font-family: var(--sq-font-family-mono, monospace) !important;
+    font-size: 0.85rem !important;
+    color: #f1f1f1 !important;
+    line-height: 1.6 !important;
+    overflow-x: auto !important;
+    background: #111111 !important;
   }
 
   .sq-intro-swatch-row {
@@ -477,24 +558,28 @@ import { Meta } from '@storybook/blocks';
     }}>
       Design System &amp; Component Library
     </span>
-    <h1 style={{
+    <h1 className="sq-intro-title" style={{
       fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", "Arial Narrow", -apple-system, sans-serif)',
-      fontSize: 'clamp(2.75rem, 5.5vw, 4.75rem)',
+      fontSize: '54px',
       fontWeight: 700,
       lineHeight: '1.05',
       letterSpacing: '-0.02em',
       color: '#000000',
       margin: '0 0 0.5rem 0',
-      padding: 0
+      padding: 0,
+      display: 'block'
     }}>
-      <span className="sq-wavy-underline" style={{ color: '#000000', paddingBottom: '3px' }}>Squiggle</span> UI Design System
+      {[
+        <span key="wave" className="sq-wavy-underline" style={{ color: '#000000', paddingBottom: '4px' }}>Squiggle</span>,
+        " UI Design System"
+      ]}
     </h1>
   </div>
 
   {/* Subtitle */}
   <p style={{
     fontFamily: 'var(--sq-font-family-normal, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif)',
-    fontSize: 'clamp(1rem, 1.3vw, 1.18rem)',
+    fontSize: '17px',
     lineHeight: '1.6',
     color: 'rgba(0, 0, 0, 0.78)',
     maxWidth: '780px',
@@ -574,9 +659,9 @@ import { Meta } from '@storybook/blocks';
   paddingBottom: '0.75rem',
   borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
 }}>
-  <h2 style={{
+  <h2 className="sq-intro-heading-2" style={{
     fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif)',
-    fontSize: '1.85rem',
+    fontSize: '30px',
     fontWeight: 700,
     textTransform: 'uppercase',
     letterSpacing: '-0.01em',
@@ -612,11 +697,11 @@ import { Meta } from '@storybook/blocks';
 
       <h3 style={{
         fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif)',
-        fontSize: '1.45rem',
+        fontSize: '22px',
         fontWeight: 600,
         color: '#ffffff',
-        margin: '0 0 0.65rem 0',
-        lineHeight: '1.2'
+        margin: '0 0 8px 0',
+        lineHeight: '1.25'
       }}>Compass Explore Button</h3>
       <p className="sq-intro-card__desc">
         Signature next-page trigger featuring a neon green surface (<code style={{ color: '#a1ff14', background: 'rgba(255,255,255,0.1)', padding: '2px 4px', borderRadius: '3px' }}>rgb(161,255,20)</code>) and an authentic compass icon that rotates 250° on hover with smooth mechanical easing.
@@ -659,11 +744,11 @@ import { Meta } from '@storybook/blocks';
 
       <h3 style={{
         fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif)',
-        fontSize: '1.45rem',
+        fontSize: '22px',
         fontWeight: 600,
         color: '#ffffff',
-        margin: '0 0 0.65rem 0',
-        lineHeight: '1.2'
+        margin: '0 0 8px 0',
+        lineHeight: '1.25'
       }}>Hand-Drawn Vector Wave</h3>
       <p className="sq-intro-card__desc">
         Signature electric yellow (<code style={{ color: '#ffe32e', background: 'rgba(255,255,255,0.1)', padding: '2px 4px', borderRadius: '3px' }}>#ffe32e</code>) SVG curve applied beneath active accordions, emphasized text, and full-bleed editorial section boundaries.
@@ -671,7 +756,7 @@ import { Meta } from '@storybook/blocks';
 
       {/* Live Interactive Preview */}
       <div className="sq-intro-card__preview">
-        <span className="sq-wavy-underline" style={{ fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.45rem', color: '#ffffff', fontWeight: 600, letterSpacing: '0.02em', paddingBottom: '3px' }}>
+        <span className="sq-wavy-underline" style={{ fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '24px', color: '#ffffff', fontWeight: 600, letterSpacing: '0.02em', paddingBottom: '3px' }}>
           Interactive Underline
         </span>
       </div>
@@ -700,11 +785,11 @@ import { Meta } from '@storybook/blocks';
 
       <h3 style={{
         fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif)',
-        fontSize: '1.45rem',
+        fontSize: '22px',
         fontWeight: 600,
         color: '#ffffff',
-        margin: '0 0 0.65rem 0',
-        lineHeight: '1.2'
+        margin: '0 0 8px 0',
+        lineHeight: '1.25'
       }}>Corner Brackets &amp; Badges</h3>
       <p className="sq-intro-card__desc">
         Geometric 93×93 pixel-corner brackets, subtle 2px micro-radii, signal indicator tags (<code style={{ color: '#ffe32e', background: 'rgba(255,255,255,0.1)', padding: '2px 4px', borderRadius: '3px' }}>[III]</code>), and tactile click spark burst feedback.
@@ -741,11 +826,11 @@ import { Meta } from '@storybook/blocks';
 
       <h3 style={{
         fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif)',
-        fontSize: '1.45rem',
+        fontSize: '22px',
         fontWeight: 600,
         color: '#ffffff',
-        margin: '0 0 0.65rem 0',
-        lineHeight: '1.2'
+        margin: '0 0 8px 0',
+        lineHeight: '1.25'
       }}>High-Contrast Dual Theme</h3>
       <p className="sq-intro-card__desc">
         Warm organic cream background (<code style={{ color: '#ffe32e', background: 'rgba(255,255,255,0.1)', padding: '2px 4px', borderRadius: '3px' }}>#f9f4eb</code>) counterbalanced against deep brutalist black (<code style={{ color: '#ffe32e', background: 'rgba(255,255,255,0.1)', padding: '2px 4px', borderRadius: '3px' }}>#000000</code>) and electric accents.
@@ -782,9 +867,9 @@ import { Meta } from '@storybook/blocks';
   paddingBottom: '0.75rem',
   borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
 }}>
-  <h2 style={{
+  <h2 className="sq-intro-heading-2" style={{
     fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif)',
-    fontSize: '1.85rem',
+    fontSize: '30px',
     fontWeight: 700,
     textTransform: 'uppercase',
     letterSpacing: '-0.01em',
@@ -812,11 +897,11 @@ import { Meta } from '@storybook/blocks';
       alignItems: 'center',
       gap: '8px',
       fontFamily: 'var(--sq-font-family-narrow, sans-serif)',
-      fontSize: '1.25rem',
+      fontSize: '20px',
       fontWeight: 700,
       textTransform: 'uppercase',
       color: '#000000',
-      margin: '0 0 1rem 0',
+      margin: '0 0 14px 0',
       paddingBottom: '0.75rem',
       borderBottom: '1px solid rgba(0, 0, 0, 0.08)'
     }}>
@@ -863,11 +948,11 @@ import { Meta } from '@storybook/blocks';
       alignItems: 'center',
       gap: '8px',
       fontFamily: 'var(--sq-font-family-narrow, sans-serif)',
-      fontSize: '1.25rem',
+      fontSize: '20px',
       fontWeight: 700,
       textTransform: 'uppercase',
       color: '#000000',
-      margin: '0 0 1rem 0',
+      margin: '0 0 14px 0',
       paddingBottom: '0.75rem',
       borderBottom: '1px solid rgba(0, 0, 0, 0.08)'
     }}>
@@ -932,11 +1017,11 @@ import { Meta } from '@storybook/blocks';
       alignItems: 'center',
       gap: '8px',
       fontFamily: 'var(--sq-font-family-narrow, sans-serif)',
-      fontSize: '1.25rem',
+      fontSize: '20px',
       fontWeight: 700,
       textTransform: 'uppercase',
       color: '#000000',
-      margin: '0 0 1rem 0',
+      margin: '0 0 14px 0',
       paddingBottom: '0.75rem',
       borderBottom: '1px solid rgba(0, 0, 0, 0.08)'
     }}>
@@ -1000,9 +1085,9 @@ import { Meta } from '@storybook/blocks';
   paddingBottom: '0.75rem',
   borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
 }}>
-  <h2 style={{
+  <h2 className="sq-intro-heading-2" style={{
     fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif)',
-    fontSize: '1.85rem',
+    fontSize: '30px',
     fontWeight: 700,
     textTransform: 'uppercase',
     letterSpacing: '-0.01em',
@@ -1029,13 +1114,33 @@ import { Meta } from '@storybook/blocks';
     <span className="sq-intro-terminal__dot sq-intro-terminal__dot--green"></span>
     <span className="sq-intro-terminal__title">bash — squiggle-ui-quickstart</span>
   </div>
-  <div className="sq-intro-terminal__body">
-    <span style={{ color: '#888888' }}># 1. Include the single standalone CSS bundle in your &lt;head&gt; (zero dependencies, 51KB)</span><br />
-    &lt;<span style={{ color: '#ffe32e' }}>link</span> <span style={{ color: '#a1ff14' }}>rel</span>=<span style={{ color: '#ffd2f3' }}>"stylesheet"</span> <span style={{ color: '#a1ff14' }}>href</span>=<span style={{ color: '#ffd2f3' }}>"https://prth1234.github.io/portfolio-2025/design-system/dist/design-system.css"</span> /&gt;<br /><br />
-    <span style={{ color: '#888888' }}># 2. Re-bundle distribution CSS after token or component changes</span><br />
-    <span style={{ color: '#ffe32e' }}>cd</span> design-system &amp;&amp; <span style={{ color: '#a1ff14' }}>node build.js</span><br /><br />
-    <span style={{ color: '#888888' }}># 3. Launch the local Storybook development server</span><br />
-    <span style={{ color: '#ffe32e' }}>cd</span> design-system &amp;&amp; <span style={{ color: '#a1ff14' }}>npm run storybook</span>
+  <div className="sq-intro-terminal__body" style={{ color: '#f1f1f1', backgroundColor: '#111111' }}>
+    <div style={{ color: '#888888', marginBottom: '6px' }}># 1. Include standalone CSS bundle in your &lt;head&gt; (zero dependencies, 51KB)</div>
+    <div style={{ color: '#f1f1f1', marginBottom: '16px' }}>
+      <span style={{ color: '#888888' }}>&lt;</span>
+      <span style={{ color: '#ffe32e' }}>link</span>{' '}
+      <span style={{ color: '#a1ff14' }}>rel</span>=<span style={{ color: '#ffd2f3' }}>"stylesheet"</span>{' '}
+      <span style={{ color: '#a1ff14' }}>href</span>=<span style={{ color: '#ffd2f3' }}>"https://prth1234.github.io/portfolio-2025/design-system/dist/design-system.css"</span>{' '}
+      <span style={{ color: '#888888' }}>/&gt;</span>
+    </div>
+
+    <div style={{ color: '#888888', marginBottom: '6px' }}># 2. Re-bundle distribution CSS after token or component changes</div>
+    <div style={{ color: '#f1f1f1', marginBottom: '16px' }}>
+      <span style={{ color: '#ffe32e' }}>cd</span>{' '}
+      <span style={{ color: '#f1f1f1' }}>design-system</span>{' '}
+      <span style={{ color: '#ffe32e' }}>&amp;&amp;</span>{' '}
+      <span style={{ color: '#a1ff14' }}>node</span>{' '}
+      <span style={{ color: '#f1f1f1' }}>build.js</span>
+    </div>
+
+    <div style={{ color: '#888888', marginBottom: '6px' }}># 3. Launch local Storybook development server</div>
+    <div style={{ color: '#f1f1f1' }}>
+      <span style={{ color: '#ffe32e' }}>cd</span>{' '}
+      <span style={{ color: '#f1f1f1' }}>design-system</span>{' '}
+      <span style={{ color: '#ffe32e' }}>&amp;&amp;</span>{' '}
+      <span style={{ color: '#a1ff14' }}>npm run</span>{' '}
+      <span style={{ color: '#f1f1f1' }}>storybook</span>
+    </div>
   </div>
 </div>
 
@@ -1050,9 +1155,9 @@ import { Meta } from '@storybook/blocks';
   paddingBottom: '0.75rem',
   borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
 }}>
-  <h2 style={{
+  <h2 className="sq-intro-heading-2" style={{
     fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif)',
-    fontSize: '1.85rem',
+    fontSize: '30px',
     fontWeight: 700,
     textTransform: 'uppercase',
     letterSpacing: '-0.01em',
