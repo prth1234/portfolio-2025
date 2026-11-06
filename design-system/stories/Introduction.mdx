@@ -2,6 +2,60 @@ import { Meta } from '@storybook/blocks';
 
 <Meta title="Introduction" />
 
+<style>{`
+  /* Overrides for Storybook Docs styling interference */
+  .sbdocs-content a.sq-button--primary,
+  .sbdocs-content a.sq-button--primary:visited,
+  .sbdocs-content a.sq-button--primary:hover,
+  .sbdocs-content a.sq-button--primary:active,
+  .sbdocs-content button.sq-button--primary,
+  .sbdocs-content .sq-button--primary,
+  .sbdocs-content .sq-button--primary span,
+  .sbdocs-content .sq-button--primary svg {
+    color: #000000 !important;
+    fill: #000000 !important;
+  }
+
+  .sbdocs-content a.sq-button--outline,
+  .sbdocs-content a.sq-button--outline:visited,
+  .sbdocs-content a.sq-button--outline:hover,
+  .sbdocs-content a.sq-button--outline:active,
+  .sbdocs-content button.sq-button--outline,
+  .sbdocs-content .sq-button--outline,
+  .sbdocs-content .sq-button--outline span {
+    color: #000000 !important;
+  }
+
+  /* Fix dark text on black cards ("black on black") */
+  .sbdocs-content .sq-project-card {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+  }
+  .sbdocs-content .sq-project-card h3,
+  .sbdocs-content .sq-project-card .sq-project-card__title {
+    color: #ffffff !important;
+  }
+  .sbdocs-content .sq-project-card p,
+  .sbdocs-content .sq-project-card .sq-project-card__desc {
+    color: #e0dbd1 !important;
+  }
+  .sbdocs-content .sq-project-card code {
+    color: #ffe32e !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 227, 46, 0.3) !important;
+  }
+  .sbdocs-content .sq-project-card .sq-project-card__tag {
+    color: #ffe32e !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+  }
+  .sbdocs-content .sq-project-card .sq-tag,
+  .sbdocs-content .sq-project-card .sq-skill-tag {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  }
+`}</style>
+
 <div style={{
   background: '#f9f4eb',
   padding: '2.5rem 2rem',
@@ -23,10 +77,10 @@ import { Meta } from '@storybook/blocks';
 
   <h1 style={{
     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-    fontSize: 'clamp(2rem, 1.2rem + 2.5vi, 3.25rem)',
+    fontSize: '2.25rem',
     fontWeight: '700',
     letterSpacing: '-0.02em',
-    lineHeight: '1.1',
+    lineHeight: '1.2',
     margin: '0.5rem 0 1rem 0',
     color: '#000000'
   }}>
@@ -37,7 +91,7 @@ import { Meta } from '@storybook/blocks';
     fontSize: '1rem',
     maxWidth: '680px',
     lineHeight: '1.55',
-    color: 'rgba(0,0,0,0.75)',
+    color: '#333333',
     margin: '0 0 1.5rem 0'
   }}>
     A production-grade, framework-agnostic design system reverse-engineered with 100% exact fidelity from the high-contrast editorial portfolio. Built for reusable, themeable consistency across creative projects.
@@ -105,10 +159,10 @@ import { Meta } from '@storybook/blocks';
     </div>
 
     <div>
-      <h3 style={{ color: '#ffffff', fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.35rem', fontWeight: 600, margin: '0.5rem 0 0.75rem 0' }}>
+      <h3 className="sq-project-card__title" style={{ color: '#ffffff', fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.35rem', fontWeight: 600, margin: '0.5rem 0 0.75rem 0' }}>
         Signature Yellow Accent
       </h3>
-      <p style={{ color: '#e0dbd1', fontSize: '0.86rem', lineHeight: '1.6', margin: 0 }}>
+      <p className="sq-project-card__desc" style={{ color: '#e0dbd1', fontSize: '0.86rem', lineHeight: '1.6', margin: 0 }}>
         Vibrant electric yellow (<code style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: '#ffe32e', padding: '2px 6px', borderRadius: '3px', border: '1px solid rgba(255, 227, 46, 0.3)' }}>#ffe32e</code>) applied to the hand-drawn wavy underline, active milestone nodes, form submit CTAs, and interactive hover star indicators.
       </p>
     </div>
@@ -141,10 +195,10 @@ import { Meta } from '@storybook/blocks';
     </div>
 
     <div>
-      <h3 style={{ color: '#ffffff', fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.35rem', fontWeight: 600, margin: '0.5rem 0 0.75rem 0' }}>
+      <h3 className="sq-project-card__title" style={{ color: '#ffffff', fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.35rem', fontWeight: 600, margin: '0.5rem 0 0.75rem 0' }}>
         Editorial Typography
       </h3>
-      <p style={{ color: '#e0dbd1', fontSize: '0.86rem', lineHeight: '1.6', margin: 0 }}>
+      <p className="sq-project-card__desc" style={{ color: '#e0dbd1', fontSize: '0.86rem', lineHeight: '1.6', margin: 0 }}>
         Bold, condensed display headers paired with monospace technical tracking (<code style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: '#ffe32e', padding: '2px 6px', borderRadius: '3px', border: '1px solid rgba(255, 227, 46, 0.3)' }}>font-mono-medium</code>) and neutral body text across fluid clamp scales.
       </p>
     </div>
@@ -177,10 +231,10 @@ import { Meta } from '@storybook/blocks';
     </div>
 
     <div>
-      <h3 style={{ color: '#ffffff', fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.35rem', fontWeight: 600, margin: '0.5rem 0 0.75rem 0' }}>
+      <h3 className="sq-project-card__title" style={{ color: '#ffffff', fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.35rem', fontWeight: 600, margin: '0.5rem 0 0.75rem 0' }}>
         Retro Pixel Accents
       </h3>
-      <p style={{ color: '#e0dbd1', fontSize: '0.86rem', lineHeight: '1.6', margin: 0 }}>
+      <p className="sq-project-card__desc" style={{ color: '#e0dbd1', fontSize: '0.86rem', lineHeight: '1.6', margin: 0 }}>
         Subtle 2px micro-radii, geometric corner bracket trims (<code style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: '#ffe32e', padding: '2px 6px', borderRadius: '3px', border: '1px solid rgba(255, 227, 46, 0.3)' }}>93x93</code> SVG paths), signal indicator bars (<code style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: '#ffe32e', padding: '2px 6px', borderRadius: '3px', border: '1px solid rgba(255, 227, 46, 0.3)' }}>III</code>), and radial click spark bursts.
       </p>
     </div>

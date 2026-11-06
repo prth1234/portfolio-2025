@@ -32,7 +32,13 @@
 /* Primary Yellow Form Button */
 .sq-button--primary,
 .sq-button--form,
-.button.is-form {
+.button.is-form,
+a.sq-button--primary,
+a.sq-button--primary:visited,
+a.sq-button--primary:hover,
+a.sq-button--primary:active,
+a.sq-button--form,
+a.sq-button--form:visited {
   background-color: var(--sq-color-yellow) !important;
   color: #000000 !important;
   border-color: rgba(0, 0, 0, 0.12);
@@ -41,8 +47,13 @@
 
 .sq-button--primary span,
 .sq-button--primary svg,
+.sq-button--primary path,
 .sq-button--form span,
-.sq-button--form svg {
+.sq-button--form svg,
+.sq-button--form path,
+a.sq-button--primary span,
+a.sq-button--primary svg,
+a.sq-button--primary path {
   color: #000000 !important;
   fill: #000000 !important;
 }

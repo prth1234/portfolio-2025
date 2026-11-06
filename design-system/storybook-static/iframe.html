@@ -541,10 +541,62 @@
   descent-override: 31%;
   line-gap-override: 14%;
 }
+
+/* Force high-specificity docs overrides for Squiggle UI components inside Storybook Docs */
+.sbdocs-content a.sq-button--primary,
+.sbdocs-content a.sq-button--primary:visited,
+.sbdocs-content a.sq-button--primary:hover,
+.sbdocs-content a.sq-button--primary:active,
+.sbdocs-content button.sq-button--primary,
+.sbdocs-content .sq-button--primary,
+.sbdocs-content .sq-button--primary span,
+.sbdocs-content .sq-button--primary svg {
+  color: #000000 !important;
+  fill: #000000 !important;
+}
+
+.sbdocs-content a.sq-button--outline,
+.sbdocs-content a.sq-button--outline:visited,
+.sbdocs-content a.sq-button--outline:hover,
+.sbdocs-content a.sq-button--outline:active,
+.sbdocs-content button.sq-button--outline,
+.sbdocs-content .sq-button--outline,
+.sbdocs-content .sq-button--outline span {
+  color: #000000 !important;
+}
+
+/* Fix dark text on black cards ("black on black") */
+.sbdocs-content .sq-project-card {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+.sbdocs-content .sq-project-card h3,
+.sbdocs-content .sq-project-card .sq-project-card__title {
+  color: #ffffff !important;
+}
+.sbdocs-content .sq-project-card p,
+.sbdocs-content .sq-project-card .sq-project-card__desc {
+  color: #e0dbd1 !important;
+}
+.sbdocs-content .sq-project-card code {
+  color: #ffe32e !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 227, 46, 0.3) !important;
+}
+.sbdocs-content .sq-project-card .sq-project-card__tag {
+  color: #ffe32e !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+.sbdocs-content .sq-project-card .sq-tag,
+.sbdocs-content .sq-project-card .sq-skill-tag {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
 </style>
 
 
-    <script type="module" crossorigin src="./assets/iframe-D8LA2vUD.js"></script>
+    <script type="module" crossorigin src="./assets/iframe-Bt3mBs4Z.js"></script>
   </head>
 
   <body>
