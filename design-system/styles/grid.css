@@ -1,0 +1,22 @@
+/**
+ * SQUIGGLE UI - GRID & CONTAINER
+ */
+
+.container,
+.sq-container {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--sq-grid-margin);
+  padding-right: var(--sq-grid-margin);
+}
+
+.grid,
+.sq-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--sq-grid-columns), minmax(0, 1fr));
+  column-gap: var(--sq-size-16);
+  row-gap: var(--sq-size-24);
+}
+

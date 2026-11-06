@@ -1,0 +1,49 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+import * as WavyUnderlineStories from './wavy-underline.stories';
+
+<Meta of={WavyUnderlineStories} />
+
+# Wavy Underline
+
+The signature visual accent of the portfolio. Originally used under expanded accordion items on the Resume & More page (`main/index4.html`), this component draws a warm, vibrant yellow (`#ffe32e`) hand-drawn wave beneath headings, inline words, and titles.
+
+## Anatomy
+
+1. **Host Element**: Relative inline or inline-block container with removed standard text decoration.
+2. **Pseudo-element (`::after`)**: Absolute element anchored to `bottom: -6px` with an SVG data URI background patterned horizontally (`repeat-x`).
+
+## Live Preview
+
+<Canvas of={WavyUnderlineStories.Default} />
+
+## Code Snippet
+
+```html
+<h2 class="sq-wavy-underline">Experience & Milestones</h2>
+```
+
+```css
+.sq-wavy-underline {
+  position: relative !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+}
+
+.sq-wavy-underline::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: -6px !important;
+  width: 100% !important;
+  height: 8px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 6'%3E%3Cpath d='M0 3 Q 5 0, 10 3 T 20 3' fill='none' stroke='%23ffe32e' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat: repeat-x !important;
+  background-size: 16px 6px !important;
+  pointer-events: none !important;
+}
+```
+
+## Accessibility (A11y)
+- The underline is purely decorative (`pointer-events: none`, pseudo-element `aria-hidden` by nature).
+- The contrast ratio of the parent text is fully preserved as the wave rests below the baseline.
+

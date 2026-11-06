@@ -1,0 +1,54 @@
+/**
+ * SQUIGGLE UI - DOTTED LEADER
+ * Editorial table of contents & project list rows with dot leaders
+ */
+
+.sq-dotted-leader-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 600px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sq-dotted-leader-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  font-family: var(--sq-font-family-mono);
+  font-size: 0.85rem;
+  font-weight: var(--sq-font-weight-medium);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color var(--sq-speed-fast) var(--sq-color-ease);
+}
+
+.sq-dotted-leader-row:hover {
+  color: var(--sq-color-yellow);
+}
+
+.sq-dotted-leader-index {
+  flex-shrink: 0;
+  color: inherit;
+}
+
+.sq-dotted-leader-dots {
+  flex-grow: 1;
+  border-bottom: 2px dotted currentColor;
+  margin: 0 0.85rem;
+  opacity: 0.45;
+  transform: translateY(-4px);
+}
+
+.sq-dotted-leader-title {
+  flex-shrink: 0;
+  font-weight: var(--sq-font-weight-semibold);
+  letter-spacing: 0.04em;
+}
+

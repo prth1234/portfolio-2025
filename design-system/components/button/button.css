@@ -1,0 +1,124 @@
+/**
+ * SQUIGGLE UI - BUTTONS
+ * Exact buttons from source
+ */
+
+.sq-button,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--sq-font-family-mono);
+  font-size: 0.75rem;
+  font-weight: var(--sq-font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  padding: 0.75rem 1.35rem;
+  border-radius: var(--sq-radius-pill);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform var(--sq-speed-fast) var(--sq-bouncy-ease),
+              background-color var(--sq-speed-fast) var(--sq-color-ease),
+              box-shadow var(--sq-speed-fast) var(--sq-color-ease),
+              color var(--sq-speed-fast) var(--sq-color-ease);
+  position: relative;
+  user-select: none;
+}
+
+/* Primary Yellow Form Button */
+.sq-button--primary,
+.sq-button--form,
+.button.is-form {
+  background-color: var(--sq-color-yellow);
+  color: var(--sq-color-black);
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.sq-button--primary:hover,
+.sq-button--form:hover,
+.button.is-form:hover,
+.sq-button--hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  background-color: #ffd600;
+}
+
+.sq-button--primary:active,
+.sq-button--form:active,
+.button.is-form:active,
+.sq-button--active {
+  transform: scale(0.97);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.sq-button:focus-visible,
+.button:focus-visible,
+.sq-button--focus {
+  outline: 2px solid var(--sq-color-black);
+  outline-offset: 2px;
+}
+
+.sq-button[disabled],
+.button[disabled],
+.sq-button--disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Dark Variant */
+.sq-button--dark {
+  background-color: var(--sq-color-black);
+  color: var(--sq-color-cream);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.sq-button--dark:hover {
+  background-color: #1a1a1a;
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Outline Variant */
+.sq-button--outline {
+  background-color: transparent;
+  color: var(--sq-color-black);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.sq-button--outline:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: var(--sq-color-black);
+}
+
+/* Sizes */
+.sq-button--small {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.65rem;
+}
+
+.sq-button--large {
+  padding: 0.95rem 1.85rem;
+  font-size: 0.875rem;
+}
+
+/* Arrow inside button */
+.sq-button .sq-icon--arrow,
+.button .icon.is-arrow {
+  width: 0.75rem;
+  height: 0.75rem;
+  transition: transform var(--sq-speed-fast) var(--sq-bouncy-ease);
+}
+
+.sq-button:hover .sq-icon--arrow,
+.button:hover .icon.is-arrow {
+  transform: translateX(3px);
+}
+

@@ -1,0 +1,19 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+import * as ContactFormStories from './contact-form.stories';
+
+<Meta of={ContactFormStories} />
+
+# Contact Form
+
+The retro-styled inline communication form used in the black `.plan` section of `main/index.html` and `main/index3.html`. Incorporates custom monospace inputs (`E-MAIL`, `MESSAGE`), the yellow pill `ENTER` button, and the synchronized 4-box spinning windmill loader on the right.
+
+## Anatomy
+- **Input Fields**: Monospace font, uppercase placeholders, yellow focus ring.
+- **Submit Wrap**: Relative anchor grouping the submit button and floating spinner.
+- **Loader**: 4 offset spinning boxes with `SENDING...` status text.
+- **Feedback Message**: Inline success/error status below the form.
+
+## Live Preview
+
+<Canvas of={ContactFormStories.Interactive} />
+

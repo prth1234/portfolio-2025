@@ -1,0 +1,36 @@
+{
+  "name": "squiggle-ui",
+  "version": "1.0.0",
+  "description": "Squiggle UI - Production-grade design system reverse-engineered from portfolio-2025",
+  "main": "dist/design-system.css",
+  "style": "dist/design-system.css",
+  "exports": {
+    ".": "./dist/design-system.css",
+    "./tokens": "./tokens/tokens.css",
+    "./tokens.json": "./tokens/tokens.json"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "keywords": [
+    "design-system",
+    "squiggle",
+    "retro-pixel",
+    "editorial-ui",
+    "storybook"
+  ],
+  "author": "Parth Singh",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-a11y": "^8.6.19",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/blocks": "^8.6.14",
+    "@storybook/html": "^8.6.19",
+    "@storybook/html-vite": "^8.6.19",
+    "storybook": "^8.6.19",
+    "vite": "^5.4.21"
+  }
+}

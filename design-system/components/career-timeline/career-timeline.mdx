@@ -1,0 +1,20 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+import * as CareerTimelineStories from './career-timeline.stories';
+
+<Meta of={CareerTimelineStories} />
+
+# Career Progression Timeline
+
+A vertical milestone tracker created for the Experience page (`main/index2.html`) to showcase career promotions and role progression at an organization.
+
+## Anatomy
+- **Header**: Company name in narrow display typography + pill badge `Career Progression`.
+- **Active Node**: Yellow square node (`#ffe32e`, border-radius 4px) containing a black star symbol (`✦`).
+- **Gradient Stem**: Vertical connector line flowing from the active node down to past milestones.
+- **Past Node**: Inactive dark disc (`●`).
+- **Role Body**: Title, status pill (`PROMOTED ✦` or `INITIAL ROLE`), and monospace uppercase date span.
+
+## Live Preview
+
+<Canvas of={CareerTimelineStories.Default} />
+

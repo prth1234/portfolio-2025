@@ -1,0 +1,24 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+import * as ExploreButtonStories from './explore-button.stories';
+
+<Meta of={ExploreButtonStories} />
+
+# Explore Button
+
+An interactive navigation button placed on the landing page (`main/index.html`) leading the visitor to `index2.html` (Experience). Features neon chartreuse styling (`rgb(161, 255, 20)`), smooth 0.5s transition, and an animated compass SVG that spins 250 degrees on hover.
+
+## Live Preview
+
+<Canvas of={ExploreButtonStories.Default} />
+
+## Code Snippet
+
+```html
+<button class="sq-explore-button" type="button">
+  <svg class="sq-explore-button__icon" viewBox="0 0 512 512" height="25" width="25">
+    <path fill="rgb(19, 19, 19)" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path>
+  </svg>
+  Explore
+</button>
+```
+

@@ -1,0 +1,206 @@
+/**
+ * SQUIGGLE UI - CAREER PROGRESSION TIMELINE
+ * Exact progression tracking component from main/index2.html
+ */
+
+.sq-career-timeline,
+.role_timeline-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0.25rem 0 0.5rem;
+}
+
+.sq-career-timeline__header,
+.role_timeline-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.sq-career-timeline__company,
+.role_timeline-header .role_company {
+  font-family: var(--sq-font-family-narrow);
+  font-size: clamp(1.4rem, 1.1rem + 0.9vi, 2.1rem);
+  font-weight: var(--sq-font-weight-semibold);
+  color: var(--color, var(--sq-color-black));
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.sq-career-timeline__badge,
+.role_timeline-header .role_company-badge {
+  font-family: var(--sq-font-family-mono);
+  font-size: 0.65rem;
+  font-weight: var(--sq-font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: var(--sq-radius-badge);
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.u-theme-dark .sq-career-timeline__badge,
+.u-theme-dark .role_timeline-header .role_company-badge {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.sq-career-timeline__list,
+.role_timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 0.25rem;
+  position: relative;
+}
+
+.sq-career-timeline__step,
+.role_timeline-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  position: relative;
+}
+
+.sq-career-timeline__track,
+.role_timeline-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+/* Active / Current Node */
+.sq-career-timeline__node,
+.role_timeline-node {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--sq-radius-node);
+  background-color: var(--sq-color-yellow);
+  color: var(--sq-color-black);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+/* Past / Initial Node */
+.sq-career-timeline__node--past,
+.role_timeline-node.is-past {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.22);
+  color: transparent;
+  font-size: 0;
+  box-shadow: none;
+  margin: 3px 0;
+}
+
+.u-theme-dark .sq-career-timeline__node--past,
+.u-theme-dark .role_timeline-node.is-past {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Connecting Stem */
+.sq-career-timeline__stem,
+.role_timeline-stem {
+  width: 2px;
+  min-height: 22px;
+  flex-grow: 1;
+  background: linear-gradient(to bottom, var(--sq-color-yellow) 0%, rgba(0, 0, 0, 0.2) 100%);
+  margin: 2px 0;
+}
+
+.u-theme-dark .sq-career-timeline__stem,
+.u-theme-dark .role_timeline-stem {
+  background: linear-gradient(to bottom, var(--sq-color-yellow) 0%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+.sq-career-timeline__body,
+.role_timeline-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-bottom: 0.75rem;
+}
+
+.sq-career-timeline__heading,
+.role_timeline-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.sq-career-timeline__title,
+.role_timeline-title {
+  font-family: var(--sq-font-family-narrow);
+  font-size: clamp(1.1rem, 0.95rem + 0.45vi, 1.45rem);
+  font-weight: var(--sq-font-weight-semibold);
+  color: var(--color, var(--sq-color-black));
+  line-height: 1.2;
+}
+
+.sq-career-timeline__step:not(.is-current) .sq-career-timeline__title,
+.role_timeline-step:not(.is-current) .role_timeline-title {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: clamp(1rem, 0.9rem + 0.3vi, 1.25rem);
+}
+
+.u-theme-dark .sq-career-timeline__step:not(.is-current) .sq-career-timeline__title,
+.u-theme-dark .role_timeline-step:not(.is-current) .role_timeline-title {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Role Badges */
+.sq-career-timeline__tag,
+.role_timeline-tag {
+  font-family: var(--sq-font-family-mono);
+  font-size: 0.65rem;
+  font-weight: var(--sq-font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1px 7px;
+  border-radius: var(--sq-radius-badge);
+  background: rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sq-career-timeline__tag--promoted,
+.role_timeline-tag.is-promoted {
+  background: var(--sq-color-yellow);
+  color: var(--sq-color-black);
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.sq-career-timeline__date,
+.role_timeline-date {
+  font-family: var(--sq-font-family-mono);
+  font-size: clamp(0.72rem, 0.68rem + 0.15vi, 0.8rem);
+  color: rgba(0, 0, 0, 0.55);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+}
+
+.u-theme-dark .sq-career-timeline__date,
+.u-theme-dark .role_timeline-date {
+  color: rgba(255, 255, 255, 0.55);
+}
+

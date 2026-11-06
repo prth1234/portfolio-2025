@@ -1,0 +1,36 @@
+/**
+ * SQUIGGLE UI - THEMES
+ * Supports Light Theme (Cream & Black) and Dark Theme (Pitch Black & Cream/Yellow)
+ */
+
+.u-theme-light,
+.sq-theme-light,
+[data-theme="light"] {
+  --color: var(--sq-color-black);
+  --color-background: var(--sq-color-cream);
+  --selection-foreground: var(--sq-color-black);
+  --selection-background: var(--sq-color-yellow);
+  background-color: var(--sq-color-cream);
+  color: var(--sq-color-black);
+}
+
+.u-theme-dark,
+.sq-theme-dark,
+[data-theme="dark"] {
+  --color: var(--sq-color-cream);
+  --color-background: var(--sq-color-black);
+  --selection-foreground: var(--sq-color-black);
+  --selection-background: var(--sq-color-yellow);
+  background-color: var(--sq-color-black);
+  color: var(--sq-color-cream);
+}
+
+.u-theme-dark .u-h1,
+.u-theme-dark .u-h2,
+.u-theme-dark .u-h3,
+.sq-theme-dark .sq-h1,
+.sq-theme-dark .sq-h2,
+.sq-theme-dark .sq-h3 {
+  color: var(--sq-color-cream);
+}
+

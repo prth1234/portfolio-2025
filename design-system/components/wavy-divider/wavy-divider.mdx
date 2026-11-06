@@ -1,0 +1,31 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+import * as WavyDividerStories from './wavy-divider.stories';
+
+<Meta of={WavyDividerStories} />
+
+# Wavy Section Divider
+
+A seamless, full-width fluid SVG wave connecting the pitch black `.plan` section to the warm cream `.service` section on the main portfolio page. Traced with a vibrant yellow wave boundary stroke (`#ffe32e`, width 4.5px).
+
+## Live Preview
+
+<Canvas of={WavyDividerStories.Default} />
+
+## Anatomy
+- **Container**: Zero-line-height wrapper with negative margins to prevent subpixel antialiasing gaps between sections.
+- **Top Fill Path**: Perfectly closes into the top section.
+- **Bottom Fill Path**: Perfectly closes into the bottom section.
+- **Stroke Path**: 4.5px curved yellow boundary path across 1440 coordinate units with cubic bezier wave segments.
+
+## Copyable Snippet
+
+```html
+<div class="sq-wavy-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 90" fill="none" preserveAspectRatio="none" class="sq-wavy-divider__svg" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 L0,45 Q 60,80 120,45 T 240,45 T 360,45 T 480,45 T 600,45 T 720,45 T 840,45 T 960,45 T 1080,45 T 1200,45 T 1320,45 T 1440,45 L 1440,0 Z" fill="#000000"></path>
+    <path d="M0,95 L0,45 Q 60,80 120,45 T 240,45 T 360,45 T 480,45 T 600,45 T 720,45 T 840,45 T 960,45 T 1080,45 T 1200,45 T 1320,45 T 1440,95 Z" fill="#f9f4eb"></path>
+    <path d="M0,45 Q 60,80 120,45 T 240,45 T 360,45 T 480,45 T 600,45 T 720,45 T 840,45 T 960,45 T 1080,45 T 1200,45 T 1320,45 T 1440,45" fill="none" stroke="#ffe32e" stroke-width="4.5" stroke-linecap="round"></path>
+  </svg>
+</div>
+```
+

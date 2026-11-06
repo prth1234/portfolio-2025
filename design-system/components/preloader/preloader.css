@@ -1,0 +1,44 @@
+/**
+ * SQUIGGLE UI - PRELOADER
+ * Retro 3-box loading sequence
+ */
+
+.sq-preloader,
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sq-size-4);
+  padding: 2rem;
+  background-color: var(--sq-color-black);
+  border-radius: 4px;
+}
+
+.sq-preloader--fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: var(--sq-z-index-preloader);
+  border-radius: 0;
+}
+
+.sq-preloader__box,
+.preloader_box {
+  width: var(--sq-size-8);
+  height: var(--sq-size-24);
+  border-radius: 2px;
+  background-color: var(--sq-color-yellow);
+  animation: sq-preloader-spin 0.6s infinite cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.sq-preloader__box:nth-child(1) { animation-delay: -0.045s; }
+.sq-preloader__box:nth-child(2) { animation-delay: -0.030s; }
+.sq-preloader__box:nth-child(3) { animation-delay: -0.015s; }
+
+@keyframes sq-preloader-spin {
+  0% { transform: rotate(0deg) translateZ(0); }
+  100% { transform: rotate(180deg) translateZ(0); }
+}
+

@@ -1,0 +1,229 @@
+/**
+ * SQUIGGLE UI - NAVIGATION
+ * Exact matches from portfolio-2025
+ */
+
+.sq-header,
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--sq-z-index-header, 800);
+  background-color: var(--color-background, var(--sq-color-cream, #f9f4eb));
+  transition: background-color var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out);
+  padding: 0.75rem var(--sq-grid-margin, clamp(1.5rem, 0.3333rem + 2.6667vi, 3rem));
+}
+
+.sq-header__inner,
+.header_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+/* ==========================================================================
+   BRAND BADGE (Left side of header in Screenshot 5)
+   ========================================================================== */
+.sq-brand-badge,
+.header_title-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color, var(--sq-color-black, #000000));
+  color: var(--color-background, var(--sq-color-cream, #f9f4eb));
+  font-family: var(--sq-font-family-mono, monospace);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--sq-radius-pixel, 2px);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: transform var(--sq-speed-fast, 0.3s) var(--sq-bouncy-ease, ease),
+              box-shadow var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out);
+  white-space: nowrap;
+}
+
+.sq-brand-badge:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.sq-brand-badge__star {
+  color: var(--sq-color-yellow, #ffe32e);
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.u-theme-dark .sq-brand-badge {
+  background-color: var(--sq-color-cream, #f9f4eb);
+  color: var(--sq-color-black, #000000);
+}
+
+.u-theme-dark .sq-brand-badge__star {
+  color: var(--sq-color-black, #000000);
+}
+
+/* Optional avatar variant */
+.sq-header__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   NAV TABS (Variant 1: Authentic Real Portfolio Floating Pills - Screenshot 5)
+   ========================================================================== */
+.sq-nav,
+.header_nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sq-nav__list,
+.header_nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sq-nav__item,
+.header_nav-list-item {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav Tab Button */
+.sq-nav__button,
+.header_nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0.45rem 1.15rem;
+  font-family: var(--sq-font-family-mono, monospace);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color, var(--sq-color-black, #000000));
+  background: transparent;
+  border-radius: var(--sq-radius-pill, 9999px);
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  transition: color var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out),
+              background-color var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out),
+              transform var(--sq-speed-fast, 0.3s) var(--sq-bouncy-ease, ease);
+}
+
+.sq-nav__button:hover,
+.header_nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.u-theme-dark .sq-nav__button {
+  color: var(--color, var(--sq-color-cream, #f9f4eb));
+}
+
+.u-theme-dark .sq-nav__button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Active Nav Button (Black solid capsule in light theme, Cream solid capsule in dark theme) */
+.sq-nav__button.is-active,
+.sq-nav__button.w--current,
+.header_nav-button.w--current,
+.header_nav-button.is-active {
+  background-color: var(--sq-color-black, #000000) !important;
+  color: var(--sq-color-cream, #f9f4eb) !important;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.u-theme-dark .sq-nav__button.is-active,
+.u-theme-dark .sq-nav__button.w--current,
+.u-theme-dark .header_nav-button.w--current,
+.u-theme-dark .header_nav-button.is-active {
+  background-color: var(--sq-color-cream, #f9f4eb) !important;
+  color: var(--sq-color-black, #000000) !important;
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.15);
+}
+
+/* ==========================================================================
+   NAV TABS (Variant 2: Segmented Capsule Track)
+   ========================================================================== */
+.sq-nav--capsule .sq-nav__list {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: var(--sq-radius-pill, 9999px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 3px;
+  gap: 0.2rem;
+}
+
+.u-theme-dark .sq-nav--capsule .sq-nav__list {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ==========================================================================
+   FEED BUTTON (Right side of header)
+   ========================================================================== */
+.sq-feed-button,
+.header_tools .header_nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1.1rem;
+  font-family: var(--sq-font-family-mono, monospace);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color, var(--sq-color-black, #000000));
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: var(--sq-radius-pill, 9999px);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  transition: border-color var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out),
+              background-color var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out),
+              color var(--sq-speed-fast, 0.3s) var(--sq-color-ease, ease-out);
+}
+
+.sq-feed-button:hover,
+.header_tools .header_nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: var(--sq-color-black, #000000);
+}
+
+.u-theme-dark .sq-feed-button,
+.u-theme-dark .header_tools .header_nav-button {
+  color: var(--sq-color-cream, #f9f4eb);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.u-theme-dark .sq-feed-button:hover,
+.u-theme-dark .header_tools .header_nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--sq-color-cream, #f9f4eb);
+}

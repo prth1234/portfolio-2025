@@ -1,0 +1,28 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+import * as NavStories from './nav.stories';
+
+<Meta of={NavStories} />
+
+# Navigation
+
+The primary header navigation component connecting the 4 portfolio views (`About`, `Experience`, `Projects`, `More`) along with the brand badge and `FEED` action button.
+
+## Variants
+
+1. **Authentic Editorial Nav (`sq-nav--editorial`)**:
+   Matches the live deployed portfolio. The navigation items float cleanly with generous spacing; only the active item is wrapped in the solid black rounded pill. Features the left-aligned `[ BRAND ✦ ARCHIVE ]` micro-badge and the right-aligned `[ FEED ]` pill button.
+2. **Capsule Track Nav (`sq-nav--capsule`)**:
+   Encloses all navigation items within a shared rounded pill container track.
+3. **Dark Theme**:
+   Inverts colors to pitch dark ground (`#000000`) with cream pill active state (`#f9f4eb`).
+
+## Live Previews
+
+### Authentic Editorial Nav
+<Canvas of={NavStories.AuthenticEditorialNav} />
+
+### Capsule Track Nav
+<Canvas of={NavStories.CapsuleTrackNav} />
+
+### Dark Theme Nav
+<Canvas of={NavStories.DarkThemeNav} />

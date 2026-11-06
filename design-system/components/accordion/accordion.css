@@ -1,0 +1,101 @@
+/**
+ * SQUIGGLE UI - ACCORDION
+ * Native details/summary disclosure with wavy underline and animated plus icon
+ */
+
+.sq-accordion,
+.accordion_item {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  transition: border-color var(--sq-speed-fast) var(--sq-color-ease);
+}
+
+.u-theme-dark .sq-accordion,
+.u-theme-dark .accordion_item {
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+}
+
+.sq-accordion__details,
+.accordion_details {
+  width: 100%;
+}
+
+.sq-accordion__summary,
+.accordion_summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  gap: 1rem;
+}
+
+.sq-accordion__summary::-webkit-details-marker {
+  display: none;
+}
+
+.sq-accordion__title,
+.accordion_title {
+  font-family: var(--sq-font-family-narrow);
+  font-size: clamp(1.25rem, 1rem + 1vi, 2rem);
+  font-weight: var(--sq-font-weight-semibold);
+  letter-spacing: -0.01em;
+  color: var(--color, var(--sq-color-black));
+  transition: color var(--sq-speed-fast) var(--sq-color-ease);
+}
+
+/* Wavy underline on open */
+.sq-accordion__details[open] > .sq-accordion__summary .sq-accordion__title,
+.accordion_details[open] > .accordion_summary .accordion_title {
+  position: relative !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+}
+
+.sq-accordion__details[open] > .sq-accordion__summary .sq-accordion__title::after,
+.accordion_details[open] > .accordion_summary .accordion_title::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: -6px !important;
+  width: 100% !important;
+  height: 8px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 6'%3E%3Cpath d='M0 3 Q 5 0, 10 3 T 20 3' fill='none' stroke='%23ffe32e' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat: repeat-x !important;
+  background-size: 16px 6px !important;
+  pointer-events: none !important;
+}
+
+/* Toggle Icon */
+.sq-accordion__icon,
+.accordion_icon-wrap .icon.is-accordion {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform var(--sq-speed) var(--sq-bouncy-ease);
+  color: var(--color, var(--sq-color-black));
+}
+
+.sq-accordion__details[open] .sq-accordion__icon,
+.accordion_details[open] .accordion_icon-wrap .icon.is-accordion {
+  transform: rotate(45deg);
+}
+
+.sq-accordion__content,
+.accordion_content {
+  padding-bottom: 2rem;
+  animation: sq-accordion-slide 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@keyframes sq-accordion-slide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

@@ -1,0 +1,233 @@
+/**
+ * SQUIGGLE UI - DESIGN TOKENS
+ * Single Source of Truth
+ * Prefix: --sq-
+ * Exact values reverse-engineered from portfolio-2025
+ */
+
+@font-face {
+  font-family: arial narrow fallback;
+  src: local(Arial Narrow);
+  size-adjust: 93%;
+  ascent-override: 103%;
+  descent-override: 31%;
+  line-gap-override: 14%;
+}
+
+:root {
+  /* ==========================================================================
+     COLOR TOKENS
+     ========================================================================== */
+  --sq-color-cream: #f9f4eb;
+  --sq-color-yellow: #ffe32e;
+  --sq-color-black: #000000;
+  --sq-color-white: #ffffff;
+  --sq-color-beige: #f0ece5;
+  --sq-color-lemon: #fef280;
+  --sq-color-peach: #fcdca6;
+  --sq-color-pink: #ffd2f3;
+  --sq-color-violet: #e5daf6;
+  --sq-color-black-60: #0009;
+
+  /* Neutral & Alpha steps */
+  --sq-color-text-dark: #1a1a1a;
+  --sq-color-text-near-black: #111111;
+  --sq-color-border-faint: rgba(0, 0, 0, 0.05);
+  --sq-color-border-subtle: rgba(0, 0, 0, 0.08);
+  --sq-color-border-medium: rgba(0, 0, 0, 0.14);
+  --sq-color-border-strong: rgba(0, 0, 0, 0.15);
+  --sq-color-text-muted: rgba(0, 0, 0, 0.55);
+  --sq-color-text-subtle: rgba(0, 0, 0, 0.45);
+  --sq-color-bg-hover: rgba(0, 0, 0, 0.02);
+  --sq-color-bg-badge: rgba(0, 0, 0, 0.06);
+
+  /* Neon / Explore accents */
+  --sq-color-neon-surface: rgb(19, 19, 19);
+  --sq-color-neon-glow: rgb(192, 255, 20);
+  --sq-color-neon-border: rgb(161, 255, 20);
+
+  /* ==========================================================================
+     TYPOGRAPHY TOKENS
+     ========================================================================== */
+  --sq-font-family-narrow: "font-narrow-semibold", arial narrow fallback, -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui, helvetica neue, helvetica, cantarell, ubuntu, roboto, noto, arial, sans-serif;
+  --sq-font-family-mono: "font-mono-medium", menlo, consolas, monaco, liberation mono, lucida console, monospace;
+  --sq-font-family-normal: "font-normal-medium", -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui, helvetica neue, helvetica, cantarell, ubuntu, roboto, noto, arial, sans-serif;
+
+  --sq-font-weight-normal: 400;
+  --sq-font-weight-medium: 500;
+  --sq-font-weight-semibold: 600;
+  --sq-font-weight-bold: 700;
+
+  --sq-font-size-h1: clamp(5rem, -.0556rem + 11.5556vi, 11.5rem);
+  --sq-font-size-h2: clamp(2rem, 1.0278rem + 2.2222vi, 3.25rem);
+  --sq-font-size-h3: clamp(1.375rem, 1.0833rem + .6667vi, 1.75rem);
+  --sq-font-size-p1: clamp(1rem, .9028rem + .2222vi, 1.125rem);
+  --sq-font-size-p2: clamp(.75rem, .1667rem + 1.3333vi, 1.5rem);
+  --sq-font-size-c1: 0.875rem;
+  --sq-font-size-f1: 0.65rem;
+  --sq-font-size-f2: 0.75rem;
+
+  /* ==========================================================================
+     SPACING & DIMENSIONS
+     ========================================================================== */
+  --sq-size-2: clamp(.125rem, -.125rem + .25vi, .25rem);
+  --sq-size-4: clamp(.25rem, -.25rem + .5vi, .5rem);
+  --sq-size-8: clamp(.5rem, 0rem + .5vi, .75rem);
+  --sq-size-12: clamp(.75rem, .25rem + .5vi, 1rem);
+  --sq-size-16: clamp(1rem, 0rem + 1vi, 1.5rem);
+  --sq-size-24: clamp(1.5rem, .5rem + 1vi, 2rem);
+  --sq-size-32: clamp(2rem, 0rem + 2vi, 3rem);
+  --sq-size-48: clamp(2rem, 1.2222rem + 1.7778vi, 3rem);
+  --sq-size-64: clamp(2.5rem, 1.3333rem + 2.6667vi, 4rem);
+  --sq-size-80: clamp(3rem, 1.4444rem + 3.5556vi, 5rem);
+  --sq-size-96: clamp(4rem, 2.4444rem + 3.5556vi, 6rem);
+  --sq-size-120: clamp(5rem, 3.0556rem + 4.4444vi, 7.5rem);
+  --sq-size-144: clamp(6rem, 3.6667rem + 5.3333vi, 9rem);
+
+  /* Layout grid */
+  --sq-grid-margin: clamp(1.5rem, .3333rem + 2.6667vi, 3rem);
+  --sq-grid-columns: 8;
+  --sq-header-height: 3.375rem;
+
+  /* ==========================================================================
+     BORDER RADII & STROKES
+     ========================================================================== */
+  --sq-radius-pixel: 2px;
+  --sq-radius-node: 4px;
+  --sq-radius-3: .1875rem;
+  --sq-radius-badge: 999px;
+  --sq-radius-pill: 9999px;
+  --sq-radius-card: 1.5em;
+  --sq-border-stroke: .0625rem;
+
+  /* ==========================================================================
+     MOTION & EASINGS
+     ========================================================================== */
+  --sq-speed-faster: .15s;
+  --sq-speed-fast: .3s;
+  --sq-speed: .45s;
+  --sq-speed-slow: .65s;
+  --sq-speed-slower: .8s;
+  --sq-stagger: .04s;
+  --sq-content-stagger: .03s;
+
+  --sq-bouncy-ease: cubic-bezier(.34, 1.64, .64, 1);
+  --sq-bounce-cubic-ease: cubic-bezier(.34, 2.27, .64, 1);
+  --sq-smooth-ease: cubic-bezier(.32, .72, 0, 1);
+  --sq-opacity-ease: cubic-bezier(.4, 0, .2, 1);
+  --sq-color-ease: cubic-bezier(.215, .61, .355, 1);
+  --sq-transform-ease: cubic-bezier(.34, 1.64, .64, 1);
+  --sq-elastic-ease: linear( 0, .2178 2.1%, 1.1144 8.49%, 1.2959 10.7%, 1.3463 11.81%, 1.3705 12.94%, 1.3726, 1.3643 14.48%, 1.3151 16.2%, 1.0317 21.81%, .941 24.01%, .8912 25.91%, .8694 27.84%, .8698 29.21%, .8824 30.71%, 1.0122 38.33%, 1.0357, 1.046 42.71%, 1.0416 45.7%, .9961 53.26%, .9839 57.54%, .9853 60.71%, 1.0012 68.14%, 1.0056 72.24%, .9981 86.66%, 1 100% );
+  --sq-elastic-ease-out: linear( 0, .5737 7.6%, .8382 11.87%, .9463 14.19%, 1.0292 16.54%, 1.0886 18.97%, 1.1258 21.53%, 1.137 22.97%, 1.1424 24.48%, 1.1423 26.1%, 1.1366 27.86%, 1.1165 31.01%, 1.0507 38.62%, 1.0219 42.57%, .9995 46.99%, .9872 51.63%, .9842 58.77%, 1.0011 81.26%, 1 );
+
+  /* ==========================================================================
+     Z-INDEX SCALE
+     ========================================================================== */
+  --sq-z-index-below: -1;
+  --sq-z-index-default: 0;
+  --sq-z-index-above: 1;
+  --sq-z-index-higher: 2;
+  --sq-z-index-overlay: 700;
+  --sq-z-index-header: 800;
+  --sq-z-index-cursor: 850;
+  --sq-z-index-menu: 900;
+  --sq-z-index-chat-modal: 950;
+  --sq-z-index-skip-link: 1000;
+  --sq-z-index-click: 1050;
+  --sq-z-index-preloader: 1100;
+
+  /* ==========================================================================
+     LEGACY ALIASES (100% Source Compatibility)
+     ========================================================================== */
+  --ci-cream: var(--sq-color-cream);
+  --ci-yellow: var(--sq-color-yellow);
+  --ci-black: var(--sq-color-black);
+  --ci-white: var(--sq-color-white);
+  --ci-beige: var(--sq-color-beige);
+  --ci-lemon: var(--sq-color-lemon);
+  --ci-peach: var(--sq-color-peach);
+  --ci-pink: var(--sq-color-pink);
+  --ci-violet: var(--sq-color-violet);
+  --ci-black-60: var(--sq-color-black-60);
+  --font-family-narrow: var(--sq-font-family-narrow);
+  --font-family-mono: var(--sq-font-family-mono);
+  --font-family-normal: var(--sq-font-family-normal);
+  --font-size-h1: var(--sq-font-size-h1);
+  --font-size-h2: var(--sq-font-size-h2);
+  --font-size-h3: var(--sq-font-size-h3);
+  --font-size-p1: var(--sq-font-size-p1);
+  --font-size-p2: var(--sq-font-size-p2);
+  --size-2: var(--sq-size-2);
+  --size-4: var(--sq-size-4);
+  --size-8: var(--sq-size-8);
+  --size-12: var(--sq-size-12);
+  --size-16: var(--sq-size-16);
+  --size-24: var(--sq-size-24);
+  --size-32: var(--sq-size-32);
+  --size-48: var(--sq-size-48);
+  --size-64: var(--sq-size-64);
+  --size-80: var(--sq-size-80);
+  --size-96: var(--sq-size-96);
+  --size-120: var(--sq-size-120);
+  --size-144: var(--sq-size-144);
+  --bouncy-ease: var(--sq-bouncy-ease);
+  --smooth-ease: var(--sq-smooth-ease);
+  --speed: var(--sq-speed);
+  --speed-fast: var(--sq-speed-fast);
+  --speed-faster: var(--sq-speed-faster);
+  --speed-slow: var(--sq-speed-slow);
+  --speed-slower: var(--sq-speed-slower);
+}
+
+/* Media query responsive tokens */
+@media screen and (max-width: 699px) {
+  :root {
+    --sq-font-size-h1: clamp(4rem, 1.8227rem + 7.2727vi, 5rem);
+    --font-size-h1: var(--sq-font-size-h1);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --sq-header-height: 3.875rem;
+    --header-height: var(--sq-header-height);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  :root {
+    --sq-grid-columns: 12;
+    --grid-columns: var(--sq-grid-columns);
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  :root {
+    --sq-font-size-h1: clamp(11.5rem, -1.5rem + 13vi, 18rem);
+    --sq-font-size-h3: clamp(1.75rem, -.75rem + 2.5vi, 3rem);
+    --sq-font-size-p1: clamp(1.125rem, .375rem + .75vi, 1.5rem);
+    --sq-font-size-c1: clamp(.875rem, .375rem + .5vi, 1.125rem);
+    --sq-font-size-f1: clamp(.5rem, 0rem + .5vi, .75rem);
+    --sq-font-size-f2: clamp(.75rem, .25rem + .5vi, 1rem);
+    --sq-size-48: clamp(3rem, 1rem + 2vi, 4rem);
+    --sq-size-64: clamp(4rem, 1rem + 3vi, 5.5rem);
+    --sq-size-80: clamp(5rem, 1rem + 4vi, 7rem);
+    --sq-size-96: clamp(6rem, 1rem + 5vi, 8.5rem);
+    --sq-size-120: clamp(7.5rem, 1.5rem + 6vi, 10.5rem);
+    --sq-size-144: clamp(9rem, 2rem + 7vi, 12.5rem);
+
+    --font-size-h1: var(--sq-font-size-h1);
+    --font-size-h3: var(--sq-font-size-h3);
+    --font-size-p1: var(--sq-font-size-p1);
+    --font-size-c1: var(--sq-font-size-c1);
+    --font-size-f1: var(--sq-font-size-f1);
+    --font-size-f2: var(--sq-font-size-f2);
+    --size-48: var(--sq-size-48);
+    --size-64: var(--sq-size-64);
+    --size-80: var(--sq-size-80);
+    --size-96: var(--sq-size-96);
+    --size-120: var(--sq-size-120);
+    --size-144: var(--sq-size-144);
+  }
+}
+
