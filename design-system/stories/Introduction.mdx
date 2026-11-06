@@ -3,305 +3,1072 @@ import { Meta } from '@storybook/blocks';
 <Meta title="Introduction" />
 
 <style>{`
-  /* Overrides for Storybook Docs styling interference */
-  .sbdocs-content a.sq-button--primary,
-  .sbdocs-content a.sq-button--primary:visited,
-  .sbdocs-content a.sq-button--primary:hover,
-  .sbdocs-content a.sq-button--primary:active,
-  .sbdocs-content button.sq-button--primary,
-  .sbdocs-content .sq-button--primary,
-  .sbdocs-content .sq-button--primary span,
-  .sbdocs-content .sq-button--primary svg {
-    color: #000000 !important;
-    fill: #000000 !important;
+  /* ============================================================
+     SQUIGGLE UI - STORYBOOK INTRODUCTION SHOWCASE
+     Editorial Brutalism & Retro System
+     ============================================================ */
+
+  /* Prevent Storybook docs interference on custom intro layout */
+  .sbdocs-content {
+    max-width: 1200px !important;
+    padding-top: 1rem !important;
   }
 
-  .sbdocs-content a.sq-button--outline,
-  .sbdocs-content a.sq-button--outline:visited,
-  .sbdocs-content a.sq-button--outline:hover,
-  .sbdocs-content a.sq-button--outline:active,
-  .sbdocs-content button.sq-button--outline,
-  .sbdocs-content .sq-button--outline,
-  .sbdocs-content .sq-button--outline span {
-    color: #000000 !important;
+  .sbdocs-content a {
+    text-decoration: none !important;
   }
 
-  /* Fix dark text on black cards ("black on black") */
-  .sbdocs-content .sq-project-card {
-    background-color: #000000 !important;
+  /* Scoped Hero Container */
+  .sq-intro-hero {
+    background: #f9f4eb;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 3.5vw, 3rem);
+    color: #111111;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Top Technical Meta Bar */
+  .sq-intro-hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sq-intro-pill {
+    font-family: var(--sq-font-family-mono, "font-mono-medium", monospace);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.06);
+    color: #111111;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    line-height: 1.2;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .sq-intro-pill--accent {
+    background: #ffe32e;
+    color: #000000;
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .sq-intro-pill--live {
+    background: #111111;
+    color: #a1ff14;
+    border-color: #111111;
+  }
+
+  .sq-intro-pill--live::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #a1ff14;
+    box-shadow: 0 0 6px #a1ff14;
+    animation: sq-pulse-dot 2s infinite ease-in-out;
+  }
+
+  @keyframes sq-pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+  }
+
+  /* Massive Editorial Display Heading */
+  .sq-intro-hero__title-group {
+    margin: 0.5rem 0 1.25rem 0;
+  }
+
+  .sq-intro-hero__eyebrow {
+    font-family: var(--sq-font-family-mono, "font-mono-medium", monospace);
+    font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 0.5rem;
+    display: block;
+    font-weight: 600;
+  }
+
+  .sq-intro-hero__title {
+    font-family: var(--sq-font-family-narrow, "font-narrow-semibold", "Arial Narrow", -apple-system, sans-serif) !important;
+    font-size: clamp(3rem, 7.5vw, 6.25rem) !important;
+    font-weight: 700 !important;
+    line-height: 0.92 !important;
+    letter-spacing: -0.03em !important;
+    text-transform: uppercase !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  .sq-intro-hero__title-underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .sq-intro-hero__title-underline::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: clamp(8px, 1.2vw, 16px);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 6'%3E%3Cpath d='M0 3 Q 5 0, 10 3 T 20 3' fill='none' stroke='%23ffe32e' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: clamp(18px, 2.2vw, 28px) clamp(8px, 1.2vw, 14px);
+    pointer-events: none;
+  }
+
+  .sq-intro-hero__desc {
+    font-family: var(--sq-font-family-normal, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+    font-size: clamp(1rem, 1.3vw, 1.2rem);
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.78);
+    max-width: 780px;
+    margin: 1.5rem 0 2rem 0;
+  }
+
+  /* CTA Button Row */
+  .sq-intro-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  /* Explore Button (Compass next-page trigger) */
+  .sq-intro-explore-btn {
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(161, 255, 20);
+    border-radius: 30px;
+    color: rgb(19, 19, 19) !important;
+    font-family: var(--sq-font-family-normal, -apple-system, sans-serif);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 0 18px 0 10px;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+    border: none;
+  }
+
+  .sq-intro-explore-btn:hover {
+    background-color: rgb(192, 255, 20);
+  }
+
+  .sq-intro-explore-btn:active {
+    transform: scale(0.97);
+  }
+
+  .sq-intro-explore-btn svg {
+    width: 25px;
+    height: 25px;
+    display: block;
+    fill: rgb(19, 19, 19) !important;
+    transition: transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .sq-intro-explore-btn:hover svg {
+    transform: rotate(250deg);
+  }
+
+  /* Primary Yellow Pill Button */
+  .sq-intro-btn-primary {
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffe32e;
+    color: #000000 !important;
+    font-family: var(--sq-font-family-mono, "font-mono-medium", monospace);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0 20px;
+    border-radius: 9999px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .sq-intro-btn-primary:hover {
+    background: #fff066;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 227, 46, 0.35);
+  }
+
+  .sq-intro-btn-primary:active {
+    transform: translateY(0);
+  }
+
+  /* Outline Pill Button */
+  .sq-intro-btn-outline {
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    color: #000000 !important;
+    font-family: var(--sq-font-family-mono, "font-mono-medium", monospace);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0 18px;
+    border-radius: 9999px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .sq-intro-btn-outline:hover {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: #000000;
+  }
+
+  /* Standalone Distribution Bundle Tag */
+  .sq-intro-dist-badge {
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--sq-font-family-mono, monospace);
+    font-size: 0.78rem;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 0 14px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 9999px;
+    border: 1px dashed rgba(0, 0, 0, 0.15);
+  }
+
+  /* ============================================================
+     METRICS STRIP (Technical Monospace Bar)
+     ============================================================ */
+  .sq-intro-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0 3rem 0;
+    padding: 1.5rem;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+  }
+
+  .sq-intro-metric-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0.75rem;
+    border-left: 2px solid #ffe32e;
+  }
+
+  .sq-intro-metric-value {
+    font-family: var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif);
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000000;
+    margin-bottom: 0.25rem;
+  }
+
+  .sq-intro-metric-label {
+    font-family: var(--sq-font-family-mono, monospace);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.55);
+    font-weight: 600;
+  }
+
+  /* ============================================================
+     INTERACTIVE SHOWCASE MATRIX (Core Motifs)
+     ============================================================ */
+  .sq-intro-section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 3rem 0 1.5rem 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .sq-intro-section-title {
+    font-family: var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif);
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: #000000;
+    margin: 0;
+  }
+
+  .sq-intro-section-tag {
+    font-family: var(--sq-font-family-mono, monospace);
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .sq-intro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .sq-intro-card {
+    background: #000000;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 1.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .sq-intro-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  }
+
+  .sq-intro-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .sq-intro-card__tag {
+    font-family: var(--sq-font-family-mono, monospace);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffe32e;
+    font-weight: 600;
+  }
+
+  .sq-intro-card__num {
+    font-family: var(--sq-font-family-mono, monospace);
+    font-size: 0.75rem;
+    color: #ffe32e;
+  }
+
+  .sq-intro-card__title {
+    font-family: var(--sq-font-family-narrow, sans-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
     color: #ffffff !important;
+    margin: 0 0 0.65rem 0;
   }
-  .sbdocs-content .sq-project-card h3,
-  .sbdocs-content .sq-project-card .sq-project-card__title {
-    color: #ffffff !important;
+
+  .sq-intro-card__desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #d1cbc1;
+    margin: 0 0 1.25rem 0;
   }
-  .sbdocs-content .sq-project-card p,
-  .sbdocs-content .sq-project-card .sq-project-card__desc {
-    color: #e0dbd1 !important;
+
+  .sq-intro-card__preview {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
   }
-  .sbdocs-content .sq-project-card code {
+
+  .sq-intro-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .sq-intro-card__link {
+    font-family: var(--sq-font-family-mono, monospace);
+    font-size: 0.78rem;
     color: #ffe32e !important;
-    background-color: rgba(255, 255, 255, 0.15) !important;
-    border: 1px solid rgba(255, 227, 46, 0.3) !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+    transition: gap 0.2s ease;
   }
-  .sbdocs-content .sq-project-card .sq-project-card__tag {
-    color: #ffe32e !important;
-    background: rgba(255, 255, 255, 0.1) !important;
+
+  .sq-intro-card:hover .sq-intro-card__link {
+    gap: 8px;
   }
-  .sbdocs-content .sq-project-card .sq-tag,
-  .sbdocs-content .sq-project-card .sq-skill-tag {
-    color: #ffffff !important;
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+
+  /* Pixel Corner Bracket SVGs */
+  .sq-bracket-tl, .sq-bracket-tr, .sq-bracket-bl, .sq-bracket-br {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    color: rgba(255, 255, 255, 0.35);
+    pointer-events: none;
+  }
+  .sq-bracket-tl { top: 6px; left: 6px; }
+  .sq-bracket-tr { top: 6px; right: 6px; }
+  .sq-bracket-bl { bottom: 6px; left: 6px; }
+  .sq-bracket-br { bottom: 6px; right: 6px; }
+
+  /* ============================================================
+     DIRECTORY MATRIX (Foundations, Components, Templates)
+     ============================================================ */
+  .sq-intro-dir-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .sq-intro-dir-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  .sq-intro-dir-card__heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sq-font-family-narrow, sans-serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000000;
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .sq-intro-dir-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sq-intro-dir-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: #111111 !important;
+    font-family: var(--sq-font-family-normal, sans-serif);
+    font-size: 0.9rem;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+
+  .sq-intro-dir-link:hover {
+    background: #f9f4eb;
+    transform: translateX(3px);
+  }
+
+  .sq-intro-dir-tag {
+    font-family: var(--sq-font-family-mono, monospace);
+    font-size: 0.68rem;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.06);
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  /* ============================================================
+     TERMINAL QUICK START
+     ============================================================ */
+  .sq-intro-terminal {
+    background: #111111;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 2rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  }
+
+  .sq-intro-terminal__bar {
+    background: #1d1d1d;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .sq-intro-terminal__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .sq-intro-terminal__dot--red { background: #ff5f56; }
+  .sq-intro-terminal__dot--yellow { background: #ffbd2e; }
+  .sq-intro-terminal__dot--green { background: #27c93f; }
+
+  .sq-intro-terminal__title {
+    font-family: var(--sq-font-family-mono, monospace);
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .sq-intro-terminal__body {
+    padding: 1.25rem 1.5rem;
+    font-family: var(--sq-font-family-mono, monospace);
+    font-size: 0.85rem;
+    color: #f1f1f1;
+    line-height: 1.6;
+    overflow-x: auto;
+  }
+
+  .sq-intro-terminal__comment {
+    color: #888888;
+  }
+
+  .sq-intro-terminal__tag {
+    color: #ffe32e;
+  }
+
+  .sq-intro-terminal__attr {
+    color: #a1ff14;
+  }
+
+  .sq-intro-terminal__string {
+    color: #ffd2f3;
+  }
+
+  /* Live swatch preview */
+  .sq-intro-swatch-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .sq-intro-swatch {
+    flex: 1;
+    height: 38px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--sq-font-family-mono, monospace);
+    font-size: 0.65rem;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 `}</style>
 
-<div style={{
-  background: '#f9f4eb',
-  padding: '2.5rem 2rem',
-  borderRadius: '8px',
-  border: '1px solid rgba(0,0,0,0.08)',
-  color: '#111111',
-  marginBottom: '2.5rem',
-  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
-}}>
-  <div style={{
-    display: 'flex',
-    gap: '0.5rem',
-    alignItems: 'center',
-    marginBottom: '0.75rem'
-  }}>
-    <span className="sq-badge sq-badge--promoted" style={{ fontSize: '0.65rem', padding: '2px 8px' }}>V1.0.0 ✦</span>
-    <span className="sq-badge sq-badge--faint" style={{ fontSize: '0.65rem', padding: '2px 8px' }}>EDITORIAL & RETRO SYSTEM</span>
+{/* ============================================================
+    HERO DISPLAY BANNER
+    ============================================================ */}
+<div className="sq-intro-hero">
+  {/* Top Telemetry / Status Row */}
+  <div className="sq-intro-hero__meta">
+    <span className="sq-intro-pill sq-intro-pill--accent">✦ SPEC 01</span>
+    <span className="sq-intro-pill">V1.0.0 PRODUCTION</span>
+    <span className="sq-intro-pill">EDITORIAL BRUTALISM & RETRO SYSTEM</span>
+    <span className="sq-intro-pill sq-intro-pill--live">LIVE WORKSPACE</span>
   </div>
 
-  <h1 style={{
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-    fontSize: '2.25rem',
-    fontWeight: '700',
-    letterSpacing: '-0.02em',
-    lineHeight: '1.2',
-    margin: '0.5rem 0 1rem 0',
-    color: '#000000'
-  }}>
-    Squiggle <span className="sq-wavy-underline">UI Design System</span>
-  </h1>
+  {/* Main Colossal Display Heading */}
+  <div className="sq-intro-hero__title-group">
+    <span className="sq-intro-hero__eyebrow">Design System & Component Library</span>
+    <h1 className="sq-intro-hero__title">
+      SQUIGGLE
+    </h1>
+    <h1 className="sq-intro-hero__title">
+      <span className="sq-intro-hero__title-underline">DESIGN SYSTEM</span>
+    </h1>
+  </div>
 
-  <p style={{
-    fontSize: '1rem',
-    maxWidth: '680px',
-    lineHeight: '1.55',
-    color: '#333333',
-    margin: '0 0 1.5rem 0'
-  }}>
-    A production-grade, framework-agnostic design system reverse-engineered with 100% exact fidelity from the high-contrast editorial portfolio. Built for reusable, themeable consistency across creative projects.
+  {/* Subtitle */}
+  <p className="sq-intro-hero__desc">
+    The high-contrast, framework-agnostic design system reverse-engineered with 100% exact fidelity from the brutalist editorial portfolio. Built with W3C design tokens, fluid clamp typography, hand-drawn vector squiggles, and retro pixel-art motifs.
   </p>
 
-  <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', alignItems: 'center' }}>
-    <a href="./?path=/story/page-patterns-templates--experience-page-template"
-       className="sq-button sq-button--primary sq-button--small"
-       style={{
-         textDecoration: 'none',
-         backgroundColor: '#ffe32e',
-         color: '#000000',
-         border: '1px solid rgba(0,0,0,0.15)'
-       }}>
-      <span style={{ color: '#000000', fontWeight: '700' }}>VIEW EXPERIENCE TEMPLATE</span>
-      <svg className="sq-icon--arrow" viewBox="0 0 20 20" fill="#000000" style={{ color: '#000000', width: '13px', height: '13px' }}>
-        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+  {/* Live CTA Actions */}
+  <div className="sq-intro-hero__actions">
+    {/* Live Explore Button with rotating compass icon */}
+    <a href="./?path=/docs/components-explore-button--docs"
+       className="sq-intro-explore-btn"
+       title="Explore Button component documentation">
+      <svg viewBox="0 0 512 512">
+        <path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48zM345 199.7L280.9 285.2C277.6 289.6 273.2 293.1 268.1 295.3L183.4 331.7C174.9 335.4 165.3 333.7 158.6 327.4C151.9 321.1 150.2 311.5 153.9 303L190.3 218.3C192.5 213.2 196 208.8 200.4 205.5L285.9 141.4C293.4 135.8 303.7 136.2 310.8 142.4C317.9 148.6 319.4 159 314.9 166.9L345 199.7z"></path>
       </svg>
+      <span>Explore System</span>
     </a>
-    <a href="./?path=/story/components-wavy-underline--default"
-       className="sq-button sq-button--outline sq-button--small"
-       style={{ textDecoration: 'none', color: '#000000' }}>
-      <span style={{ color: '#000000', fontWeight: '600' }}>EXPLORE WAVY UNDERLINE</span>
+
+    {/* Primary Pill Button */}
+    <a href="./?path=/story/page-patterns-templates--experience-page-template"
+       className="sq-intro-btn-primary">
+      <span>View Templates</span>
+      <span>→</span>
     </a>
+
+    {/* Outline Button */}
+    <a href="./?path=/docs/foundations-colors--docs"
+       className="sq-intro-btn-outline">
+      <span>Tokens & Colors ✦</span>
+    </a>
+
+    {/* Standalone bundle indicator */}
+    <span className="sq-intro-dist-badge">
+      <span>dist/design-system.css</span>
+      <span style={{ color: '#ffe32e' }}>✦</span>
+      <span>51 KB</span>
+    </span>
   </div>
 </div>
 
----
+{/* ============================================================
+    TECHNICAL METRICS BAR
+    ============================================================ */}
+<div className="sq-intro-metrics">
+  <div className="sq-intro-metric-item">
+    <span className="sq-intro-metric-value">18+</span>
+    <span className="sq-intro-metric-label">UI Components & Stories</span>
+  </div>
+  <div className="sq-intro-metric-item">
+    <span className="sq-intro-metric-value">100%</span>
+    <span className="sq-intro-metric-label">Pixel & Timing Fidelity</span>
+  </div>
+  <div className="sq-intro-metric-item">
+    <span className="sq-intro-metric-value">0</span>
+    <span className="sq-intro-metric-label">Runtime Dependencies</span>
+  </div>
+  <div className="sq-intro-metric-item">
+    <span className="sq-intro-metric-value">W3C</span>
+    <span className="sq-intro-metric-label">JSON + CSS Custom Props</span>
+  </div>
+  <div className="sq-intro-metric-item">
+    <span className="sq-intro-metric-value">51 KB</span>
+    <span className="sq-intro-metric-label">Standalone Single Bundle</span>
+  </div>
+</div>
 
-<h2 style={{
-  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-  fontSize: '1.5rem',
-  fontWeight: '600',
-  letterSpacing: '-0.01em',
-  margin: '2rem 0 1.25rem 0',
-  color: '#000000'
-}}>
-  Visual Identity & Core Motifs
-</h2>
+{/* ============================================================
+    INTERACTIVE CORE MOTIFS (Live Showcases)
+    ============================================================ */}
+<div className="sq-intro-section-header">
+  <h2 className="sq-intro-section-title">Visual Identity & Core Motifs</h2>
+  <span className="sq-intro-section-tag">Interactive Design System Primitives</span>
+</div>
 
-<div style={{
-  display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-  gap: '1.5rem',
-  margin: '1.5rem 0 2.5rem'
-}}>
-  {/* Card 1: Signature Yellow Accent */}
-  <div className="sq-project-card" style={{ maxWidth: '100%', minHeight: '340px', backgroundColor: '#000000', color: '#ffffff' }}>
-    <div className="sq-project-card__corner sq-project-card__corner--tl">
-      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
-    </div>
-    <div className="sq-project-card__corner sq-project-card__corner--tr">
-      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
-    </div>
-    <div className="sq-project-card__corner sq-project-card__corner--bl">
-      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
-    </div>
-    <div className="sq-project-card__corner sq-project-card__corner--br">
-      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
-    </div>
-
-    <div className="sq-project-card__header">
-      <span className="sq-project-card__tag" style={{ color: '#ffe32e', background: 'rgba(255, 255, 255, 0.1)' }}>Core Accent</span>
-      <span style={{ fontFamily: 'var(--sq-font-family-mono)', fontSize: '0.75rem', color: '#ffe32e' }}>01 ✦</span>
-    </div>
+<div className="sq-intro-grid">
+  {/* Card 1: Kinetic Explore Action */}
+  <div className="sq-intro-card">
+    <svg className="sq-bracket-tl" viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    <svg className="sq-bracket-tr" viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    <svg className="sq-bracket-bl" viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    <svg className="sq-bracket-br" viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
 
     <div>
-      <h3 className="sq-project-card__title" style={{ color: '#ffffff', fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.35rem', fontWeight: 600, margin: '0.5rem 0 0.75rem 0' }}>
-        Signature Yellow Accent
-      </h3>
-      <p className="sq-project-card__desc" style={{ color: '#e0dbd1', fontSize: '0.86rem', lineHeight: '1.6', margin: 0 }}>
-        Vibrant electric yellow (<code style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: '#ffe32e', padding: '2px 6px', borderRadius: '3px', border: '1px solid rgba(255, 227, 46, 0.3)' }}>#ffe32e</code>) applied to the hand-drawn wavy underline, active milestone nodes, form submit CTAs, and interactive hover star indicators.
+      <div className="sq-intro-card__top">
+        <span className="sq-intro-card__tag">Kinetic Action</span>
+        <span className="sq-intro-card__num">01 ✦</span>
+      </div>
+
+      <h3 className="sq-intro-card__title">Compass Explore Button</h3>
+      <p className="sq-intro-card__desc">
+        Signature next-page trigger featuring a neon green surface (<code style={{ color: '#a1ff14', background: 'rgba(255,255,255,0.1)', padding: '2px 4px', borderRadius: '3px' }}>rgb(161,255,20)</code>) and an authentic compass icon that rotates 250° on hover with smooth mechanical easing.
       </p>
+
+      {/* Live Interactive Preview inside card */}
+      <div className="sq-intro-card__preview">
+        <a href="./?path=/docs/components-explore-button--docs"
+           className="button1234"
+           style={{ textDecoration: 'none' }}
+           title="Hover to spin compass">
+          <svg className="svgIcon" viewBox="0 0 512 512">
+            <path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48zM345 199.7L280.9 285.2C277.6 289.6 273.2 293.1 268.1 295.3L183.4 331.7C174.9 335.4 165.3 333.7 158.6 327.4C151.9 321.1 150.2 311.5 153.9 303L190.3 218.3C192.5 213.2 196 208.8 200.4 205.5L285.9 141.4C293.4 135.8 303.7 136.2 310.8 142.4C317.9 148.6 319.4 159 314.9 166.9L345 199.7z"></path>
+          </svg>
+          <span style={{ color: '#131313', fontWeight: 600 }}>Explore</span>
+        </a>
+      </div>
     </div>
 
-    <div className="sq-project-card__tags" style={{ marginTop: '1.25rem' }}>
-      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>Tokens</span>
-      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>#ffe32e</span>
-      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>Interactive</span>
+    <div className="sq-intro-card__footer">
+      <span style={{ fontFamily: 'var(--sq-font-family-mono, monospace)', fontSize: '0.72rem', color: '#888' }}>30px Pill Radius</span>
+      <a href="./?path=/docs/components-explore-button--docs" className="sq-intro-card__link">
+        Inspect Button →
+      </a>
     </div>
   </div>
 
-  {/* Card 2: Editorial Typography */}
-  <div className="sq-project-card" style={{ maxWidth: '100%', minHeight: '340px', backgroundColor: '#000000', color: '#ffffff' }}>
-    <div className="sq-project-card__corner sq-project-card__corner--tl">
-      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
-    </div>
-    <div className="sq-project-card__corner sq-project-card__corner--tr">
-      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
-    </div>
-    <div className="sq-project-card__corner sq-project-card__corner--bl">
-      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
-    </div>
-    <div className="sq-project-card__corner sq-project-card__corner--br">
-      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
-    </div>
-
-    <div className="sq-project-card__header">
-      <span className="sq-project-card__tag" style={{ color: '#ffe32e', background: 'rgba(255, 255, 255, 0.1)' }}>Type System</span>
-      <span style={{ fontFamily: 'var(--sq-font-family-mono)', fontSize: '0.75rem', color: '#ffe32e' }}>02 ✦</span>
-    </div>
+  {/* Card 2: Hand-Drawn Wavy Underline */}
+  <div className="sq-intro-card">
+    <svg className="sq-bracket-tl" viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    <svg className="sq-bracket-tr" viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    <svg className="sq-bracket-bl" viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    <svg className="sq-bracket-br" viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
 
     <div>
-      <h3 className="sq-project-card__title" style={{ color: '#ffffff', fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.35rem', fontWeight: 600, margin: '0.5rem 0 0.75rem 0' }}>
-        Editorial Typography
-      </h3>
-      <p className="sq-project-card__desc" style={{ color: '#e0dbd1', fontSize: '0.86rem', lineHeight: '1.6', margin: 0 }}>
-        Bold, condensed display headers paired with monospace technical tracking (<code style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: '#ffe32e', padding: '2px 6px', borderRadius: '3px', border: '1px solid rgba(255, 227, 46, 0.3)' }}>font-mono-medium</code>) and neutral body text across fluid clamp scales.
+      <div className="sq-intro-card__top">
+        <span className="sq-intro-card__tag">Vector Motif</span>
+        <span className="sq-intro-card__num">02 ✦</span>
+      </div>
+
+      <h3 className="sq-intro-card__title">Hand-Drawn Vector Wave</h3>
+      <p className="sq-intro-card__desc">
+        Signature electric yellow (<code style={{ color: '#ffe32e', background: 'rgba(255,255,255,0.1)', padding: '2px 4px', borderRadius: '3px' }}>#ffe32e</code>) SVG curve applied beneath active accordions, emphasized text, and full-bleed editorial section boundaries.
       </p>
+
+      {/* Live Interactive Preview */}
+      <div className="sq-intro-card__preview">
+        <span className="sq-wavy-underline" style={{ fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.45rem', color: '#ffffff', fontWeight: 600, letterSpacing: '0.02em' }}>
+          Interactive Underline
+        </span>
+      </div>
     </div>
 
-    <div className="sq-project-card__tags" style={{ marginTop: '1.25rem' }}>
-      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>Mono</span>
-      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>Scales</span>
-      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>Fluid Clamp</span>
+    <div className="sq-intro-card__footer">
+      <span style={{ fontFamily: 'var(--sq-font-family-mono, monospace)', fontSize: '0.72rem', color: '#888' }}>SVG Stroke · 2.4px</span>
+      <a href="./?path=/docs/components-wavy-underline--docs" className="sq-intro-card__link">
+        Inspect Wave →
+      </a>
     </div>
   </div>
 
-  {/* Card 3: Retro Pixel Accents */}
-  <div className="sq-project-card" style={{ maxWidth: '100%', minHeight: '340px', backgroundColor: '#000000', color: '#ffffff' }}>
-    <div className="sq-project-card__corner sq-project-card__corner--tl">
-      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
-    </div>
-    <div className="sq-project-card__corner sq-project-card__corner--tr">
-      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
-    </div>
-    <div className="sq-project-card__corner sq-project-card__corner--bl">
-      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
-    </div>
-    <div className="sq-project-card__corner sq-project-card__corner--br">
-      <svg viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
-    </div>
-
-    <div className="sq-project-card__header">
-      <span className="sq-project-card__tag" style={{ color: '#ffe32e', background: 'rgba(255, 255, 255, 0.1)' }}>Pixel Craft</span>
-      <span style={{ fontFamily: 'var(--sq-font-family-mono)', fontSize: '0.75rem', color: '#ffe32e' }}>03 ✦</span>
-    </div>
+  {/* Card 3: Pixel Craft & Retro Accents */}
+  <div className="sq-intro-card">
+    <svg className="sq-bracket-tl" viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    <svg className="sq-bracket-tr" viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    <svg className="sq-bracket-bl" viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    <svg className="sq-bracket-br" viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
 
     <div>
-      <h3 className="sq-project-card__title" style={{ color: '#ffffff', fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.35rem', fontWeight: 600, margin: '0.5rem 0 0.75rem 0' }}>
-        Retro Pixel Accents
-      </h3>
-      <p className="sq-project-card__desc" style={{ color: '#e0dbd1', fontSize: '0.86rem', lineHeight: '1.6', margin: 0 }}>
-        Subtle 2px micro-radii, geometric corner bracket trims (<code style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: '#ffe32e', padding: '2px 6px', borderRadius: '3px', border: '1px solid rgba(255, 227, 46, 0.3)' }}>93x93</code> SVG paths), signal indicator bars (<code style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: '#ffe32e', padding: '2px 6px', borderRadius: '3px', border: '1px solid rgba(255, 227, 46, 0.3)' }}>III</code>), and radial click spark bursts.
+      <div className="sq-intro-card__top">
+        <span className="sq-intro-card__tag">Retro Craft</span>
+        <span className="sq-intro-card__num">03 ✦</span>
+      </div>
+
+      <h3 className="sq-intro-card__title">Corner Brackets &amp; Badges</h3>
+      <p className="sq-intro-card__desc">
+        Geometric 93×93 pixel-corner brackets, subtle 2px micro-radii, signal indicator tags (<code style={{ color: '#ffe32e', background: 'rgba(255,255,255,0.1)', padding: '2px 4px', borderRadius: '3px' }}>[III]</code>), and tactile click spark burst feedback.
       </p>
+
+      {/* Live Interactive Preview */}
+      <div className="sq-intro-card__preview" style={{ gap: '6px', flexWrap: 'wrap' }}>
+        <span className="sq-tag" style={{ background: 'rgba(255,255,255,0.12)', color: '#ffffff', border: '1px solid rgba(255,255,255,0.25)' }}>Tokens</span>
+        <span className="sq-tag" style={{ background: 'rgba(255,255,255,0.12)', color: '#ffe32e', border: '1px solid rgba(255,227,46,0.35)' }}>#ffe32e</span>
+        <span className="sq-tag" style={{ background: 'rgba(255,255,255,0.12)', color: '#a1ff14', border: '1px solid rgba(161,255,20,0.35)' }}>Pill 999px</span>
+      </div>
     </div>
 
-    <div className="sq-project-card__tags" style={{ marginTop: '1.25rem' }}>
-      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>Brackets</span>
-      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>Particles</span>
-      <span className="sq-tag" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid rgba(255, 255, 255, 0.2)' }}>Sparks</span>
+    <div className="sq-intro-card__footer">
+      <span style={{ fontFamily: 'var(--sq-font-family-mono, monospace)', fontSize: '0.72rem', color: '#888' }}>93×93 Path Matrix</span>
+      <a href="./?path=/docs/components-project-card--docs" className="sq-intro-card__link">
+        Inspect Card →
+      </a>
+    </div>
+  </div>
+
+  {/* Card 4: Editorial High-Contrast Palette */}
+  <div className="sq-intro-card">
+    <svg className="sq-bracket-tl" viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    <svg className="sq-bracket-tr" viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    <svg className="sq-bracket-bl" viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+    <svg className="sq-bracket-br" viewBox="0 0 93 93" fill="none"><path fill="currentColor" d="M31 0h62v31H62v31H31v31H0V31h31V0Z"></path></svg>
+
+    <div>
+      <div className="sq-intro-card__top">
+        <span className="sq-intro-card__tag">Color System</span>
+        <span className="sq-intro-card__num">04 ✦</span>
+      </div>
+
+      <h3 className="sq-intro-card__title">High-Contrast Dual Theme</h3>
+      <p className="sq-intro-card__desc">
+        Warm organic cream background (<code style={{ color: '#ffe32e', background: 'rgba(255,255,255,0.1)', padding: '2px 4px', borderRadius: '3px' }}>#f9f4eb</code>) counterbalanced against deep brutalist black (<code style={{ color: '#ffe32e', background: 'rgba(255,255,255,0.1)', padding: '2px 4px', borderRadius: '3px' }}>#000000</code>) and electric accents.
+      </p>
+
+      {/* Live Interactive Preview */}
+      <div className="sq-intro-card__preview">
+        <div className="sq-intro-swatch-row">
+          <div className="sq-intro-swatch" style={{ background: '#f9f4eb', color: '#000000' }}>CREAM</div>
+          <div className="sq-intro-swatch" style={{ background: '#ffe32e', color: '#000000' }}>GOLD</div>
+          <div className="sq-intro-swatch" style={{ background: 'rgb(161,255,20)', color: '#000000' }}>NEON</div>
+          <div className="sq-intro-swatch" style={{ background: '#000000', color: '#ffffff', borderColor: 'rgba(255,255,255,0.4)' }}>BLACK</div>
+        </div>
+      </div>
+    </div>
+
+    <div className="sq-intro-card__footer">
+      <span style={{ fontFamily: 'var(--sq-font-family-mono, monospace)', fontSize: '0.72rem', color: '#888' }}>W3C Token Spec</span>
+      <a href="./?path=/docs/foundations-colors--docs" className="sq-intro-card__link">
+        Inspect Tokens →
+      </a>
     </div>
   </div>
 </div>
 
----
+{/* ============================================================
+    SYSTEM DIRECTORY (Foundations, Components, Patterns)
+    ============================================================ */}
+<div className="sq-intro-section-header">
+  <h2 className="sq-intro-section-title">Component &amp; Foundation Directory</h2>
+  <span className="sq-intro-section-tag">Direct Storybook Links</span>
+</div>
 
-<h2 style={{
-  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-  fontSize: '1.5rem',
-  fontWeight: '600',
-  letterSpacing: '-0.01em',
-  margin: '2rem 0 1rem 0',
-  color: '#000000'
-}}>
-  Component Architecture
-</h2>
+<div className="sq-intro-dir-grid">
+  {/* Column 1: Foundations */}
+  <div className="sq-intro-dir-card">
+    <h3 className="sq-intro-dir-card__heading">
+      <span style={{ color: '#ffe32e' }}>✦</span> Foundations
+    </h3>
+    <ul className="sq-intro-dir-list">
+      <li>
+        <a href="./?path=/docs/foundations-colors--docs" className="sq-intro-dir-link">
+          <span>Colors &amp; Themes</span>
+          <span className="sq-intro-dir-tag">#f9f4eb · #ffe32e</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/docs/foundations-typography--docs" className="sq-intro-dir-link">
+          <span>Typography &amp; Fluid Scale</span>
+          <span className="sq-intro-dir-tag">Narrow · Mono · Normal</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/docs/foundations-spacing--docs" className="sq-intro-dir-link">
+          <span>Spacing &amp; Grid</span>
+          <span className="sq-intro-dir-tag">clamp(2px .. 144px)</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/docs/foundations-motion--docs" className="sq-intro-dir-link">
+          <span>Motion &amp; Easings</span>
+          <span className="sq-intro-dir-tag">Cubic Bouncy Curves</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/docs/foundations-iconography--docs" className="sq-intro-dir-link">
+          <span>Iconography &amp; SVGs</span>
+          <span className="sq-intro-dir-tag">Pixel Glyphs</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  {/* Column 2: Core Components */}
+  <div className="sq-intro-dir-card">
+    <h3 className="sq-intro-dir-card__heading">
+      <span style={{ color: '#ffe32e' }}>✦</span> Core UI Primitives
+    </h3>
+    <ul className="sq-intro-dir-list">
+      <li>
+        <a href="./?path=/docs/components-explore-button--docs" className="sq-intro-dir-link">
+          <span>Explore Button (Compass)</span>
+          <span className="sq-intro-dir-tag">Rotating 250°</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/docs/components-wavy-underline--docs" className="sq-intro-dir-link">
+          <span>Wavy Underline</span>
+          <span className="sq-intro-dir-tag">Animated SVG</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/docs/components-wavy-divider--docs" className="sq-intro-dir-link">
+          <span>Wavy Divider</span>
+          <span className="sq-intro-dir-tag">Full-Bleed</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/docs/components-button--docs" className="sq-intro-dir-link">
+          <span>Pill &amp; CTA Buttons</span>
+          <span className="sq-intro-dir-tag">Primary · Dark · Outline</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/docs/components-career-progression-timeline--docs" className="sq-intro-dir-link">
+          <span>Career Progression Timeline</span>
+          <span className="sq-intro-dir-tag">Gold Star Nodes</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/docs/components-project-card--docs" className="sq-intro-dir-link">
+          <span>Project Card (Corner Brackets)</span>
+          <span className="sq-intro-dir-tag">93×93 Path</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/docs/components-accordion--docs" className="sq-intro-dir-link">
+          <span>Accordion</span>
+          <span className="sq-intro-dir-tag">Hanging Indent</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/docs/components-contact-form--docs" className="sq-intro-dir-link">
+          <span>Contact Form</span>
+          <span className="sq-intro-dir-tag">White Pills + Yellow CTA</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  {/* Column 3: Composite Patterns */}
+  <div className="sq-intro-dir-card">
+    <h3 className="sq-intro-dir-card__heading">
+      <span style={{ color: '#ffe32e' }}>✦</span> Page Patterns &amp; Templates
+    </h3>
+    <ul className="sq-intro-dir-list">
+      <li>
+        <a href="./?path=/story/page-patterns-templates--experience-page-template" className="sq-intro-dir-link">
+          <span>Experience Page Template</span>
+          <span className="sq-intro-dir-tag">Interactive Switcher</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/story/page-patterns-templates--about-page-template" className="sq-intro-dir-link">
+          <span>About Page Template</span>
+          <span className="sq-intro-dir-tag">Hero + Dotted Leader</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/story/page-patterns-templates--projects-page-template" className="sq-intro-dir-link">
+          <span>Projects Page Template</span>
+          <span className="sq-intro-dir-tag">Dark Matrix Grid</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/story/page-patterns-templates--interactive-site-preview" className="sq-intro-dir-link">
+          <span>Interactive Site Preview</span>
+          <span className="sq-intro-dir-tag">Full Navigation</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/docs/components-comparison-list--docs" className="sq-intro-dir-link">
+          <span>Side-by-Side Comparison</span>
+          <span className="sq-intro-dir-tag">Two-Column Matrix</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/docs/components-nav--docs" className="sq-intro-dir-link">
+          <span>Navigation Capsule</span>
+          <span className="sq-intro-dir-tag">Active State Pill</span>
+        </a>
+      </li>
+      <li>
+        <a href="./?path=/docs/components-footer--docs" className="sq-intro-dir-link">
+          <span>Editorial Footer</span>
+          <span className="sq-intro-dir-tag">Yellow Hover + Stars</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+{/* ============================================================
+    QUICK START TERMINAL SNIPPET
+    ============================================================ */}
+<div className="sq-intro-section-header">
+  <h2 className="sq-intro-section-title">Standalone Quick Start</h2>
+  <span className="sq-intro-section-tag">Zero Configuration Bundle</span>
+</div>
+
+<div className="sq-intro-terminal">
+  <div className="sq-intro-terminal__bar">
+    <span className="sq-intro-terminal__dot sq-intro-terminal__dot--red"></span>
+    <span className="sq-intro-terminal__dot sq-intro-terminal__dot--yellow"></span>
+    <span className="sq-intro-terminal__dot sq-intro-terminal__dot--green"></span>
+    <span className="sq-intro-terminal__title">bash — squiggle-ui-quickstart</span>
+  </div>
+  <div className="sq-intro-terminal__body">
+    <span className="sq-intro-terminal__comment"># 1. Include the single standalone CSS bundle in your &lt;head&gt; (zero dependencies, 51KB)</span><br />
+    &lt;<span className="sq-intro-terminal__tag">link</span> <span className="sq-intro-terminal__attr">rel</span>=<span className="sq-intro-terminal__string">"stylesheet"</span> <span className="sq-intro-terminal__attr">href</span>=<span className="sq-intro-terminal__string">"https://prth1234.github.io/portfolio-2025/design-system/dist/design-system.css"</span> /&gt;<br /><br />
+    <span className="sq-intro-terminal__comment"># 2. Re-bundle distribution CSS after token or component changes</span><br />
+    <span style={{ color: '#ffe32e' }}>cd</span> design-system &amp;&amp; <span style={{ color: '#a1ff14' }}>node build.js</span><br /><br />
+    <span className="sq-intro-terminal__comment"># 3. Launch the local Storybook development server</span><br />
+    <span style={{ color: '#ffe32e' }}>cd</span> design-system &amp;&amp; <span style={{ color: '#a1ff14' }}>npm run storybook</span>
+  </div>
+</div>
+
+{/* ============================================================
+    CORE ARCHITECTURAL PRINCIPLES
+    ============================================================ */}
+<div className="sq-intro-section-header">
+  <h2 className="sq-intro-section-title">System Invariants &amp; Principles</h2>
+  <span className="sq-intro-section-tag">Guiding Constraints</span>
+</div>
 
 <div style={{
   background: '#ffffff',
   border: '1px solid rgba(0, 0, 0, 0.08)',
-  borderRadius: '8px',
-  padding: '1.5rem',
-  margin: '1rem 0 2rem'
+  borderRadius: '10px',
+  padding: '1.75rem',
+  marginBottom: '3rem'
 }}>
-  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.9rem' }}>
-    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-      <span style={{ color: '#ffe32e', fontSize: '0.9rem', flexShrink: 0, marginTop: '1px' }}>✦</span>
-      <div>
-        <strong style={{ fontFamily: 'var(--sq-font-family-mono)', fontSize: '0.8rem', background: 'rgba(0,0,0,0.06)', padding: '2px 6px', borderRadius: '4px', marginRight: '8px' }}>tokens/</strong>
-        <span style={{ fontSize: '0.92rem', color: 'rgba(0,0,0,0.8)' }}>CSS custom properties (<code>tokens.css</code>) & machine-readable W3C token definitions (<code>tokens.json</code>).</span>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}>
+    <div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '0.5rem' }}>
+        <span style={{ color: '#ffe32e', fontSize: '1.1rem' }}>✦</span>
+        <strong style={{ fontFamily: 'var(--sq-font-family-mono, monospace)', fontSize: '0.85rem', letterSpacing: '0.05em' }}>01. 100% FIDELITY</strong>
       </div>
-    </li>
-    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-      <span style={{ color: '#ffe32e', fontSize: '0.9rem', flexShrink: 0, marginTop: '1px' }}>✦</span>
-      <div>
-        <strong style={{ fontFamily: 'var(--sq-font-family-mono)', fontSize: '0.8rem', background: 'rgba(0,0,0,0.06)', padding: '2px 6px', borderRadius: '4px', marginRight: '8px' }}>styles/</strong>
-        <span style={{ fontSize: '0.92rem', color: 'rgba(0,0,0,0.8)' }}>Base CSS reset, typography scale utilities, light/dark themes, and icons.</span>
+      <p style={{ fontSize: '0.88rem', lineHeight: '1.6', color: 'rgba(0,0,0,0.7)', margin: 0 }}>
+        Zero approximation. Colors, cubic-bezier easing curves, line-heights, and SVG paths mirror the original portfolio down to the exact pixel.
+      </p>
+    </div>
+
+    <div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '0.5rem' }}>
+        <span style={{ color: '#ffe32e', fontSize: '1.1rem' }}>✦</span>
+        <strong style={{ fontFamily: 'var(--sq-font-family-mono, monospace)', fontSize: '0.85rem', letterSpacing: '0.05em' }}>02. EDITORIAL BRUTALISM</strong>
       </div>
-    </li>
-    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-      <span style={{ color: '#ffe32e', fontSize: '0.9rem', flexShrink: 0, marginTop: '1px' }}>✦</span>
-      <div>
-        <strong style={{ fontFamily: 'var(--sq-font-family-mono)', fontSize: '0.8rem', background: 'rgba(0,0,0,0.06)', padding: '2px 6px', borderRadius: '4px', marginRight: '8px' }}>components/</strong>
-        <span style={{ fontSize: '0.92rem', color: 'rgba(0,0,0,0.8)' }}>17 production-grade UI components with exact CSS, isolated stories, and autodocs.</span>
+      <p style={{ fontSize: '0.88rem', lineHeight: '1.6', color: 'rgba(0,0,0,0.7)', margin: 0 }}>
+        High-contrast typography pairing condensed display letterforms (<code style={{ fontSize: '0.75rem', background: 'rgba(0,0,0,0.06)', padding: '2px 4px', borderRadius: '3px' }}>font-narrow-semibold</code>) with technical monospace tracking.
+      </p>
+    </div>
+
+    <div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '0.5rem' }}>
+        <span style={{ color: '#ffe32e', fontSize: '1.1rem' }}>✦</span>
+        <strong style={{ fontFamily: 'var(--sq-font-family-mono, monospace)', fontSize: '0.85rem', letterSpacing: '0.05em' }}>03. KINETIC MICRO-CRAFT</strong>
       </div>
-    </li>
-    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-      <span style={{ color: '#ffe32e', fontSize: '0.9rem', flexShrink: 0, marginTop: '1px' }}>✦</span>
-      <div>
-        <strong style={{ fontFamily: 'var(--sq-font-family-mono)', fontSize: '0.8rem', background: 'rgba(0,0,0,0.06)', padding: '2px 6px', borderRadius: '4px', marginRight: '8px' }}>foundations/</strong>
-        <span style={{ fontSize: '0.92rem', color: 'rgba(0,0,0,0.8)' }}>Interactive token catalogs for Colors, Typography, Spacing, Motion, and Iconography.</span>
+      <p style={{ fontSize: '0.88rem', lineHeight: '1.6', color: 'rgba(0,0,0,0.7)', margin: 0 }}>
+        Every element provides tactile response: 250° compass rotations, radial click spark bursts, and smooth bouncy layout transitions.
+      </p>
+    </div>
+
+    <div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '0.5rem' }}>
+        <span style={{ color: '#ffe32e', fontSize: '1.1rem' }}>✦</span>
+        <strong style={{ fontFamily: 'var(--sq-font-family-mono, monospace)', fontSize: '0.85rem', letterSpacing: '0.05em' }}>04. ZERO RUNTIME OVERHEAD</strong>
       </div>
-    </li>
-    <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-      <span style={{ color: '#ffe32e', fontSize: '0.9rem', flexShrink: 0, marginTop: '1px' }}>✦</span>
-      <div>
-        <strong style={{ fontFamily: 'var(--sq-font-family-mono)', fontSize: '0.8rem', background: 'rgba(0,0,0,0.06)', padding: '2px 6px', borderRadius: '4px', marginRight: '8px' }}>dist/</strong>
-        <span style={{ fontSize: '0.92rem', color: 'rgba(0,0,0,0.8)' }}>Unified standalone distribution file <code>dist/design-system.css</code> (51 KB).</span>
-      </div>
-    </li>
-  </ul>
+      <p style={{ fontSize: '0.88rem', lineHeight: '1.6', color: 'rgba(0,0,0,0.7)', margin: 0 }}>
+        Pure semantic HTML5 and performant CSS variables. No bulky component frameworks or runtime script dependencies required.
+      </p>
+    </div>
+  </div>
 </div>

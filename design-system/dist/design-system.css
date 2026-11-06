@@ -2726,43 +2726,4 @@ a.sq-button--primary path {
   gap: 1.5rem;
 }
 
-/* ============================================================
-   Hanging Indent Pointer System (Universal)
-   ============================================================ */
-.pointer-item,
-.experience-point,
-.hanging-pointer {
-  display: flex !important;
-  align-items: baseline !important;
-  gap: 0.6rem !important;
-  margin-bottom: 0.65rem !important;
-  line-height: 1.65 !important;
-  padding-left: 0 !important;
-  text-indent: 0 !important;
-}
-
-.pointer-item:last-child,
-.experience-point:last-child,
-.hanging-pointer:last-child {
-  margin-bottom: 0 !important;
-}
-
-.pointer-bullet,
-.pointer-star,
-.experience-point-bullet {
-  flex-shrink: 0 !important;
-  color: currentColor !important;
-  font-size: 0.85em !important;
-  line-height: 1 !important;
-  transform: translateY(-0.04em);
-  user-select: none;
-}
-
-.pointer-text,
-.experience-point-text {
-  flex: 1 1 0% !important;
-  min-width: 0 !important;
-}
-
-
 
