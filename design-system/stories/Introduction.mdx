@@ -5,10 +5,8 @@ import { Meta } from '@storybook/blocks';
 <style>{`
   /* ============================================================
      SQUIGGLE UI - STORYBOOK INTRODUCTION SHOWCASE
-     Editorial Brutalism & Retro System
      ============================================================ */
 
-  /* Prevent Storybook docs interference on custom intro layout */
   .sbdocs-content {
     max-width: 1200px !important;
     padding-top: 1rem !important;
@@ -37,7 +35,7 @@ import { Meta } from '@storybook/blocks';
     flex-wrap: wrap;
     align-items: center;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .sq-intro-pill {
@@ -83,69 +81,6 @@ import { Meta } from '@storybook/blocks';
   @keyframes sq-pulse-dot {
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.4; transform: scale(0.85); }
-  }
-
-  /* Massive Editorial Display Heading */
-  .sq-intro-hero__title-group {
-    margin: 0.5rem 0 1.25rem 0;
-  }
-
-  .sq-intro-hero__eyebrow {
-    font-family: var(--sq-font-family-mono, "font-mono-medium", monospace);
-    font-size: clamp(0.75rem, 1.2vw, 0.95rem);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.6);
-    margin-bottom: 0.5rem;
-    display: block;
-    font-weight: 600;
-  }
-
-  .sq-intro-hero__title {
-    font-family: var(--sq-font-family-narrow, "font-narrow-semibold", "Arial Narrow", -apple-system, sans-serif) !important;
-    font-size: clamp(3rem, 7.5vw, 6.25rem) !important;
-    font-weight: 700 !important;
-    line-height: 0.92 !important;
-    letter-spacing: -0.03em !important;
-    text-transform: uppercase !important;
-    color: #000000 !important;
-    margin: 0 !important;
-    display: block !important;
-  }
-
-  .sq-intro-hero__title-underline {
-    position: relative;
-    display: inline-block;
-  }
-
-  .sq-intro-hero__title-underline::after {
-    content: "";
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 100%;
-    height: clamp(8px, 1.2vw, 16px);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 6'%3E%3Cpath d='M0 3 Q 5 0, 10 3 T 20 3' fill='none' stroke='%23ffe32e' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-repeat: repeat-x;
-    background-size: clamp(18px, 2.2vw, 28px) clamp(8px, 1.2vw, 14px);
-    pointer-events: none;
-  }
-
-  .sq-intro-hero__desc {
-    font-family: var(--sq-font-family-normal, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
-    font-size: clamp(1rem, 1.3vw, 1.2rem);
-    line-height: 1.6;
-    color: rgba(0, 0, 0, 0.78);
-    max-width: 780px;
-    margin: 1.5rem 0 2rem 0;
-  }
-
-  /* CTA Button Row */
-  .sq-intro-hero__actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.85rem;
   }
 
   /* Explore Button (Compass next-page trigger) */
@@ -255,9 +190,7 @@ import { Meta } from '@storybook/blocks';
     border: 1px dashed rgba(0, 0, 0, 0.15);
   }
 
-  /* ============================================================
-     METRICS STRIP (Technical Monospace Bar)
-     ============================================================ */
+  /* Metrics Strip */
   .sq-intro-metrics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -294,36 +227,7 @@ import { Meta } from '@storybook/blocks';
     font-weight: 600;
   }
 
-  /* ============================================================
-     INTERACTIVE SHOWCASE MATRIX (Core Motifs)
-     ============================================================ */
-  .sq-intro-section-header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    margin: 3rem 0 1.5rem 0;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .sq-intro-section-title {
-    font-family: var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif);
-    font-size: 1.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: -0.01em;
-    color: #000000;
-    margin: 0;
-  }
-
-  .sq-intro-section-tag {
-    font-family: var(--sq-font-family-mono, monospace);
-    font-size: 0.75rem;
-    color: rgba(0, 0, 0, 0.5);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
+  /* Showcase Grid */
   .sq-intro-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -373,14 +277,6 @@ import { Meta } from '@storybook/blocks';
     font-family: var(--sq-font-family-mono, monospace);
     font-size: 0.75rem;
     color: #ffe32e;
-  }
-
-  .sq-intro-card__title {
-    font-family: var(--sq-font-family-narrow, sans-serif);
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #ffffff !important;
-    margin: 0 0 0.65rem 0;
   }
 
   .sq-intro-card__desc {
@@ -438,9 +334,7 @@ import { Meta } from '@storybook/blocks';
   .sq-bracket-bl { bottom: 6px; left: 6px; }
   .sq-bracket-br { bottom: 6px; right: 6px; }
 
-  /* ============================================================
-     DIRECTORY MATRIX (Foundations, Components, Templates)
-     ============================================================ */
+  /* Directory Grid */
   .sq-intro-dir-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -453,20 +347,6 @@ import { Meta } from '@storybook/blocks';
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 1.5rem;
-  }
-
-  .sq-intro-dir-card__heading {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--sq-font-family-narrow, sans-serif);
-    font-size: 1.25rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #000000;
-    margin: 0 0 1rem 0;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
 
   .sq-intro-dir-list {
@@ -504,9 +384,7 @@ import { Meta } from '@storybook/blocks';
     color: rgba(0, 0, 0, 0.6);
   }
 
-  /* ============================================================
-     TERMINAL QUICK START
-     ============================================================ */
+  /* Terminal Block */
   .sq-intro-terminal {
     background: #111111;
     border-radius: 10px;
@@ -552,23 +430,6 @@ import { Meta } from '@storybook/blocks';
     overflow-x: auto;
   }
 
-  .sq-intro-terminal__comment {
-    color: #888888;
-  }
-
-  .sq-intro-terminal__tag {
-    color: #ffe32e;
-  }
-
-  .sq-intro-terminal__attr {
-    color: #a1ff14;
-  }
-
-  .sq-intro-terminal__string {
-    color: #ffd2f3;
-  }
-
-  /* Live swatch preview */
   .sq-intro-swatch-row {
     display: flex;
     gap: 8px;
@@ -603,23 +464,47 @@ import { Meta } from '@storybook/blocks';
   </div>
 
   {/* Main Colossal Display Heading */}
-  <div className="sq-intro-hero__title-group">
-    <span className="sq-intro-hero__eyebrow">Design System & Component Library</span>
-    <h1 className="sq-intro-hero__title">
-      SQUIGGLE
-    </h1>
-    <h1 className="sq-intro-hero__title">
-      <span className="sq-intro-hero__title-underline">DESIGN SYSTEM</span>
+  <div style={{ margin: '0.85rem 0 1.25rem 0' }}>
+    <span style={{
+      fontFamily: 'var(--sq-font-family-mono, "font-mono-medium", monospace)',
+      fontSize: '0.82rem',
+      letterSpacing: '0.18em',
+      textTransform: 'uppercase',
+      color: 'rgba(0, 0, 0, 0.55)',
+      display: 'block',
+      fontWeight: 600,
+      marginBottom: '0.5rem'
+    }}>
+      Design System &amp; Component Library
+    </span>
+    <h1 style={{
+      fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", "Arial Narrow", -apple-system, sans-serif)',
+      fontSize: 'clamp(2.75rem, 5.5vw, 4.75rem)',
+      fontWeight: 700,
+      lineHeight: '1.05',
+      letterSpacing: '-0.02em',
+      color: '#000000',
+      margin: '0 0 0.5rem 0',
+      padding: 0
+    }}>
+      <span className="sq-wavy-underline" style={{ color: '#000000', paddingBottom: '3px' }}>Squiggle</span> UI Design System
     </h1>
   </div>
 
   {/* Subtitle */}
-  <p className="sq-intro-hero__desc">
+  <p style={{
+    fontFamily: 'var(--sq-font-family-normal, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif)',
+    fontSize: 'clamp(1rem, 1.3vw, 1.18rem)',
+    lineHeight: '1.6',
+    color: 'rgba(0, 0, 0, 0.78)',
+    maxWidth: '780px',
+    margin: '1.25rem 0 2rem 0'
+  }}>
     The high-contrast, framework-agnostic design system reverse-engineered with 100% exact fidelity from the brutalist editorial portfolio. Built with W3C design tokens, fluid clamp typography, hand-drawn vector squiggles, and retro pixel-art motifs.
   </p>
 
   {/* Live CTA Actions */}
-  <div className="sq-intro-hero__actions">
+  <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '0.85rem' }}>
     {/* Live Explore Button with rotating compass icon */}
     <a href="./?path=/docs/components-explore-button--docs"
        className="sq-intro-explore-btn"
@@ -640,7 +525,7 @@ import { Meta } from '@storybook/blocks';
     {/* Outline Button */}
     <a href="./?path=/docs/foundations-colors--docs"
        className="sq-intro-btn-outline">
-      <span>Tokens & Colors ✦</span>
+      <span>Tokens &amp; Colors ✦</span>
     </a>
 
     {/* Standalone bundle indicator */}
@@ -658,11 +543,11 @@ import { Meta } from '@storybook/blocks';
 <div className="sq-intro-metrics">
   <div className="sq-intro-metric-item">
     <span className="sq-intro-metric-value">18+</span>
-    <span className="sq-intro-metric-label">UI Components & Stories</span>
+    <span className="sq-intro-metric-label">UI Components &amp; Stories</span>
   </div>
   <div className="sq-intro-metric-item">
     <span className="sq-intro-metric-value">100%</span>
-    <span className="sq-intro-metric-label">Pixel & Timing Fidelity</span>
+    <span className="sq-intro-metric-label">Pixel &amp; Timing Fidelity</span>
   </div>
   <div className="sq-intro-metric-item">
     <span className="sq-intro-metric-value">0</span>
@@ -681,9 +566,34 @@ import { Meta } from '@storybook/blocks';
 {/* ============================================================
     INTERACTIVE CORE MOTIFS (Live Showcases)
     ============================================================ */}
-<div className="sq-intro-section-header">
-  <h2 className="sq-intro-section-title">Visual Identity & Core Motifs</h2>
-  <span className="sq-intro-section-tag">Interactive Design System Primitives</span>
+<div style={{
+  display: 'flex',
+  alignItems: 'baseline',
+  justifyContent: 'space-between',
+  margin: '3rem 0 1.5rem 0',
+  paddingBottom: '0.75rem',
+  borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
+}}>
+  <h2 style={{
+    fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif)',
+    fontSize: '1.85rem',
+    fontWeight: 700,
+    textTransform: 'uppercase',
+    letterSpacing: '-0.01em',
+    color: '#000000',
+    margin: 0
+  }}>
+    Visual Identity &amp; Core Motifs
+  </h2>
+  <span style={{
+    fontFamily: 'var(--sq-font-family-mono, monospace)',
+    fontSize: '0.75rem',
+    color: 'rgba(0, 0, 0, 0.5)',
+    letterSpacing: '0.08em',
+    textTransform: 'uppercase'
+  }}>
+    Interactive Design System Primitives
+  </span>
 </div>
 
 <div className="sq-intro-grid">
@@ -700,7 +610,14 @@ import { Meta } from '@storybook/blocks';
         <span className="sq-intro-card__num">01 ✦</span>
       </div>
 
-      <h3 className="sq-intro-card__title">Compass Explore Button</h3>
+      <h3 style={{
+        fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif)',
+        fontSize: '1.45rem',
+        fontWeight: 600,
+        color: '#ffffff',
+        margin: '0 0 0.65rem 0',
+        lineHeight: '1.2'
+      }}>Compass Explore Button</h3>
       <p className="sq-intro-card__desc">
         Signature next-page trigger featuring a neon green surface (<code style={{ color: '#a1ff14', background: 'rgba(255,255,255,0.1)', padding: '2px 4px', borderRadius: '3px' }}>rgb(161,255,20)</code>) and an authentic compass icon that rotates 250° on hover with smooth mechanical easing.
       </p>
@@ -740,14 +657,21 @@ import { Meta } from '@storybook/blocks';
         <span className="sq-intro-card__num">02 ✦</span>
       </div>
 
-      <h3 className="sq-intro-card__title">Hand-Drawn Vector Wave</h3>
+      <h3 style={{
+        fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif)',
+        fontSize: '1.45rem',
+        fontWeight: 600,
+        color: '#ffffff',
+        margin: '0 0 0.65rem 0',
+        lineHeight: '1.2'
+      }}>Hand-Drawn Vector Wave</h3>
       <p className="sq-intro-card__desc">
         Signature electric yellow (<code style={{ color: '#ffe32e', background: 'rgba(255,255,255,0.1)', padding: '2px 4px', borderRadius: '3px' }}>#ffe32e</code>) SVG curve applied beneath active accordions, emphasized text, and full-bleed editorial section boundaries.
       </p>
 
       {/* Live Interactive Preview */}
       <div className="sq-intro-card__preview">
-        <span className="sq-wavy-underline" style={{ fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.45rem', color: '#ffffff', fontWeight: 600, letterSpacing: '0.02em' }}>
+        <span className="sq-wavy-underline" style={{ fontFamily: 'var(--sq-font-family-narrow, sans-serif)', fontSize: '1.45rem', color: '#ffffff', fontWeight: 600, letterSpacing: '0.02em', paddingBottom: '3px' }}>
           Interactive Underline
         </span>
       </div>
@@ -774,7 +698,14 @@ import { Meta } from '@storybook/blocks';
         <span className="sq-intro-card__num">03 ✦</span>
       </div>
 
-      <h3 className="sq-intro-card__title">Corner Brackets &amp; Badges</h3>
+      <h3 style={{
+        fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif)',
+        fontSize: '1.45rem',
+        fontWeight: 600,
+        color: '#ffffff',
+        margin: '0 0 0.65rem 0',
+        lineHeight: '1.2'
+      }}>Corner Brackets &amp; Badges</h3>
       <p className="sq-intro-card__desc">
         Geometric 93×93 pixel-corner brackets, subtle 2px micro-radii, signal indicator tags (<code style={{ color: '#ffe32e', background: 'rgba(255,255,255,0.1)', padding: '2px 4px', borderRadius: '3px' }}>[III]</code>), and tactile click spark burst feedback.
       </p>
@@ -808,7 +739,14 @@ import { Meta } from '@storybook/blocks';
         <span className="sq-intro-card__num">04 ✦</span>
       </div>
 
-      <h3 className="sq-intro-card__title">High-Contrast Dual Theme</h3>
+      <h3 style={{
+        fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif)',
+        fontSize: '1.45rem',
+        fontWeight: 600,
+        color: '#ffffff',
+        margin: '0 0 0.65rem 0',
+        lineHeight: '1.2'
+      }}>High-Contrast Dual Theme</h3>
       <p className="sq-intro-card__desc">
         Warm organic cream background (<code style={{ color: '#ffe32e', background: 'rgba(255,255,255,0.1)', padding: '2px 4px', borderRadius: '3px' }}>#f9f4eb</code>) counterbalanced against deep brutalist black (<code style={{ color: '#ffe32e', background: 'rgba(255,255,255,0.1)', padding: '2px 4px', borderRadius: '3px' }}>#000000</code>) and electric accents.
       </p>
@@ -836,15 +774,52 @@ import { Meta } from '@storybook/blocks';
 {/* ============================================================
     SYSTEM DIRECTORY (Foundations, Components, Patterns)
     ============================================================ */}
-<div className="sq-intro-section-header">
-  <h2 className="sq-intro-section-title">Component &amp; Foundation Directory</h2>
-  <span className="sq-intro-section-tag">Direct Storybook Links</span>
+<div style={{
+  display: 'flex',
+  alignItems: 'baseline',
+  justifyContent: 'space-between',
+  margin: '3rem 0 1.5rem 0',
+  paddingBottom: '0.75rem',
+  borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
+}}>
+  <h2 style={{
+    fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif)',
+    fontSize: '1.85rem',
+    fontWeight: 700,
+    textTransform: 'uppercase',
+    letterSpacing: '-0.01em',
+    color: '#000000',
+    margin: 0
+  }}>
+    Component &amp; Foundation Directory
+  </h2>
+  <span style={{
+    fontFamily: 'var(--sq-font-family-mono, monospace)',
+    fontSize: '0.75rem',
+    color: 'rgba(0, 0, 0, 0.5)',
+    letterSpacing: '0.08em',
+    textTransform: 'uppercase'
+  }}>
+    Direct Storybook Links
+  </span>
 </div>
 
 <div className="sq-intro-dir-grid">
   {/* Column 1: Foundations */}
   <div className="sq-intro-dir-card">
-    <h3 className="sq-intro-dir-card__heading">
+    <h3 style={{
+      display: 'flex',
+      alignItems: 'center',
+      gap: '8px',
+      fontFamily: 'var(--sq-font-family-narrow, sans-serif)',
+      fontSize: '1.25rem',
+      fontWeight: 700,
+      textTransform: 'uppercase',
+      color: '#000000',
+      margin: '0 0 1rem 0',
+      paddingBottom: '0.75rem',
+      borderBottom: '1px solid rgba(0, 0, 0, 0.08)'
+    }}>
       <span style={{ color: '#ffe32e' }}>✦</span> Foundations
     </h3>
     <ul className="sq-intro-dir-list">
@@ -883,7 +858,19 @@ import { Meta } from '@storybook/blocks';
 
   {/* Column 2: Core Components */}
   <div className="sq-intro-dir-card">
-    <h3 className="sq-intro-dir-card__heading">
+    <h3 style={{
+      display: 'flex',
+      alignItems: 'center',
+      gap: '8px',
+      fontFamily: 'var(--sq-font-family-narrow, sans-serif)',
+      fontSize: '1.25rem',
+      fontWeight: 700,
+      textTransform: 'uppercase',
+      color: '#000000',
+      margin: '0 0 1rem 0',
+      paddingBottom: '0.75rem',
+      borderBottom: '1px solid rgba(0, 0, 0, 0.08)'
+    }}>
       <span style={{ color: '#ffe32e' }}>✦</span> Core UI Primitives
     </h3>
     <ul className="sq-intro-dir-list">
@@ -940,7 +927,19 @@ import { Meta } from '@storybook/blocks';
 
   {/* Column 3: Composite Patterns */}
   <div className="sq-intro-dir-card">
-    <h3 className="sq-intro-dir-card__heading">
+    <h3 style={{
+      display: 'flex',
+      alignItems: 'center',
+      gap: '8px',
+      fontFamily: 'var(--sq-font-family-narrow, sans-serif)',
+      fontSize: '1.25rem',
+      fontWeight: 700,
+      textTransform: 'uppercase',
+      color: '#000000',
+      margin: '0 0 1rem 0',
+      paddingBottom: '0.75rem',
+      borderBottom: '1px solid rgba(0, 0, 0, 0.08)'
+    }}>
       <span style={{ color: '#ffe32e' }}>✦</span> Page Patterns &amp; Templates
     </h3>
     <ul className="sq-intro-dir-list">
@@ -993,9 +992,34 @@ import { Meta } from '@storybook/blocks';
 {/* ============================================================
     QUICK START TERMINAL SNIPPET
     ============================================================ */}
-<div className="sq-intro-section-header">
-  <h2 className="sq-intro-section-title">Standalone Quick Start</h2>
-  <span className="sq-intro-section-tag">Zero Configuration Bundle</span>
+<div style={{
+  display: 'flex',
+  alignItems: 'baseline',
+  justifyContent: 'space-between',
+  margin: '3rem 0 1.5rem 0',
+  paddingBottom: '0.75rem',
+  borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
+}}>
+  <h2 style={{
+    fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif)',
+    fontSize: '1.85rem',
+    fontWeight: 700,
+    textTransform: 'uppercase',
+    letterSpacing: '-0.01em',
+    color: '#000000',
+    margin: 0
+  }}>
+    Standalone Quick Start
+  </h2>
+  <span style={{
+    fontFamily: 'var(--sq-font-family-mono, monospace)',
+    fontSize: '0.75rem',
+    color: 'rgba(0, 0, 0, 0.5)',
+    letterSpacing: '0.08em',
+    textTransform: 'uppercase'
+  }}>
+    Zero Configuration Bundle
+  </span>
 </div>
 
 <div className="sq-intro-terminal">
@@ -1006,11 +1030,11 @@ import { Meta } from '@storybook/blocks';
     <span className="sq-intro-terminal__title">bash — squiggle-ui-quickstart</span>
   </div>
   <div className="sq-intro-terminal__body">
-    <span className="sq-intro-terminal__comment"># 1. Include the single standalone CSS bundle in your &lt;head&gt; (zero dependencies, 51KB)</span><br />
-    &lt;<span className="sq-intro-terminal__tag">link</span> <span className="sq-intro-terminal__attr">rel</span>=<span className="sq-intro-terminal__string">"stylesheet"</span> <span className="sq-intro-terminal__attr">href</span>=<span className="sq-intro-terminal__string">"https://prth1234.github.io/portfolio-2025/design-system/dist/design-system.css"</span> /&gt;<br /><br />
-    <span className="sq-intro-terminal__comment"># 2. Re-bundle distribution CSS after token or component changes</span><br />
+    <span style={{ color: '#888888' }}># 1. Include the single standalone CSS bundle in your &lt;head&gt; (zero dependencies, 51KB)</span><br />
+    &lt;<span style={{ color: '#ffe32e' }}>link</span> <span style={{ color: '#a1ff14' }}>rel</span>=<span style={{ color: '#ffd2f3' }}>"stylesheet"</span> <span style={{ color: '#a1ff14' }}>href</span>=<span style={{ color: '#ffd2f3' }}>"https://prth1234.github.io/portfolio-2025/design-system/dist/design-system.css"</span> /&gt;<br /><br />
+    <span style={{ color: '#888888' }}># 2. Re-bundle distribution CSS after token or component changes</span><br />
     <span style={{ color: '#ffe32e' }}>cd</span> design-system &amp;&amp; <span style={{ color: '#a1ff14' }}>node build.js</span><br /><br />
-    <span className="sq-intro-terminal__comment"># 3. Launch the local Storybook development server</span><br />
+    <span style={{ color: '#888888' }}># 3. Launch the local Storybook development server</span><br />
     <span style={{ color: '#ffe32e' }}>cd</span> design-system &amp;&amp; <span style={{ color: '#a1ff14' }}>npm run storybook</span>
   </div>
 </div>
@@ -1018,9 +1042,34 @@ import { Meta } from '@storybook/blocks';
 {/* ============================================================
     CORE ARCHITECTURAL PRINCIPLES
     ============================================================ */}
-<div className="sq-intro-section-header">
-  <h2 className="sq-intro-section-title">System Invariants &amp; Principles</h2>
-  <span className="sq-intro-section-tag">Guiding Constraints</span>
+<div style={{
+  display: 'flex',
+  alignItems: 'baseline',
+  justifyContent: 'space-between',
+  margin: '3rem 0 1.5rem 0',
+  paddingBottom: '0.75rem',
+  borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
+}}>
+  <h2 style={{
+    fontFamily: 'var(--sq-font-family-narrow, "font-narrow-semibold", sans-serif)',
+    fontSize: '1.85rem',
+    fontWeight: 700,
+    textTransform: 'uppercase',
+    letterSpacing: '-0.01em',
+    color: '#000000',
+    margin: 0
+  }}>
+    System Invariants &amp; Principles
+  </h2>
+  <span style={{
+    fontFamily: 'var(--sq-font-family-mono, monospace)',
+    fontSize: '0.75rem',
+    color: 'rgba(0, 0, 0, 0.5)',
+    letterSpacing: '0.08em',
+    textTransform: 'uppercase'
+  }}>
+    Guiding Constraints
+  </span>
 </div>
 
 <div style={{
