@@ -32,7 +32,7 @@
   <meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <link id="main-css" rel="stylesheet" href="../styles/main.css?v=20261105l">
+  <link id="main-css" rel="stylesheet" href="../styles/main.css?v=20261106a">
   <style>
     :root {
       --z-index-preloader: 1100;
@@ -257,18 +257,42 @@
       line-height: 1.4;
     }
 
-    /* Experience Pointers */
+    /* Universal Hanging Indent Pointers */
+    .pointer-item,
     .experience-point {
-      margin-bottom: 12px !important;
+      display: flex !important;
+      align-items: baseline !important;
+      gap: 0.6rem !important;
+      margin-bottom: 0.65rem !important;
       line-height: 1.65 !important;
       color: #1a1a1a;
+      padding-left: 0 !important;
+      text-indent: 0 !important;
     }
 
+    .pointer-item:last-child,
     .experience-point:last-child {
       margin-bottom: 0 !important;
     }
 
-    .experience-point strong {
+    .pointer-bullet,
+    .experience-point-bullet {
+      flex-shrink: 0 !important;
+      color: currentColor !important;
+      font-size: 0.85em !important;
+      line-height: 1 !important;
+      transform: translateY(-0.04em);
+      user-select: none;
+    }
+
+    .pointer-text,
+    .experience-point-text {
+      flex: 1 1 0% !important;
+      min-width: 0 !important;
+    }
+
+    .experience-point strong,
+    .pointer-text strong {
       color: #000;
     }
 
@@ -886,10 +910,10 @@
                     <div data-accordion-content="" class="accordion_content">
                       <div class="accordion_content-inner">
                         <div class="rich-text w-richtext">
-                          <p class="experience-point">✦ <strong>Hybrid Cloud FinOps Platform:</strong> Part of the Agile FinOps team at Flexera GCC developing an enterprise-grade platform managing billions in annual cloud spend for Fortune 500 enterprises with ~30% average cost savings.</p>
-                          <p class="experience-point">✦ <strong>Microservices &amp; Multi-Cloud Parsers:</strong> Architected scalable microservices from the ground up and engineered multi-cloud bill parsers for AWS, Azure, and GCP.</p>
-                          <p class="experience-point">✦ <strong>Lakehouse ETL &amp; High-Performance APIs:</strong> Designed robust ETL pipelines to ingest, normalize, and standardize telemetry into a centralized datalakehouse; built low-latency gRPC and REST APIs for real-time spend analytics.</p>
-                          <p class="experience-point">✦ <strong>AI Spend Intelligence &amp; DevOps SLA:</strong> Implemented AI-driven spend pattern recognition and anomaly detection; automated CI/CD pipelines accelerating deployments by 25% while maintaining a 100% P1/P2 resolution rate under a 15-minute SLA.</p>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><strong>Hybrid Cloud FinOps Platform:</strong> Part of the Agile FinOps team at Flexera GCC developing an enterprise-grade platform managing billions in annual cloud spend for Fortune 500 enterprises with ~30% average cost savings.</span></div>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><strong>Microservices &amp; Multi-Cloud Parsers:</strong> Architected scalable microservices from the ground up and engineered multi-cloud bill parsers for AWS, Azure, and GCP.</span></div>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><strong>Lakehouse ETL &amp; High-Performance APIs:</strong> Designed robust ETL pipelines to ingest, normalize, and standardize telemetry into a centralized datalakehouse; built low-latency gRPC and REST APIs for real-time spend analytics.</span></div>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><strong>AI Spend Intelligence &amp; DevOps SLA:</strong> Implemented AI-driven spend pattern recognition and anomaly detection; automated CI/CD pipelines accelerating deployments by 25% while maintaining a 100% P1/P2 resolution rate under a 15-minute SLA.</span></div>
                         </div>
                       </div>
                     </div>
@@ -913,10 +937,10 @@
                     <div data-accordion-content="" class="accordion_content">
                       <div class="accordion_content-inner">
                         <div class="rich-text w-richtext">
-                          <p class="experience-point">✦ <strong>Low-Code Core Platform:</strong> Contributed to Finvolv’s Core Platform team, building highly configurable, domain-rich Loan Origination (LOS) and Loan Management Systems (LMS), including Workspace Portal modules.</p>
-                          <p class="experience-point">✦ <strong>Advanced IAM &amp; Keycloak API Layer:</strong> Engineered a custom Keycloak layer for Identity &amp; Access Management with fraud detection and audit trails, improving tokenization efficiency by 45%.</p>
-                          <p class="experience-point">✦ <strong>High-Performance Financial APIs:</strong> Designed and optimized REST endpoints across credit engines and onboarding flows using caching, pagination, and database tuning to cut response times by 30%.</p>
-                          <p class="experience-point">✦ <strong>Encrypted Document Management &amp; MFA:</strong> Built an encrypted Document Management System on AWS S3, integrated Multi-Factor Authentication (MFA), and streamlined event-driven LOS-LMS workflows.</p>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><strong>Low-Code Core Platform:</strong> Contributed to Finvolv’s Core Platform team, building highly configurable, domain-rich Loan Origination (LOS) and Loan Management Systems (LMS), including Workspace Portal modules.</span></div>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><strong>Advanced IAM &amp; Keycloak API Layer:</strong> Engineered a custom Keycloak layer for Identity &amp; Access Management with fraud detection and audit trails, improving tokenization efficiency by 45%.</span></div>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><strong>High-Performance Financial APIs:</strong> Designed and optimized REST endpoints across credit engines and onboarding flows using caching, pagination, and database tuning to cut response times by 30%.</span></div>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><strong>Encrypted Document Management &amp; MFA:</strong> Built an encrypted Document Management System on AWS S3, integrated Multi-Factor Authentication (MFA), and streamlined event-driven LOS-LMS workflows.</span></div>
                         </div>
                       </div>
                     </div>
@@ -940,10 +964,10 @@
                     <div data-accordion-content="" class="accordion_content">
                       <div class="accordion_content-inner">
                         <div class="rich-text w-richtext">
-                          <p class="experience-point">✦ <strong>AI-Driven Content Discovery:</strong> Enhanced OTT platform user engagement through real-time metadata enrichment and automated indexing to improve discoverability.</p>
-                          <p class="experience-point">✦ <strong>CV &amp; NLP Media Workflows:</strong> Integrated Computer Vision (CNN) and NLP (BERT) for automated visual feature mapping and intelligent content categorization.</p>
-                          <p class="experience-point">✦ <strong>Real-Time Video Event Recognition:</strong> Built on-the-fly event detection and dynamic video tagging systems, improving metadata searchability by over 50% for personalized recommendations and ad targeting.</p>
-                          <p class="experience-point">✦ <strong>Agile Engineering:</strong> Drove iterative ML model evaluation and collaboration across multi-functional engineering teams.</p>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><strong>AI-Driven Content Discovery:</strong> Enhanced OTT platform user engagement through real-time metadata enrichment and automated indexing to improve discoverability.</span></div>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><strong>CV &amp; NLP Media Workflows:</strong> Integrated Computer Vision (CNN) and NLP (BERT) for automated visual feature mapping and intelligent content categorization.</span></div>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><strong>Real-Time Video Event Recognition:</strong> Built on-the-fly event detection and dynamic video tagging systems, improving metadata searchability by over 50% for personalized recommendations and ad targeting.</span></div>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><strong>Agile Engineering:</strong> Drove iterative ML model evaluation and collaboration across multi-functional engineering teams.</span></div>
                         </div>
                       </div>
                     </div>
@@ -967,9 +991,9 @@
                     <div data-accordion-content="" class="accordion_content">
                       <div class="accordion_content-inner">
                         <div class="rich-text w-richtext">
-                          <p class="experience-point">✦ <strong>NLP Sentiment Pipelines:</strong> Developed NLP models to extract sentiment and market intelligence from unstructured text and customer reviews to guide product strategy.</p>
-                          <p class="experience-point">✦ <strong>Big Data Scale (2 Petabytes):</strong> Engineered scalable data pipelines processing 2PB of data using transformer embeddings, outlier detection, and data cleansing techniques.</p>
-                          <p class="experience-point">✦ <strong>Automated Market Intelligence Dashboards:</strong> Built continuous reporting systems and real-time visualization dashboards delivering actionable trend analytics to stakeholders.</p>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><strong>NLP Sentiment Pipelines:</strong> Developed NLP models to extract sentiment and market intelligence from unstructured text and customer reviews to guide product strategy.</span></div>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><strong>Big Data Scale (2 Petabytes):</strong> Engineered scalable data pipelines processing 2PB of data using transformer embeddings, outlier detection, and data cleansing techniques.</span></div>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><strong>Automated Market Intelligence Dashboards:</strong> Built continuous reporting systems and real-time visualization dashboards delivering actionable trend analytics to stakeholders.</span></div>
                         </div>
                       </div>
                     </div>
@@ -1017,15 +1041,9 @@
                     <div data-accordion-content="" class="accordion_content">
                       <div class="accordion_content-inner">
                         <div class="rich-text w-richtext">
-                          <p> ✦ https://prth1234.github.io/portfolio-2024/
-
-                          <br>
-                          ✦ https://prth1234.github.io/Parths-Website/
-                            
-                          <br>
-                         ✦ https://prth1234.github.io/happy-lemon-portoflio/
-                            
-                          </p>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><a href="https://prth1234.github.io/portfolio-2024/" target="_blank" rel="noopener noreferrer">https://prth1234.github.io/portfolio-2024/</a></span></div>
+<div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><a href="https://prth1234.github.io/Parths-Website/" target="_blank" rel="noopener noreferrer">https://prth1234.github.io/Parths-Website/</a></span></div>
+<div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text"><a href="https://prth1234.github.io/happy-lemon-portoflio/" target="_blank" rel="noopener noreferrer">https://prth1234.github.io/happy-lemon-portoflio/</a></span></div>
                         </div>
                       </div>
                     </div>
@@ -1049,18 +1067,16 @@
                     <div data-accordion-content="" class="accordion_content">
                       <div class="accordion_content-inner">
                         <div class="rich-text w-richtext">
-                          <p>
-                            ✦ Blender <br>
-                            ✦ Unity 3D <br>
-                            ✦ Spline — JS/TS <br>
-                            ✦ Tailwind <br>
-                            ✦ Redux <br>
-                            ✦ Design Libraries <br>
-                            ✦ NoSQL DBs like Neo4J <br>
-                            ✦ Cassandra <br>
-                            ✦ Matlab <br>
-                            ✦ Git
-                          </p>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Blender</span></div>
+<div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Unity 3D</span></div>
+<div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Spline — JS/TS</span></div>
+<div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Tailwind</span></div>
+<div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Redux</span></div>
+<div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Design Libraries</span></div>
+<div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">NoSQL DBs like Neo4J</span></div>
+<div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Cassandra</span></div>
+<div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Matlab</span></div>
+<div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Git</span></div>
                         </div>
                       </div>
                     </div>
@@ -1084,11 +1100,11 @@
                     <div data-accordion-content="" class="accordion_content">
                       <div class="accordion_content-inner">
                         <div class="rich-text w-richtext">
-                          <p>✦ Google Analytics Course <br>
-                            ✦ Python Proficiency: Cutshort <br>
-                            ✦ Intro to ML: Verzeo <br>
-                            ✦ Introduction to Cloud 101 AWS <br>
-                            ✦ Statistics & Probability Khan Academy</p>
+                          <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Google Analytics Course</span></div>
+<div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Python Proficiency: Cutshort</span></div>
+<div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Intro to ML: Verzeo</span></div>
+<div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Introduction to Cloud 101 AWS</span></div>
+<div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Statistics & Probability Khan Academy</span></div>
                         </div>
                       </div>
                     </div>

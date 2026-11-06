@@ -38,7 +38,7 @@
     <meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link id="main-css" rel="stylesheet" href="../styles/main.css?v=20261105l">
+    <link id="main-css" rel="stylesheet" href="../styles/main.css?v=20261106a">
     <style>
         :root {
             --z-index-preloader: 1100;
@@ -138,6 +138,35 @@
         }
         .root{
             background-color: #000 !important;
+        }
+
+        /* Hanging Indent Pointer Styles */
+        .pointer-item {
+            display: flex !important;
+            align-items: baseline !important;
+            gap: 0.6rem !important;
+            margin-bottom: 0.65rem !important;
+            line-height: 1.65 !important;
+            padding-left: 0 !important;
+            text-indent: 0 !important;
+        }
+
+        .pointer-item:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        .pointer-bullet {
+            flex-shrink: 0 !important;
+            color: currentColor !important;
+            font-size: 0.85em !important;
+            line-height: 1 !important;
+            transform: translateY(-0.04em);
+            user-select: none;
+        }
+
+        .pointer-text {
+            flex: 1 1 0% !important;
+            min-width: 0 !important;
         }
     </style>
     <script src="experience-data.js"></script>
@@ -1038,9 +1067,9 @@
                                         <div data-accordion-content="" class="accordion_content">
                                             <div class="accordion_content-inner">
                                                 <div class="rich-text w-richtext">
-                                                    <p>✦ Swarm of AI Agents that conducts real-time market research &amp; competitive analysis to generate full-funnel marketing strategies.<br>
-✦ Leverages web search, retrieval-augmented reasoning (RAG), &amp; planner-driven task orchestration.<br>
-✦ Continuously tunes performance via outcome-driven iteration &amp; cross-agent evaluation.</p>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Swarm of AI Agents that conducts real-time market research &amp; competitive analysis to generate full-funnel marketing strategies.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Leverages web search, retrieval-augmented reasoning (RAG), &amp; planner-driven task orchestration.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Continuously tunes performance via outcome-driven iteration &amp; cross-agent evaluation.</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1069,9 +1098,9 @@
                                         <div data-accordion-content="" class="accordion_content">
                                             <div class="accordion_content-inner">
                                                 <div class="rich-text w-richtext">
-                                                    <p>✦ Agentic architecture that transforms database schemas into metric definitions, relationship graphs &amp; lineage-aware semantic abstractions.<br>
-✦ Purpose-built for analytics-grade LLM querying across OLAP systems &amp; intelligent dashboards.<br>
-✦ Reduced metric hallucination &amp; logical query errors by ~48% compared to prompt-only queries.</p>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Agentic architecture that transforms database schemas into metric definitions, relationship graphs &amp; lineage-aware semantic abstractions.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Purpose-built for analytics-grade LLM querying across OLAP systems &amp; intelligent dashboards.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Reduced metric hallucination &amp; logical query errors by ~48% compared to prompt-only queries.</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1101,9 +1130,9 @@
                                         <div data-accordion-content="" class="accordion_content">
                                             <div class="accordion_content-inner">
                                                 <div class="rich-text w-richtext">
-                                                    <p>✦ Built an intelligent agentic automation platform utilizing LLMs and browser automation to parse and autofill complex multi-step application forms.<br>
-✦ Integrated schema-aware DOM extraction, adaptive reasoning for custom fields, and profile mapping across diverse enterprise portals.<br>
-✦ Reduced repetitive manual data entry by over 80% with secure encrypted credential storage and audit logging.</p>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Built an intelligent agentic automation platform utilizing LLMs and browser automation to parse and autofill complex multi-step application forms.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Integrated schema-aware DOM extraction, adaptive reasoning for custom fields, and profile mapping across diverse enterprise portals.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Reduced repetitive manual data entry by over 80% with secure encrypted credential storage and audit logging.</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1132,9 +1161,9 @@
                                         <div data-accordion-content="" class="accordion_content">
                                             <div class="accordion_content-inner">
                                                 <div class="rich-text w-richtext">
-                                                    <p>✦ Developed NLP pipeline converting natural language queries into schema-aware, optimized SQL statements.<br>
-✦ Applied data preprocessing, tokenization, and transformer-based embeddings for high execution accuracy.<br>
-✦ Enabled efficient database querying and real-time insights from unstructured user prompts.</p>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Developed NLP pipeline converting natural language queries into schema-aware, optimized SQL statements.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Applied data preprocessing, tokenization, and transformer-based embeddings for high execution accuracy.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Enabled efficient database querying and real-time insights from unstructured user prompts.</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1164,10 +1193,10 @@
                                         <div data-accordion-content="" class="accordion_content">
                                             <div class="accordion_content-inner">
                                                 <div class="rich-text w-richtext">
-                                                    <p><img src="https://www.secureindia.in/wp-content/uploads/2023/12/Deepfake.jpg" alt="Deepfake Image" /><br>
-                                                    ✦ Developed a deepfake detection model using CV techniques to detect manipulated images/videos.<br>
-✦ Analyzed emotional cues, facial dynamics, and visual anomalies to flag tampered frames.<br>
-✦ Improved media authenticity verification for enhanced security and trust.</p>
+                                                    <p><img src="https://www.secureindia.in/wp-content/uploads/2023/12/Deepfake.jpg" alt="Deepfake Image" /></p>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Developed a deepfake detection model using CV techniques to detect manipulated images/videos.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Analyzed emotional cues, facial dynamics, and visual anomalies to flag tampered frames.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Improved media authenticity verification for enhanced security and trust.</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1196,10 +1225,10 @@
                                         <div data-accordion-content="" class="accordion_content">
                                             <div class="accordion_content-inner">
                                                 <div class="rich-text w-richtext">
-                                                       <p><img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Netflix_UI_for_Web.png/330px-Netflix_UI_for_Web.png" alt="Recommendation System" /><br>
-                                                    ✦ Built personalized recommendation engine enhancing user engagement and content discovery.<br>
-✦ Leveraged ML algorithms and collaborative filtering models based on user interaction history and preferences.<br>
-✦ Enhanced content discoverability and user engagement through curated recommendations.</p>
+                                                    <p><img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Netflix_UI_for_Web.png/330px-Netflix_UI_for_Web.png" alt="Recommendation System" /></p>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Built personalized recommendation engine enhancing user engagement and content discovery.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Leveraged ML algorithms and collaborative filtering models based on user interaction history and preferences.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Enhanced content discoverability and user engagement through curated recommendations.</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1229,9 +1258,9 @@
                                         <div data-accordion-content="" class="accordion_content">
                                             <div class="accordion_content-inner">
                                                 <div class="rich-text w-richtext">
-                                                    <p>✦ E-commerce scraper tracking temporal price drops &amp; coupon intelligence.<br>
-✦ Tracked price fluctuations to identify optimal buying windows and trigger real-time deal alerts.<br>
-✦ Built interactive analytics charts visualizing historical pricing trends and discount patterns.</p>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">E-commerce scraper tracking temporal price drops &amp; coupon intelligence.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Tracked price fluctuations to identify optimal buying windows and trigger real-time deal alerts.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Built interactive analytics charts visualizing historical pricing trends and discount patterns.</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1261,10 +1290,10 @@
                                         <div data-accordion-content="" class="accordion_content">
                                             <div class="accordion_content-inner">
                                                 <div class="rich-text w-richtext">
-                                                    <p><img src="./img1.png" alt="Uber Eats"><br>
-                                                    ✦ Built a feature-rich food delivery app inspired by Uber Eats, focusing on UI/UX &amp; performance.<br>
-✦ Utilized Vue.js, Pinia for state management, &amp; Vue Router for seamless client navigation.<br>
-✦ Integrated design libraries like Primer &amp; Ant Design for a sleek, responsive interface.</p>
+                                                    <p><img src="./img1.png" alt="Uber Eats"></p>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Built a feature-rich food delivery app inspired by Uber Eats, focusing on UI/UX &amp; performance.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Utilized Vue.js, Pinia for state management, &amp; Vue Router for seamless client navigation.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Integrated design libraries like Primer &amp; Ant Design for a sleek, responsive interface.</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1294,9 +1323,9 @@
                                         <div data-accordion-content="" class="accordion_content">
                                             <div class="accordion_content-inner">
                                                 <div class="rich-text w-richtext">
-                                                    <p>✦ An E2E application for booking flights allowing users to search &amp; compare multi-airline routes.<br>
-✦ Integrated seat availability matrix, transparent fee breakdowns, and real-time booking flows.<br>
-✦ Engineered using Flask, Jinja &amp; MySQL as the resilient backend technologies.</p>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">An E2E application for booking flights allowing users to search &amp; compare multi-airline routes.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Integrated seat availability matrix, transparent fee breakdowns, and real-time booking flows.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Engineered using Flask, Jinja &amp; MySQL as the resilient backend technologies.</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1325,14 +1354,11 @@
                                         <div data-accordion-content="" class="accordion_content">
                                             <div class="accordion_content-inner">
                                                 <div class="rich-text w-richtext">
-                                                    <p>
-                                                        <img src="https://www.happiestminds.com/wp-content/uploads/2024/07/Benefits-of-Marketplace-Ecommerce.jpg"
-                                                            alt="Benefits of Marketplace Ecommerce" /><br>
-
-                                                            ✦ Developed an eCommerce platform allowing users to buy, sell, like, and comment.<br>
-✦ Implemented seamless product posting, browsing, and direct purchasing features.<br>
-✦ Focused on responsive design and intuitive user experience for engagement.
-                                                    </p>
+                                                    <p><img src="https://www.happiestminds.com/wp-content/uploads/2024/07/Benefits-of-Marketplace-Ecommerce.jpg"
+                                                            alt="Benefits of Marketplace Ecommerce" /></p>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Developed an eCommerce platform allowing users to buy, sell, like, and comment.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Implemented seamless product posting, browsing, and direct purchasing features.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Focused on responsive design and intuitive user experience for engagement.</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1362,10 +1388,10 @@
                                         <div data-accordion-content="" class="accordion_content">
                                             <div class="accordion_content-inner">
                                                 <div class="rich-text w-richtext">
-                                                          <p><img src="https://secure.meetupstatic.com/next/images/indexPage/irl_event.svg?w=828" alt="Meetup.com" /><br>
-                                                    ✦ Developed a social networking platform leveraging Graph Neural Networks (GNNs) for link prediction.<br>
-✦ Implemented advanced recommendation systems to suggest relevant connections and events.<br>
-✦ Enabled users to interact, connect, and discover communities effectively.</p>
+                                                    <p><img src="https://secure.meetupstatic.com/next/images/indexPage/irl_event.svg?w=828" alt="Meetup.com" /></p>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Developed a social networking platform leveraging Graph Neural Networks (GNNs) for link prediction.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Implemented advanced recommendation systems to suggest relevant connections and events.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Enabled users to interact, connect, and discover communities effectively.</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1395,9 +1421,9 @@
                                         <div data-accordion-content="" class="accordion_content">
                                             <div class="accordion_content-inner">
                                                 <div class="rich-text w-richtext">
-                                                    <p>✦ Developed a secure file vault system that avoids duplicate storage of files.<br>
-✦ Implemented deduplication algorithms to optimize storage and reduce redundancy.<br>
-✦ Enabled efficient file management with fast retrieval and version control.</p>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Developed a secure file vault system that avoids duplicate storage of files.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Implemented deduplication algorithms to optimize storage and reduce redundancy.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Enabled efficient file management with fast retrieval and version control.</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1427,9 +1453,9 @@
                                         <div data-accordion-content="" class="accordion_content">
                                             <div class="accordion_content-inner">
                                                 <div class="rich-text w-richtext">
-                                                    <p>✦ Built a platform to evaluate and compare machine learning models efficiently.<br>
-✦ Implemented performance metrics, visualizations, and benchmarking across datasets.<br>
-✦ Enabled data-driven selection of the best models for deployment and production.</p>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Built a platform to evaluate and compare machine learning models efficiently.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Implemented performance metrics, visualizations, and benchmarking across datasets.</span></div>
+                                                    <div class="pointer-item"><span class="pointer-bullet">✦</span><span class="pointer-text">Enabled data-driven selection of the best models for deployment and production.</span></div>
                                                 </div>
                                             </div>
                                         </div>
