@@ -1,4 +1,4 @@
-import{j as e,M as t}from"./index-CHbVmVQH.js";import{useMDXComponents as i}from"./index-CxnY205h.js";import"./iframe-C1x40mqo.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./index-Ca4lBP7z.js";import"./index-Bhqu_tAV.js";function n(s){const r={p:"p",span:"span",...i(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(t,{title:"Introduction"}),`
+import{j as e,M as t}from"./index-DGzzx3Oo.js";import{useMDXComponents as i}from"./index-6YnEgEIa.js";import"./iframe-CSfaR8Sr.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./index-Ca4lBP7z.js";import"./index-Bhqu_tAV.js";function n(s){const r={p:"p",span:"span",...i(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(t,{title:"Introduction"}),`
 `,e.jsx("style",{children:`
   /* ============================================================
      SQUIGGLE UI - STORYBOOK INTRODUCTION SHOWCASE
