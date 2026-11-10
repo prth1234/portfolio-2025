@@ -24,6 +24,7 @@ const filesToBundle = [
   'components/badge-tag/badge-tag.css',
   'components/preloader/preloader.css',
   'components/click-animation/click-animation.css',
+  'components/minimap/minimap.css',
   'components/footer/footer.css'
 ];
 

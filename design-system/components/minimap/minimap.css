@@ -1,0 +1,57 @@
+/* Minimap Rail — vertical pill progress rail (01 — 04) */
+.sq-minimap {
+  display: inline-grid;
+  color: var(--sq-cream, #f9f4eb);
+  font-family: var(--sq-font-mono, 'Roboto Mono', ui-monospace, monospace);
+}
+
+.sq-minimap__bg {
+  grid-area: 1 / 1;
+  background-color: var(--sq-black, #000000);
+  border-radius: 1.375rem;
+  border: 0.0625rem solid color-mix(in hsl, var(--sq-cream, #f9f4eb), transparent 80%);
+}
+
+.sq-minimap__inner {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0.625rem;
+  overflow: clip;
+}
+
+.sq-minimap__number {
+  display: block;
+  font-size: 0.6875rem;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.sq-minimap__line {
+  display: block;
+  width: 0.5rem;
+  height: 0.0625rem;
+  background-color: var(--sq-cream, #f9f4eb);
+  opacity: 0.5;
+  transform-origin: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.sq-minimap__number.is-active { opacity: 1; }
+.sq-minimap__line.is-active { opacity: 1; transform: scaleX(1.8); }
+
+/* Light variant (cream rail, black ticks) */
+.sq-minimap--light .sq-minimap__bg { background-color: var(--sq-cream, #f9f4eb); border-color: rgba(0, 0, 0, 0.2); }
+.sq-minimap--light { color: #000; }
+.sq-minimap--light .sq-minimap__line { background-color: #000; }
+
+/* Horizontal variant (mobile layout) */
+.sq-minimap--horizontal .sq-minimap__inner { flex-flow: row; padding: 0.625rem 1rem; }
+.sq-minimap--horizontal .sq-minimap__line { width: 0.0625rem; height: 0.5rem; }
+.sq-minimap--horizontal .sq-minimap__line.is-active { transform: scaleY(1.8); }
