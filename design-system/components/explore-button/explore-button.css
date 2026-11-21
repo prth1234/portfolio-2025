@@ -48,7 +48,7 @@
 .sq-explore-button:hover,
 .sq-explore-button--hover,
 .button1234:hover {
-  background-color: rgb(192, 255, 20);
+  background-color: var(--sq-color-yellow, #ffe32e);
   transition-duration: .5s;
 }
 
