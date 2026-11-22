@@ -8,20 +8,20 @@ Personal portfolio website of **Parth Singh**, Software Engineer at Flexera GCC,
 
 ## Overview
 
-A multi-page, design-forward portfolio built on the **Squiggle UI** design system with scroll-driven animations, condensed editorial typography, and a clean layout walking visitors through background, experience, projects, and skills.
+A multi-page, design-forward portfolio with scroll-driven animations, condensed editorial typography, and an interactive four-route walkthrough of Parth's background, engineering experience, selected projects, and skills.
 
-## Pages
+## Interactive Routes
 
 <div align="center">
   <img src="docs/assets/pages.svg" alt="Portfolio pages: About, Experience, Projects, More" width="100%" />
 </div>
 
-| Page | File | What it covers |
+| Route | File | What it covers |
 |---|---|---|
-| **About** | `index.html` | Introduction, work summary timeline, and contact form |
-| **Experience** | `index2.html` | Professional experience across strategy, design, and development |
-| **Projects** | `index3.html` | Selected projects |
-| **More** | `index4.html` | Education, skills, achievements, and contact details |
+| `/` | `main/index.html` | Introduction, work summary timeline, and interactive contact form |
+| `/index2.html` | `main/index2.html` | Professional experience across strategy, design, and engineering |
+| `/index3.html` | `main/index3.html` | Selected cloud, AI, and full-stack projects |
+| `/index4.html` | `main/index4.html` | Education, skills, achievements, and contact details |
 
 ## Work Process
 
@@ -31,48 +31,43 @@ A multi-page, design-forward portfolio built on the **Squiggle UI** design syste
 
 ## Highlights
 
-- Animated hero section with scroll-based interactions
+- Scroll-driven animations and interactive section transitions across all four pages
 - Work process breakdown: **Define -> Design -> Develop -> Run**
-- Timeline of roles: Flexera GCC, Finvolv, Irdeto, To The New, PES University, DPS Greater Noida
+- Career & academic timeline: Flexera GCC, Finvolv, Irdeto, To The New, PES University, DPS Greater Noida
 - Working contact form backed by `api/contact.js` and `server.js` using Nodemailer
-- Component library and tokens documented with Storybook in `design-system/`
-- Links to resume, LinkedIn, GitHub, and previous portfolio versions
+- Links to resume, LinkedIn, GitHub, and previous portfolio editions
 - Responsive layout with SEO and Open Graph / Twitter Card metadata
 
 ## Tech Stack
 
-- **Markup / Styling:** HTML5, CSS3, Squiggle UI design tokens (`design-system/tokens/tokens.css`)
+- **Markup / Styling:** HTML5, CSS3 (`styles/`, `main/`)
 - **Scripting:** Vanilla JavaScript (`main/scripts/app.js`)
 - **Contact Backend:** Node.js, Nodemailer (`server.js`, `api/contact.js`)
-- **Design System:** Storybook (`design-system/`)
 - **Hosting / Deployment:** [Vercel](https://vercel.com/) (`vercel.json`)
 
 ## Getting Started
 
-Clone the repository and run it locally:
-
 ```bash
 git clone https://github.com/prth1234/portfolio-2025.git
 cd portfolio-2025
-```
 
-Serve the static site directly, or start the Node.js server if testing the contact form:
-
-```bash
 # Option 1: Static server with Python
 python3 -m http.server 3000
 
 # Option 2: Static server with Node
 npx serve .
 
-# Option 3: Local server with contact API
+# Option 3: Local Node.js server with contact API
 npm install
 npm start
 ```
 
 Then visit `http://localhost:3000`.
 
-### Environment Variables
+<details>
+<summary><b>Environment Variables (Contact Form API)</b></summary>
+
+<br/>
 
 If running the Nodemailer contact form (`server.js` / `api/contact.js`), configure `.env` based on `.env.example`:
 
@@ -84,25 +79,42 @@ If running the Nodemailer contact form (`server.js` / `api/contact.js`), configu
 | `EMAIL_PASS` | 16-character SMTP app password | — |
 | `CONTACT_RECEIVER_EMAIL` | Destination address for contact form submissions | `dearparthsingh@gmail.com` |
 
-## Project Structure
+</details>
+
+<details>
+<summary><b>Project Structure</b></summary>
+
+<br/>
 
 ```text
 portfolio-2025/
-├── main/               # Primary site pages, scripts, styles, and Vercel entrypoints
+├── main/               # Primary site pages, scripts, data, and Vercel entrypoints
 │   ├── index.html      # About
 │   ├── index2.html     # Experience
 │   ├── index3.html     # Projects
 │   ├── index4.html     # More (education, skills, achievements, contact)
 │   └── api/contact.js  # Serverless contact endpoint
-├── design-system/      # Squiggle UI tokens, CSS, components, and Storybook
+├── styles/             # Global and page-level stylesheets
+├── design-system/      # Design tokens, reusable components, and Storybook
 ├── api/contact.js      # Contact API handler
 ├── server.js           # Local Node.js server
 └── vercel.json         # Vercel routing configuration
 ```
 
+</details>
+
+<details>
+<summary><b>Design System (Squiggle UI &amp; Storybook)</b></summary>
+
+<br/>
+
+Under the hood, the portfolio's visual tokens (`design-system/tokens/tokens.css`) and reusable UI primitives live in `design-system/` (Squiggle UI) and are documented with Storybook.
+
+</details>
+
 ## Deployment
 
-The site is deployed on Vercel. Every push to `main` triggers a new production deployment.
+Deployed on Vercel — every push to `main` triggers a new production deployment:
 
 ```bash
 npm i -g vercel

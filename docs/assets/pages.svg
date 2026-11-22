@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 186" width="900" height="186" role="img" aria-label="Portfolio pages">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 206" width="900" height="206" role="img" aria-label="Portfolio pages">
   <style>
   .disp { font-family: 'Arial Narrow', 'Helvetica Neue', Impact, -apple-system, sans-serif; }
   .body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
   .mono { font-family: Menlo, Consolas, Monaco, ui-monospace, monospace; }
   .fg { fill: #F9F4EB; }
   .mut { fill: #D6D0C4; }
-  .bd { fill: none; stroke: #F9F4EB; stroke-opacity: 0.35; stroke-width: 1.4; }
+  .bd { fill: none; stroke: #F9F4EB; stroke-opacity: 0.3; stroke-width: 1.4; }
   .yel { fill: #FFE32E; }
   .yel-s { stroke: #FFE32E; }
   .neon { fill: #C0FF14; }
@@ -17,7 +17,7 @@
   @media (prefers-color-scheme: light) {
     .fg { fill: #111111; }
     .mut { fill: #444444; }
-    .bd { stroke: #111111; stroke-opacity: 0.28; }
+    .bd { stroke: #111111; stroke-opacity: 0.25; }
     .yel { fill: #B45309; }
     .yel-s { stroke: #D97706; }
     .neon { fill: #3F6212; }
@@ -27,32 +27,71 @@
     .viol { fill: #6D28D9; }
     .viol-s { stroke: #7C3AED; }
   }
-  
+
+  .card { animation: p25-pg-card 6s ease-in-out infinite; }
+  @keyframes p25-pg-card {
+    0%, 100% { stroke-opacity: 0.35; stroke-width: 1.4; }
+    15% { stroke-opacity: 1; stroke-width: 2.3; }
+    32% { stroke-opacity: 0.35; stroke-width: 1.4; }
+  }
+
+  .icon-draw { stroke-dasharray: 60; stroke-dashoffset: 60; animation: p25-pg-draw 6s ease-in-out infinite; }
+  @keyframes p25-pg-draw {
+    0% { stroke-dashoffset: 60; }
+    20%, 85% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: 60; }
+  }
+
+  .bar-prog { stroke-dasharray: 166; stroke-dashoffset: 166; animation: p25-pg-bar 6s ease-in-out infinite; }
+  @keyframes p25-pg-bar {
+    0% { stroke-dashoffset: 166; }
+    22%, 85% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: 166; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
+    .icon-draw, .bar-prog { stroke-dashoffset: 0 !important; }
   }
 </style>
-  <rect x="2" y="14" width="206" height="156" rx="20" fill="none" class="yel-s" stroke-width="1.5"/>
-  <text x="22" y="46" font-size="12.5" font-weight="600" class="mono yel">01 // index.html</text>
-  <text x="22" y="84" font-size="19" font-weight="700" class="disp fg">ABOUT</text>
-  <text x="22" y="114" font-size="13" class="body mut">Introduction, career</text>
-  <text x="22" y="134" font-size="13" class="body mut">timeline &amp; contact form.</text>
 
-  <rect x="232" y="14" width="206" height="156" rx="20" fill="none" class="pink-s" stroke-width="1.5"/>
+  <!-- Card 1: About -->
+  <rect x="2" y="14" width="206" height="176" rx="20" fill="none" class="yel-s card" style="animation-delay:0s"/>
+  <circle cx="182" cy="42" r="9" fill="none" class="yel-s icon-draw" stroke-width="1.6" style="animation-delay:0s"/>
+  <text x="22" y="46" font-size="12.5" font-weight="600" class="mono yel">01 // /</text>
+  <text x="22" y="84" font-size="19" font-weight="700" class="disp fg">ABOUT</text>
+  <text x="22" y="112" font-size="13" class="body mut">Introduction, career</text>
+  <text x="22" y="132" font-size="13" class="body mut">timeline &amp; contact form.</text>
+  <line x1="22" y1="164" x2="188" y2="164" class="bd"/>
+  <line x1="22" y1="164" x2="188" y2="164" class="yel-s bar-prog" stroke-width="2.2" stroke-linecap="round" style="animation-delay:0s"/>
+
+  <!-- Card 2: Experience -->
+  <rect x="232" y="14" width="206" height="176" rx="20" fill="none" class="pink-s card" style="animation-delay:1.5s"/>
+  <path d="M404 48 L412 36 L420 44 L428 32" fill="none" class="pink-s icon-draw" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:1.5s"/>
   <text x="252" y="46" font-size="12.5" font-weight="600" class="mono pink">02 // index2.html</text>
   <text x="252" y="84" font-size="19" font-weight="700" class="disp fg">EXPERIENCE</text>
-  <text x="252" y="114" font-size="13" class="body mut">Strategy, design &amp;</text>
-  <text x="252" y="134" font-size="13" class="body mut">engineering milestones.</text>
+  <text x="252" y="112" font-size="13" class="body mut">Strategy, design &amp;</text>
+  <text x="252" y="132" font-size="13" class="body mut">engineering milestones.</text>
+  <line x1="252" y1="164" x2="418" y2="164" class="bd"/>
+  <line x1="252" y1="164" x2="418" y2="164" class="pink-s bar-prog" stroke-width="2.2" stroke-linecap="round" style="animation-delay:1.5s"/>
 
-  <rect x="462" y="14" width="206" height="156" rx="20" fill="none" class="viol-s" stroke-width="1.5"/>
+  <!-- Card 3: Projects -->
+  <rect x="462" y="14" width="206" height="176" rx="20" fill="none" class="viol-s card" style="animation-delay:3s"/>
+  <path d="M636 34 L648 41 L636 48 M648 48 H656" fill="none" class="viol-s icon-draw" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:3s"/>
   <text x="482" y="46" font-size="12.5" font-weight="600" class="mono viol">03 // index3.html</text>
   <text x="482" y="84" font-size="19" font-weight="700" class="disp fg">PROJECTS</text>
-  <text x="482" y="114" font-size="13" class="body mut">Selected cloud, AI &amp;</text>
-  <text x="482" y="134" font-size="13" class="body mut">full-stack builds.</text>
+  <text x="482" y="112" font-size="13" class="body mut">Selected cloud, AI &amp;</text>
+  <text x="482" y="132" font-size="13" class="body mut">full-stack builds.</text>
+  <line x1="482" y1="164" x2="648" y2="164" class="bd"/>
+  <line x1="482" y1="164" x2="648" y2="164" class="viol-s bar-prog" stroke-width="2.2" stroke-linecap="round" style="animation-delay:3s"/>
 
-  <rect x="692" y="14" width="206" height="156" rx="20" fill="none" class="neon-s" stroke-width="1.5"/>
+  <!-- Card 4: More -->
+  <rect x="692" y="14" width="206" height="176" rx="20" fill="none" class="neon-s card" style="animation-delay:4.5s"/>
+  <path d="M866 36 H882 M866 42 H882 M866 48 H876" fill="none" class="neon-s icon-draw" stroke-width="1.8" stroke-linecap="round" style="animation-delay:4.5s"/>
   <text x="712" y="46" font-size="12.5" font-weight="600" class="mono neon">04 // index4.html</text>
   <text x="712" y="84" font-size="19" font-weight="700" class="disp fg">MORE</text>
-  <text x="712" y="114" font-size="13" class="body mut">Education, skills,</text>
-  <text x="712" y="134" font-size="13" class="body mut">awards &amp; social links.</text>
+  <text x="712" y="112" font-size="13" class="body mut">Education, skills,</text>
+  <text x="712" y="132" font-size="13" class="body mut">awards &amp; social links.</text>
+  <line x1="712" y1="164" x2="878" y2="164" class="bd"/>
+  <line x1="712" y1="164" x2="878" y2="164" class="neon-s bar-prog" stroke-width="2.2" stroke-linecap="round" style="animation-delay:4.5s"/>
 </svg>

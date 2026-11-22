@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 116" width="900" height="116" role="img" aria-label="Define. Design. Develop. Run.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 124" width="900" height="124" role="img" aria-label="Define. Design. Develop. Run.">
   <style>
   .disp { font-family: 'Arial Narrow', 'Helvetica Neue', Impact, -apple-system, sans-serif; }
   .body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
@@ -10,10 +10,6 @@
   .yel-s { stroke: #FFE32E; }
   .neon { fill: #C0FF14; }
   .neon-s { stroke: #C0FF14; }
-  .pink { fill: #FFD2F3; }
-  .pink-s { stroke: #FFD2F3; }
-  .viol { fill: #E5DAF6; }
-  .viol-s { stroke: #E5DAF6; }
   @media (prefers-color-scheme: light) {
     .fg { fill: #111111; }
     .mut { fill: #444444; }
@@ -22,17 +18,21 @@
     .yel-s { stroke: #D97706; }
     .neon { fill: #3F6212; }
     .neon-s { stroke: #65A30D; }
-    .pink { fill: #BE185D; }
-    .pink-s { stroke: #DB2777; }
-    .viol { fill: #6D28D9; }
-    .viol-s { stroke: #7C3AED; }
   }
-  
+
+  .wave { stroke-dasharray: 10 7; animation: p25-ft-wv 3s linear infinite; }
+  @keyframes p25-ft-wv { to { stroke-dashoffset: -34; } }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
   }
 </style>
-  <path d="M250 20 Q 270 10 290 20 T 330 20 T 370 20 T 410 20 T 450 20 T 490 20 T 530 20 T 570 20 T 610 20 T 650 20" fill="none" class="yel-s" stroke-width="2" stroke-linecap="round"/>
-  <text x="450" y="68" text-anchor="middle" font-size="36" font-weight="700" letter-spacing="-1" class="disp fg">DEFINE. DESIGN. DEVELOP. RUN.</text>
-  <text x="450" y="98" text-anchor="middle" font-size="14" class="body mut">Built with Squiggle UI tokens, Storybook &amp; Vercel.</text>
+  <path id="p25-ft-wave" d="M250 22 Q 270 12 290 22 T 330 22 T 370 22 T 410 22 T 450 22 T 490 22 T 530 22 T 570 22 T 610 22 T 650 22" fill="none" class="yel-s wave" stroke-width="2" stroke-linecap="round"/>
+  <circle r="4" class="neon">
+    <animateMotion dur="4s" repeatCount="indefinite">
+      <mpath href="#p25-ft-wave"/>
+    </animateMotion>
+  </circle>
+  <text x="450" y="72" text-anchor="middle" font-size="36" font-weight="700" letter-spacing="-1" class="disp fg">DEFINE. DESIGN. DEVELOP. RUN.</text>
+  <text x="450" y="102" text-anchor="middle" font-size="14" class="body mut">Multi-page portfolio deployed on Vercel with Node.js contact API.</text>
 </svg>
