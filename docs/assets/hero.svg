@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 258" width="900" height="258" role="img" aria-label="Parth Singh Portfolio 2025">
+  <style>
+  .disp { font-family: 'Arial Narrow', 'Helvetica Neue', Impact, -apple-system, sans-serif; }
+  .body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+  .mono { font-family: Menlo, Consolas, Monaco, ui-monospace, monospace; }
+  .fg { fill: #F9F4EB; }
+  .mut { fill: #D6D0C4; }
+  .bd { fill: none; stroke: #F9F4EB; stroke-opacity: 0.35; stroke-width: 1.4; }
+  .yel { fill: #FFE32E; }
+  .yel-s { stroke: #FFE32E; }
+  .neon { fill: #C0FF14; }
+  .neon-s { stroke: #C0FF14; }
+  .pink { fill: #FFD2F3; }
+  .pink-s { stroke: #FFD2F3; }
+  .viol { fill: #E5DAF6; }
+  .viol-s { stroke: #E5DAF6; }
+  @media (prefers-color-scheme: light) {
+    .fg { fill: #111111; }
+    .mut { fill: #444444; }
+    .bd { stroke: #111111; stroke-opacity: 0.28; }
+    .yel { fill: #B45309; }
+    .yel-s { stroke: #D97706; }
+    .neon { fill: #3F6212; }
+    .neon-s { stroke: #65A30D; }
+    .pink { fill: #BE185D; }
+    .pink-s { stroke: #DB2777; }
+    .viol { fill: #6D28D9; }
+    .viol-s { stroke: #7C3AED; }
+  }
+  
+  .wave { stroke-dasharray: 12 8; animation: p25-wv 3s linear infinite; }
+  @keyframes p25-wv { to { stroke-dashoffset: -40; } }
+  
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+  <text x="450" y="38" text-anchor="middle" font-size="13" font-weight="600" letter-spacing="2.5" class="mono yel">SQUIGGLE UI // PORTFOLIO EDITION</text>
+  <text x="450" y="96" text-anchor="middle" font-size="56" font-weight="700" letter-spacing="-1.5" class="disp fg">PARTH SINGH — 2025</text>
+  <text x="450" y="132" text-anchor="middle" font-size="17" font-weight="500" class="body mut">Cloud Platforms, Distributed Systems, FinOps &amp; Agentic AI</text>
+  <path d="M180 162 Q 202 150 225 162 T 270 162 T 315 162 T 360 162 T 405 162 T 450 162 T 495 162 T 540 162 T 585 162 T 630 162 T 675 162 T 720 162" fill="none" class="yel-s wave" stroke-width="2.2" stroke-linecap="round"/>
+  <rect x="148" y="196" width="134" height="34" rx="17" class="bd"/>
+  <text x="215" y="218" text-anchor="middle" font-size="13" font-weight="600" class="mono fg">HTML5 + CSS3</text>
+  <rect x="296" y="196" width="134" height="34" rx="17" fill="none" class="yel-s" stroke-width="1.4"/>
+  <text x="363" y="218" text-anchor="middle" font-size="13" font-weight="600" class="mono yel">SQUIGGLE UI</text>
+  <rect x="444" y="196" width="174" height="34" rx="17" fill="none" class="pink-s" stroke-width="1.4"/>
+  <text x="531" y="218" text-anchor="middle" font-size="13" font-weight="600" class="mono pink">NODE + NODEMAILER</text>
+  <rect x="632" y="196" width="120" height="34" rx="17" fill="none" class="neon-s" stroke-width="1.4"/>
+  <text x="692" y="218" text-anchor="middle" font-size="13" font-weight="600" class="mono neon">VERCEL</text>
+</svg>

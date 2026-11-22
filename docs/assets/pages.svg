@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 186" width="900" height="186" role="img" aria-label="Portfolio pages">
+  <style>
+  .disp { font-family: 'Arial Narrow', 'Helvetica Neue', Impact, -apple-system, sans-serif; }
+  .body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+  .mono { font-family: Menlo, Consolas, Monaco, ui-monospace, monospace; }
+  .fg { fill: #F9F4EB; }
+  .mut { fill: #D6D0C4; }
+  .bd { fill: none; stroke: #F9F4EB; stroke-opacity: 0.35; stroke-width: 1.4; }
+  .yel { fill: #FFE32E; }
+  .yel-s { stroke: #FFE32E; }
+  .neon { fill: #C0FF14; }
+  .neon-s { stroke: #C0FF14; }
+  .pink { fill: #FFD2F3; }
+  .pink-s { stroke: #FFD2F3; }
+  .viol { fill: #E5DAF6; }
+  .viol-s { stroke: #E5DAF6; }
+  @media (prefers-color-scheme: light) {
+    .fg { fill: #111111; }
+    .mut { fill: #444444; }
+    .bd { stroke: #111111; stroke-opacity: 0.28; }
+    .yel { fill: #B45309; }
+    .yel-s { stroke: #D97706; }
+    .neon { fill: #3F6212; }
+    .neon-s { stroke: #65A30D; }
+    .pink { fill: #BE185D; }
+    .pink-s { stroke: #DB2777; }
+    .viol { fill: #6D28D9; }
+    .viol-s { stroke: #7C3AED; }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+  <rect x="2" y="14" width="206" height="156" rx="20" fill="none" class="yel-s" stroke-width="1.5"/>
+  <text x="22" y="46" font-size="12.5" font-weight="600" class="mono yel">01 // index.html</text>
+  <text x="22" y="84" font-size="19" font-weight="700" class="disp fg">ABOUT</text>
+  <text x="22" y="114" font-size="13" class="body mut">Introduction, career</text>
+  <text x="22" y="134" font-size="13" class="body mut">timeline &amp; contact form.</text>
+
+  <rect x="232" y="14" width="206" height="156" rx="20" fill="none" class="pink-s" stroke-width="1.5"/>
+  <text x="252" y="46" font-size="12.5" font-weight="600" class="mono pink">02 // index2.html</text>
+  <text x="252" y="84" font-size="19" font-weight="700" class="disp fg">EXPERIENCE</text>
+  <text x="252" y="114" font-size="13" class="body mut">Strategy, design &amp;</text>
+  <text x="252" y="134" font-size="13" class="body mut">engineering milestones.</text>
+
+  <rect x="462" y="14" width="206" height="156" rx="20" fill="none" class="viol-s" stroke-width="1.5"/>
+  <text x="482" y="46" font-size="12.5" font-weight="600" class="mono viol">03 // index3.html</text>
+  <text x="482" y="84" font-size="19" font-weight="700" class="disp fg">PROJECTS</text>
+  <text x="482" y="114" font-size="13" class="body mut">Selected cloud, AI &amp;</text>
+  <text x="482" y="134" font-size="13" class="body mut">full-stack builds.</text>
+
+  <rect x="692" y="14" width="206" height="156" rx="20" fill="none" class="neon-s" stroke-width="1.5"/>
+  <text x="712" y="46" font-size="12.5" font-weight="600" class="mono neon">04 // index4.html</text>
+  <text x="712" y="84" font-size="19" font-weight="700" class="disp fg">MORE</text>
+  <text x="712" y="114" font-size="13" class="body mut">Education, skills,</text>
+  <text x="712" y="134" font-size="13" class="body mut">awards &amp; social links.</text>
+</svg>

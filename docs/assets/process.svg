@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 182" width="900" height="182" role="img" aria-label="Work process: Define, Design, Develop, Run">
+  <style>
+  .disp { font-family: 'Arial Narrow', 'Helvetica Neue', Impact, -apple-system, sans-serif; }
+  .body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+  .mono { font-family: Menlo, Consolas, Monaco, ui-monospace, monospace; }
+  .fg { fill: #F9F4EB; }
+  .mut { fill: #D6D0C4; }
+  .bd { fill: none; stroke: #F9F4EB; stroke-opacity: 0.35; stroke-width: 1.4; }
+  .yel { fill: #FFE32E; }
+  .yel-s { stroke: #FFE32E; }
+  .neon { fill: #C0FF14; }
+  .neon-s { stroke: #C0FF14; }
+  .pink { fill: #FFD2F3; }
+  .pink-s { stroke: #FFD2F3; }
+  .viol { fill: #E5DAF6; }
+  .viol-s { stroke: #E5DAF6; }
+  @media (prefers-color-scheme: light) {
+    .fg { fill: #111111; }
+    .mut { fill: #444444; }
+    .bd { stroke: #111111; stroke-opacity: 0.28; }
+    .yel { fill: #B45309; }
+    .yel-s { stroke: #D97706; }
+    .neon { fill: #3F6212; }
+    .neon-s { stroke: #65A30D; }
+    .pink { fill: #BE185D; }
+    .pink-s { stroke: #DB2777; }
+    .viol { fill: #6D28D9; }
+    .viol-s { stroke: #7C3AED; }
+  }
+  
+  .dash { stroke-dasharray: 5 6; animation: p25-fl 1.4s linear infinite; }
+  @keyframes p25-fl { to { stroke-dashoffset: -11; } }
+  
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+  <rect x="4" y="24" width="194" height="132" rx="20" class="bd"/>
+  <text x="24" y="58" font-size="12.5" font-weight="600" class="mono yel">STEP 01</text>
+  <text x="24" y="94" font-size="19" font-weight="700" class="disp fg">DEFINE</text>
+  <text x="24" y="122" font-size="13" class="body mut">Scope problem &amp; goals</text>
+
+  <line class="dash yel-s" x1="204" y1="90" x2="230" y2="90" stroke-width="2" stroke-linecap="round"/>
+
+  <rect x="236" y="24" width="194" height="132" rx="20" class="bd"/>
+  <text x="256" y="58" font-size="12.5" font-weight="600" class="mono pink">STEP 02</text>
+  <text x="256" y="94" font-size="19" font-weight="700" class="disp fg">DESIGN</text>
+  <text x="256" y="122" font-size="13" class="body mut">Tokens, motion &amp; UX</text>
+
+  <line class="dash pink-s" x1="436" y1="90" x2="462" y2="90" stroke-width="2" stroke-linecap="round"/>
+
+  <rect x="468" y="24" width="194" height="132" rx="20" class="bd"/>
+  <text x="488" y="58" font-size="12.5" font-weight="600" class="mono viol">STEP 03</text>
+  <text x="488" y="94" font-size="19" font-weight="700" class="disp fg">DEVELOP</text>
+  <text x="488" y="122" font-size="13" class="body mut">Clean markup &amp; APIs</text>
+
+  <line class="dash viol-s" x1="668" y1="90" x2="694" y2="90" stroke-width="2" stroke-linecap="round"/>
+
+  <rect x="700" y="24" width="194" height="132" rx="20" class="bd"/>
+  <text x="720" y="58" font-size="12.5" font-weight="600" class="mono neon">STEP 04</text>
+  <text x="720" y="94" font-size="19" font-weight="700" class="disp fg">RUN</text>
+  <text x="720" y="122" font-size="13" class="body mut">Ship &amp; iterate on Vercel</text>
+</svg>
